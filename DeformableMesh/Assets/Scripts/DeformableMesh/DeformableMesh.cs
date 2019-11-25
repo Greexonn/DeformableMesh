@@ -149,6 +149,10 @@ public class DeformableMesh : MonoBehaviour
             grid = new Cell[gridSize.x, gridSize.y, gridSize.z];
 
             StorePointsAndVertices();
+
+            _faceIndexes = new int[8];
+            _mirrorFaceIndexes = new int[8];
+            _pointStates = new bool[4];
         }
 
         public void Dispose()
@@ -156,10 +160,6 @@ public class DeformableMesh : MonoBehaviour
             foreach (var array in this.points)
             {
                 array.Dispose();
-            }
-            foreach (var cell in this.grid)
-            {
-                cell.Dispose();
             }
         }
 
@@ -224,25 +224,23 @@ public class DeformableMesh : MonoBehaviour
                     for (int z = 0; z < gridSize.z; z++)
                     {
                         //check if created
-                        Cell _cell = grid[x, y, z];
-                        if (_cell.triangles.IsCreated)
+                        var _cellTriangles = grid[x, y, z].triangles;
+                        if (_cellTriangles != null)
                         {
-                            foreach (var index in _cell.triangles)
-                            {
-                                _triangles.Add(GetPointToVertexIndex(_cell.vertexIndexes[index]));
-                            }
+                            _triangles.AddRange(_cellTriangles);
                         }
                     }
                 }
             }
 
             _mesh.vertices = _vertices;
-            _mesh.triangles = _triangles.ToArray();
+            _mesh.SetIndices(_triangles, MeshTopology.Triangles, 0);
             _mesh.RecalculateNormals();
 
             if (filter.sharedMesh == null)
                 filter.sharedMesh = _mesh;
         }
+        
         [BurstCompile]
         private int GetPointToVertexIndex(int3 pointId)
         {
@@ -352,10 +350,12 @@ public class DeformableMesh : MonoBehaviour
                 return true;
         }
     
+        private int[] _faceIndexes, _mirrorFaceIndexes;
+
         public void TriangulateCube(int3 index)
         {
             //check if already created
-            if (!grid[index.x, index.y, index.z].vertexIndexes.IsCreated)
+            if (grid[index.x, index.y, index.z].triangles == null)
             {
                 grid[index.x, index.y, index.z].Create(index);
             }
@@ -364,8 +364,6 @@ public class DeformableMesh : MonoBehaviour
                 grid[index.x, index.y, index.z].triangles.Clear();
             }
             //check faces visibility
-            NativeArray<int> _faceIndexes = new NativeArray<int>(4, Allocator.Temp);
-            NativeArray<int> _mirrorFaceIndexes = new NativeArray<int>(4, Allocator.Temp);
             int3 _faceNormal;
 
             //check front face
@@ -382,9 +380,7 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(0, 0, -1);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
 
             //check back face
@@ -401,9 +397,7 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(0, 0, 1);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
 
             //check left face
@@ -420,9 +414,7 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(-1, 0, 0);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
 
             //check right face
@@ -439,9 +431,7 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(1, 0, 0);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
 
             //check top face
@@ -458,9 +448,7 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(0, 1, 0);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
 
             //check bottom face
@@ -477,16 +465,13 @@ public class DeformableMesh : MonoBehaviour
             _faceNormal = new int3(0, -1, 0);
             if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
             {
-                var _triangles = TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-                grid[index.x, index.y, index.z].triangles.AddRange(_triangles);
-                _triangles.Dispose();
+                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
             }
-
-            _faceIndexes.Dispose();
-            _mirrorFaceIndexes.Dispose();
         }
 
-        private bool CheckFaceVisible(NativeArray<int> faceIndexes, int3 faceNormal, int3 cellId)
+        private bool[] _pointStates;
+
+        private bool CheckFaceVisible(int[] faceIndexes, int3 faceNormal, int3 cellId)
         {
             for (int i = 0; i < 4; i++)
             {
@@ -517,23 +502,22 @@ public class DeformableMesh : MonoBehaviour
             return true;
         }
     
-        [BurstCompile]
-        private NativeList<int> TriangulateFace(NativeArray<int> faceIndexes, NativeArray<int> mirrorFaceIndexes, int3 cellId)
+        private void TriangulateFace(int[] faceIndexes, int[] mirrorFaceIndexes, int3 cellId)
         {
-            NativeList<int> _indexes = new NativeList<int>(6, Allocator.Temp);
-            NativeArray<bool> _pointStates = new NativeArray<bool>(4, Allocator.Temp);
+            var _cubeTriangles = grid[cellId.x, cellId.y, cellId.z].triangles;
+            var _cubePoints = grid[cellId.x, cellId.y, cellId.z].vertexIndexes;
 
             //check face points
             for (int i = 0; i < 4; i++)
             {
-                var _pointId = grid[cellId.x, cellId.y, cellId.z].vertexIndexes[faceIndexes[i]];
+                var _pointId = _cubePoints[faceIndexes[i]];
                 var _pointValue = points[_pointId.x, _pointId.y][_pointId.z];
 
                 _pointStates[i] = true;
 
                 if (_pointValue <= 0)
                 {
-                    _pointId = grid[cellId.x, cellId.y, cellId.z].vertexIndexes[mirrorFaceIndexes[i]];
+                    _pointId = _cubePoints[mirrorFaceIndexes[i]];
                     _pointValue = points[_pointId.x, _pointId.y][_pointId.z];
 
                     if (_pointValue > 0)
@@ -555,9 +539,9 @@ public class DeformableMesh : MonoBehaviour
                 {
                     if (_pointStates[2])
                     {
-                        _indexes.Add(faceIndexes[0]);
-                        _indexes.Add(faceIndexes[1]);
-                        _indexes.Add(faceIndexes[2]);
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
                         _oneFound = true;
                     }
                 }
@@ -566,9 +550,9 @@ public class DeformableMesh : MonoBehaviour
                 {
                     if (_pointStates[3])
                     {
-                        _indexes.Add(faceIndexes[0]);
-                        _indexes.Add(faceIndexes[2]);
-                        _indexes.Add(faceIndexes[3]);
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
+                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
                         _oneFound = true;
                     }
                 }
@@ -579,9 +563,9 @@ public class DeformableMesh : MonoBehaviour
                     {
                         if (_pointStates[3])
                         {
-                            _indexes.Add(faceIndexes[0]);
-                            _indexes.Add(faceIndexes[1]);
-                            _indexes.Add(faceIndexes[3]);
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
                         }
                     }
                 }
@@ -594,31 +578,27 @@ public class DeformableMesh : MonoBehaviour
                     {
                         if (_pointStates[3])
                         {
-                            _indexes.Add(faceIndexes[1]);
-                            _indexes.Add(faceIndexes[2]);
-                            _indexes.Add(faceIndexes[3]);
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
+                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
                         }
                     }
                     //only one triangle can be built in that situation
                 }
             }
-
-            _pointStates.Dispose();
-
-            return _indexes;
         }
     }
 
-    public struct Cell : System.IDisposable
+    public struct Cell
     {
-        public NativeList<int> triangles;
+        public List<int> triangles;
 
-        public NativeArray<int3> vertexIndexes;
+        public int3[] vertexIndexes;
 
         public void Create(int3 index)
         {
-            triangles = new NativeList<int>(36, Allocator.Persistent);
-            vertexIndexes = new NativeArray<int3>(8, Allocator.Persistent);
+            triangles = new List<int>(36);
+            vertexIndexes = new int3[8];
 
             //associate vertices and points
             vertexIndexes[0] = index;
@@ -630,21 +610,6 @@ public class DeformableMesh : MonoBehaviour
             vertexIndexes[6] = new int3(index.x + 1, index.y + 1, index.z + 1);
             vertexIndexes[7] = new int3(index.x + 1, index.y, index.z + 1);
         }
-
-        public void Dispose()
-        {
-            if (triangles.IsCreated)
-                triangles.Dispose();
-            if (vertexIndexes.IsCreated)
-                vertexIndexes.Dispose();
-        }
-    }
-
-    public enum CellState
-    {
-        Whole,
-        Cut,
-        Disabled
     }
 
     #region Jobs
@@ -671,6 +636,8 @@ public class DeformableMesh : MonoBehaviour
                     _dist = cellSize + _dist;
                     _dist = _dist / cellSize;
                     float _value = math.clamp(_dist, 0, 1);
+                    if (_value < 0.5f)
+                        _value = 0;
                     if (_dist < points[z])
                         points[z] = _value;
                 }
@@ -680,16 +647,6 @@ public class DeformableMesh : MonoBehaviour
         private float3 GetPointPosition(int3 pointId, float cellSize)
         {
             return new float3((cellSize * pointId.x), (cellSize * pointId.y), (cellSize * pointId.z));
-        }
-    }
-
-
-    [BurstCompile]
-    private struct TriangulateFaceJob : IJob
-    {
-        public void Execute()
-        {
-            throw new System.NotImplementedException();
         }
     }
 
