@@ -499,7 +499,7 @@ public class DeformableMesh : MonoBehaviour
                 }
             }
 
-            return true;
+            return false;
         }
     
         private void TriangulateFace(int[] faceIndexes, int[] mirrorFaceIndexes, int3 cellId)
