@@ -14,8 +14,8 @@
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.Analytics.DataPrivacy.dll
---root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
+--root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=D:\smirnyh_ns\Documents\GitHub\DeformableMesh\DeformableMesh\Temp\StagingArea\Data\Managed\Unity.Jobs.dll

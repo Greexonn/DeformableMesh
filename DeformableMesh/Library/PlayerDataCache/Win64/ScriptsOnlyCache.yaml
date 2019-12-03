@@ -46,7 +46,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.Tonemapping
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
-    - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
     - UnityEngine.Rendering.Universal.Vignette
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
@@ -104,15 +103,17 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11292}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11424}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 11542}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11566}
+    - Class: 114
+      Script: {instanceID: 11608}
     - Class: 114
       Script: {instanceID: 11616}
     - Class: 114
@@ -197,8 +198,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15602}
     - Class: 114
       Script: {instanceID: 15610}
-    - Class: 114
-      Script: {instanceID: 22044}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,6 +283,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FPSDisplay
   - hash:
       serializedVersion: 2
       Hash: 5fcd6c83f4b9ef27fbcf701cc39abb93
@@ -1094,12 +1099,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FPSDisplay
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

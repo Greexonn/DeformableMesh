@@ -795,11 +795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fee3b3ddd963b546b042b00cd3a934c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cellSize: 0.05
+  _cellSize: 0.1
   _gridSize:
-    x: 20
-    y: 20
-    z: 20
+    x: 10
+    y: 10
+    z: 10
 --- !u!23 &1619971438
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100004, guid: bae110eee250e4b418b188f4ae4e3170, type: 3}
+  - {fileID: 2100000, guid: bd2d742ee2ce7a740ae0cf992a38be74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
