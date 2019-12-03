@@ -18,7 +18,7 @@ public class DeformableMesh : MonoBehaviour
     private MeshGridData _cubesGrid;
 
     //for jobs
-    private NativeList<JobHandle> _cutJobsHandles;
+    private NativeList<JobHandle> _jobsHandles;
 
     void Start()
     {
@@ -27,7 +27,6 @@ public class DeformableMesh : MonoBehaviour
         _cubesGrid.Create(_cellSize, _gridSize);
 
         _meshFilter = GetComponent<MeshFilter>();
-        // GenerateCube();
         UpdateMesh(new int3(0, 0, 0), _gridSize);
         var _boxCollider = gameObject.AddComponent<BoxCollider>();
         _boxCollider.size = new Vector3(_gridSize.x * _cellSize, _gridSize.y * _cellSize, _gridSize.z * _cellSize);
@@ -41,32 +40,17 @@ public class DeformableMesh : MonoBehaviour
 
     private void AllocateContainers()
     {
-        _cutJobsHandles = new NativeList<JobHandle>(Allocator.Persistent);
+        _jobsHandles = new NativeList<JobHandle>(Allocator.Persistent);
     }
 
     private void DisposeContainers()
     {
-        _cutJobsHandles.Dispose();
-    }
-
-    private void GenerateCube()
-    {
-        //set all points active
-        for (int x = 0; x < (_gridSize.x + 1); x++)
-        {
-            for (int y = 0; y < (_gridSize.y + 1); y++)
-            {
-                for (int z = 0; z < (_gridSize.z + 1); z++)
-                {
-                    _cubesGrid.points[x, y][z] = 1;
-                }
-            }
-        }
+        _jobsHandles.Dispose();
     }
 
     private void UpdateMesh(int3 fromIds, int3 toIds)
     {
-        _cutJobsHandles.Clear();
+        _jobsHandles.Clear();
         //re-create surface cells
         TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
         {
@@ -80,15 +64,14 @@ public class DeformableMesh : MonoBehaviour
             {
                 for (int z = fromIds.z; z < toIds.z; z++)
                 {
-                    // _cubesGrid.TriangulateCube(new int3(x, y, z));
                     _triangulateJob.cellId = new int3(x, y, z);
                     _triangulateJob.startIndex = _cubesGrid._cellsGrid.GetCellStartIndex(_triangulateJob.cellId);
                     var _handle = _triangulateJob.Schedule();
-                    _cutJobsHandles.Add(_handle);
+                    _jobsHandles.Add(_handle);
                 }
             }
         }
-        JobHandle.CompleteAll(_cutJobsHandles);
+        JobHandle.CompleteAll(_jobsHandles);
         // _cubesGrid.PullVerticesInRange(fromIds, toIds);
         _cubesGrid.GetMesh(_meshFilter);
     }
@@ -105,9 +88,11 @@ public class DeformableMesh : MonoBehaviour
         //create job for calculations
         CutSphereJob _cutJob = new CutSphereJob
         {
+            points = _cubesGrid._pointsGrid.points,
             sphereCenter = sphereCenter,
             sphereRadius = sphereRadius,
-            cellSize = _cellSize
+            cellSize = _cellSize,
+            zStart = _from.z
         };
         //iterate in active points
         for (int x = _from.x; x < (_to.x + 1); x++)
@@ -115,17 +100,18 @@ public class DeformableMesh : MonoBehaviour
             for (int y = _from.y; y < (_to.y + 1); y++)
             {
                 //code on jobs
-                _cutJob.points = _cubesGrid.points[x, y];
                 _cutJob.x = x;
                 _cutJob.y = y;
-                var _handle = _cutJob.ScheduleBatch((_to.z + 1), _from.z);
-                _cutJobsHandles.Add(_handle);
+                _cutJob.startIndex = (x * (_gridSize.y + 1) * (_gridSize.z + 1)) + (y * (_gridSize.z + 1)) + _from.z;
+                var _count = ((_to.z + 1) - _from.z);
+                var _handle = _cutJob.Schedule(_gridSize.z + 1, _gridSize.z + 1);
+                _jobsHandles.Add(_handle);
             }
         }
 
         //complete jobs
-        JobHandle.CompleteAll(_cutJobsHandles);
-        _cutJobsHandles.Clear();
+        JobHandle.CompleteAll(_jobsHandles);
+        _jobsHandles.Clear();
 
         UpdateMesh(_from, _to);
     }
@@ -141,6 +127,8 @@ public class DeformableMesh : MonoBehaviour
         private Vector3[] _vertices;
         private List<int> _triangles;
         private Mesh _mesh;
+
+        VertexAttributeDescriptor[] _layout;
 
 
         #region Native
@@ -161,18 +149,6 @@ public class DeformableMesh : MonoBehaviour
             this.cellSize = cellSize;
             this.gridSize = gridSize;
 
-            //create all points
-            // points = new NativeArray<float>[gridSize.x + 1, gridSize.y + 1];
-            // for (int x = 0; x < (gridSize.x + 1); x++)
-            // {
-            //     for (int y = 0; y < (gridSize.y + 1); y++)
-            //     {
-            //         points[x, y] = new NativeArray<float>(gridSize.z + 1, Allocator.Persistent);
-            //     }
-            // }
-            //create grid
-            // grid = new Cell[gridSize.x, gridSize.y, gridSize.z];
-
             //create points buffer
             _pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
             _cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
@@ -180,32 +156,18 @@ public class DeformableMesh : MonoBehaviour
             _indexesList = new NativeList<int>(_cellsGrid.indexes.Length, Allocator.Persistent);
 
             StorePointsAndVertices();
-
-            // _faceIndexes = new int[8];
-            // _mirrorFaceIndexes = new int[8];
-            // _pointStates = new bool[4];
         }
 
         public void Dispose()
         {
-            // foreach (var array in this.points)
-            // {
-            //     array.Dispose();
-            // }
-
             _pointsGrid.Dispose();
             _cellsGrid.Dispose();
             _verticesArray.Dispose();
             _indexesList.Dispose();
         }
 
-        [BurstCompile]
         private void StorePointsAndVertices()
         {
-            // int _size = (gridSize.x + 1) * (gridSize.y + 1) * (gridSize.z + 1);
-            // _vertices = new Vector3[_size];
-            // _triangles = new List<int>();
-
             int _index = 0;
             for (int x = 0; x < (gridSize.x + 1); x++)
             {
@@ -217,7 +179,6 @@ public class DeformableMesh : MonoBehaviour
                         float3 _pointPosition = GetPointPosition(_pointId);
                         //add to vertices
                         _verticesArray[_index] = _pointPosition;
-                        //add to hash-map
                         _index++;
                     }
                 }
@@ -226,10 +187,10 @@ public class DeformableMesh : MonoBehaviour
             //
 
             _mesh = new Mesh();
-            if (_verticesArray.Length > 65535)
-                _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+            // if (_verticesArray.Length > 65535)
+            //     _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
 
-            var _layout = new VertexAttributeDescriptor[]
+            _layout = new VertexAttributeDescriptor[]
             {
                 new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3)
             };
@@ -260,6 +221,8 @@ public class DeformableMesh : MonoBehaviour
 
         public void GetMesh(MeshFilter filter)
         {
+            _indexesList.Clear();
+
             CopyIndexesToListJob _copyIndexesJob = new CopyIndexesToListJob
             {
                 indexes = _cellsGrid.indexes,
@@ -268,6 +231,7 @@ public class DeformableMesh : MonoBehaviour
 
             _copyIndexesJob.Schedule().Complete();
 
+            _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
             _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
             _mesh.SetIndexBufferParams(_indexesList.Length, IndexFormat.UInt32);
             _mesh.SetIndexBufferData(_indexesList.ToArray(), 0, 0, _indexesList.Length);
@@ -280,13 +244,11 @@ public class DeformableMesh : MonoBehaviour
                 filter.sharedMesh = _mesh;
         }
         
-        [BurstCompile]
         private int GetPointToVertexIndex(int3 pointId)
         {
             return (pointId.x * (gridSize.y + 1) * (gridSize.z + 1)) + (pointId.y * (gridSize.z + 1)) + pointId.z;
         }
 
-        [BurstCompile]
         public float3 GetPointPosition(int3 pointId)
         {
             return new float3((cellSize * pointId.x), (cellSize * pointId.y), (cellSize * pointId.z));
@@ -772,32 +734,35 @@ public class DeformableMesh : MonoBehaviour
     #region Jobs
 
     [BurstCompile]
-    private struct CutSphereJob : IJobParallelForBatch
+    private struct CutSphereJob : IJobParallelFor
     {
-        public NativeArray<float> points;
+        [Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestriction] 
+        public NativeArray<byte> points;
 
         [ReadOnly] public float3 sphereCenter;
-        [ReadOnly] public int x, y;
         [ReadOnly] public float cellSize, sphereRadius;
+        [ReadOnly] public int x, y, zStart;
+        [ReadOnly] public int startIndex;
 
-        public void Execute(int startIndex, int count)
+        public void Execute(int index)
         {
-            for (int z = startIndex; z < (startIndex + count); z++)
+            var _pointId = index + startIndex;
+
+            if (points[_pointId] > 0)
             {
-                if (points[z] > 0)
-                {
-                    float3 _toPoint = GetPointPosition(new int3(x, y, z), cellSize) - sphereCenter;
-                    _toPoint *= _toPoint; //square
-                    float _dist = math.sqrt(_toPoint.x + _toPoint.y + _toPoint.z);
-                    _dist -= sphereRadius;
-                    _dist = cellSize + _dist;
-                    _dist = _dist / cellSize;
-                    float _value = math.clamp(_dist, 0, 1);
-                    if (_value < 0.5f)
-                        _value = 0;
-                    if (_dist < points[z])
-                        points[z] = _value;
-                }
+                float3 _toPoint = GetPointPosition(new int3(x, y, (zStart + index)), cellSize) - sphereCenter;
+                _toPoint *= _toPoint; //square
+                float _dist = math.sqrt(_toPoint.x + _toPoint.y + _toPoint.z);
+                _dist -= sphereRadius;
+                _dist = cellSize + _dist;
+                _dist = _dist / cellSize;
+                float _value = math.clamp(_dist, 0, 1);
+
+                byte _pValue = (byte)math.lerp(0, 255, _value);
+                if (_pValue < 200)
+                    _pValue = 0;
+                if (_dist < points[_pointId])
+                    points[_pointId] = _pValue;
             }
         }
 
