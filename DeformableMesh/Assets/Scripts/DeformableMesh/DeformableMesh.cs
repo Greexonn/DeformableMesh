@@ -20,6 +20,12 @@ public class DeformableMesh : MonoBehaviour
     //for jobs
     private NativeList<JobHandle> _jobsHandles;
 
+    void Update()
+    {
+        //debug
+        // UpdateMesh(new int3(0, 0, 0), _gridSize);
+    }
+
     void Start()
     {
         AllocateContainers();
@@ -30,6 +36,7 @@ public class DeformableMesh : MonoBehaviour
         UpdateMesh(new int3(0, 0, 0), _gridSize);
         var _boxCollider = gameObject.AddComponent<BoxCollider>();
         _boxCollider.size = new Vector3(_gridSize.x * _cellSize, _gridSize.y * _cellSize, _gridSize.z * _cellSize);
+        _boxCollider.center = new Vector3(_gridSize.x * _cellSize / 2, _gridSize.y * _cellSize / 2, _gridSize.z * _cellSize / 2);
     }
 
     void OnDestroy()
@@ -50,13 +57,15 @@ public class DeformableMesh : MonoBehaviour
 
     private void UpdateMesh(int3 fromIds, int3 toIds)
     {
+        NativeArray<int3> _cellIndexes = new NativeArray<int3>(_cubesGrid._cellsGrid.indexes.Length / 36, Allocator.TempJob);
         _jobsHandles.Clear();
         //re-create surface cells
         TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
         {
             points = _cubesGrid._pointsGrid.points,
             pointsGridSize = _cubesGrid._pointsGrid.size,
-            indexes = _cubesGrid._cellsGrid.indexes
+            indexes = _cubesGrid._cellsGrid.indexes,
+            cellIndexes = _cellIndexes
         };
         for (int x = fromIds.x; x < toIds.x; x++)
         {
@@ -64,14 +73,15 @@ public class DeformableMesh : MonoBehaviour
             {
                 for (int z = fromIds.z; z < toIds.z; z++)
                 {
-                    _triangulateJob.cellId = new int3(x, y, z);
-                    _triangulateJob.startIndex = _cubesGrid._cellsGrid.GetCellStartIndex(_triangulateJob.cellId);
-                    var _handle = _triangulateJob.Schedule();
-                    _jobsHandles.Add(_handle);
+                    int _index = (x * _gridSize.y * _gridSize.z) + (y * _gridSize.z) + z;
+                    _cellIndexes[_index] = new int3(x, y, z);
                 }
             }
         }
+        var _handle = _triangulateJob.ScheduleBatch(_triangulateJob.indexes.Length, 36);
+        _jobsHandles.Add(_handle);
         JobHandle.CompleteAll(_jobsHandles);
+        _triangulateJob.cellIndexes.Dispose();
         // _cubesGrid.PullVerticesInRange(fromIds, toIds);
         _cubesGrid.GetMesh(_meshFilter);
     }
@@ -104,7 +114,7 @@ public class DeformableMesh : MonoBehaviour
                 _cutJob.y = y;
                 _cutJob.startIndex = (x * (_gridSize.y + 1) * (_gridSize.z + 1)) + (y * (_gridSize.z + 1)) + _from.z;
                 var _count = ((_to.z + 1) - _from.z);
-                var _handle = _cutJob.Schedule(_gridSize.z + 1, _gridSize.z + 1);
+                var _handle = _cutJob.Schedule(_count, _count);
                 _jobsHandles.Add(_handle);
             }
         }
@@ -153,7 +163,6 @@ public class DeformableMesh : MonoBehaviour
             _pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
             _cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
             _verticesArray = new NativeArray<float3>(_pointsGrid.points.Length, Allocator.Persistent);
-            _indexesList = new NativeList<int>(_cellsGrid.indexes.Length, Allocator.Persistent);
 
             StorePointsAndVertices();
         }
@@ -163,7 +172,6 @@ public class DeformableMesh : MonoBehaviour
             _pointsGrid.Dispose();
             _cellsGrid.Dispose();
             _verticesArray.Dispose();
-            _indexesList.Dispose();
         }
 
         private void StorePointsAndVertices()
@@ -221,7 +229,7 @@ public class DeformableMesh : MonoBehaviour
 
         public void GetMesh(MeshFilter filter)
         {
-            _indexesList.Clear();
+            _indexesList = new NativeList<int>(_cellsGrid.indexes.Length, Allocator.TempJob);
 
             CopyIndexesToListJob _copyIndexesJob = new CopyIndexesToListJob
             {
@@ -234,7 +242,7 @@ public class DeformableMesh : MonoBehaviour
             _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
             _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
             _mesh.SetIndexBufferParams(_indexesList.Length, IndexFormat.UInt32);
-            _mesh.SetIndexBufferData(_indexesList.ToArray(), 0, 0, _indexesList.Length);
+            _mesh.SetIndexBufferData(_indexesList.AsArray(), 0, 0, _indexesList.Length);
             SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesList.Length);
             _mesh.subMeshCount = 1;
             _mesh.SetSubMesh(0, _smd);
@@ -242,6 +250,8 @@ public class DeformableMesh : MonoBehaviour
 
             if (filter.sharedMesh == null)
                 filter.sharedMesh = _mesh;
+
+            _indexesList.Dispose();
         }
         
         private int GetPointToVertexIndex(int3 pointId)
@@ -773,29 +783,33 @@ public class DeformableMesh : MonoBehaviour
     }
 
     [BurstCompile]
-    private struct TriangulateCubeJob : IJob
+    private struct TriangulateCubeJob : IJobParallelForBatch
     {
         [ReadOnly] public NativeArray<byte> points;
         [ReadOnly] public int3 pointsGridSize;
-        [ReadOnly] public int3 cellId;
-        [ReadOnly] public int startIndex;
 
-        [Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestriction]
+        [ReadOnly] public NativeArray<int3> cellIndexes;
+
         [WriteOnly] public NativeArray<int> indexes;
 
-        public void Execute()
+        public void Execute(int startIndex, int count)
         {
+            // bool _miss = true;
+            int3 _currentCellId = cellIndexes[startIndex / 36];
+            if (_currentCellId.Equals(int3.zero) && startIndex != 0)
+                return;
+
             //get cell points
             Cube _cube = new Cube
             {
-                zero = cellId,
-                one = new int3(cellId.x, cellId.y + 1, cellId.z),
-                two = new int3(cellId.x + 1, cellId.y + 1, cellId.z),
-                three = new int3(cellId.x + 1, cellId.y, cellId.z),
-                four = new int3(cellId.x, cellId.y, cellId.z + 1),
-                five = new int3(cellId.x, cellId.y + 1, cellId.z + 1),
-                six = new int3(cellId.x + 1, cellId.y + 1, cellId.z + 1),
-                seven = new int3(cellId.x + 1, cellId.y, cellId.z + 1)
+                zero = _currentCellId,
+                one = new int3(_currentCellId.x, _currentCellId.y + 1, _currentCellId.z),
+                two = new int3(_currentCellId.x + 1, _currentCellId.y + 1, _currentCellId.z),
+                three = new int3(_currentCellId.x + 1, _currentCellId.y, _currentCellId.z),
+                four = new int3(_currentCellId.x, _currentCellId.y, _currentCellId.z + 1),
+                five = new int3(_currentCellId.x, _currentCellId.y + 1, _currentCellId.z + 1),
+                six = new int3(_currentCellId.x + 1, _currentCellId.y + 1, _currentCellId.z + 1),
+                seven = new int3(_currentCellId.x + 1, _currentCellId.y, _currentCellId.z + 1)
             };
             //get points states
             _cube.isZero = GetPointActive(_cube.zero);
@@ -1006,6 +1020,11 @@ public class DeformableMesh : MonoBehaviour
         private int GetPointBufferIndex(int3 pointIds)
         {
             return (pointIds.x * pointsGridSize.y * pointsGridSize.z) + (pointIds.y * pointsGridSize.z) + pointIds.z;
+        }
+
+        private int GetCellBufferIndex(int3 cellIds)
+        {
+            return ((cellIds.x * (pointsGridSize.y - 1) * (pointsGridSize.z - 1)) + (cellIds.y * (pointsGridSize.z - 1)) + cellIds.z) * 36;
         }
 
         private bool IsFaceVisible(Face face, int3 normal)
