@@ -216,8 +216,6 @@ public class DeformableMesh : MonoBehaviour
             //
 
             _mesh = new Mesh();
-            // if (_verticesArray.Length > 65535)
-            //     _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
 
             _layout = new VertexAttributeDescriptor[]
             {
@@ -248,7 +246,9 @@ public class DeformableMesh : MonoBehaviour
             SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesList.Length);
             _mesh.subMeshCount = 1;
             _mesh.SetSubMesh(0, _smd);
+            _mesh.RecalculateBounds();
             _mesh.RecalculateNormals();
+            _mesh.RecalculateTangents();
 
             if (filter.sharedMesh == null)
                 filter.sharedMesh = _mesh;
