@@ -1084,4 +1084,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/smirnyh_ns/Documents/GitHub/DeformableMesh/DeformableMesh/Build/DestructiveMesh.exe
+  playerPath: D:/smirnyh_ns/Documents/GitHub/DeformableMesh/DeformableMesh/Build/DeformableMesh.exe

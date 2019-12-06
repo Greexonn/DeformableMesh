@@ -19,6 +19,9 @@ public class DeformableMesh : MonoBehaviour
 
     //for jobs
     private NativeList<JobHandle> _jobsHandles;
+    private NativeList<JobHandle> _jobsCutHandles;
+    private NativeList<JobHandle> _jobsPullHandles;
+    private NativeList<JobHandle> _jobsTriangulateHandles;
 
     void Update()
     {
@@ -48,24 +51,31 @@ public class DeformableMesh : MonoBehaviour
     private void AllocateContainers()
     {
         _jobsHandles = new NativeList<JobHandle>(Allocator.Persistent);
+        _jobsCutHandles = new NativeList<JobHandle>(Allocator.Persistent);
+        _jobsPullHandles = new NativeList<JobHandle>(Allocator.Persistent);
+        _jobsTriangulateHandles = new NativeList<JobHandle>(Allocator.Persistent);
     }
 
     private void DisposeContainers()
     {
         _jobsHandles.Dispose();
+        _jobsCutHandles.Dispose();
+        _jobsPullHandles.Dispose();
+        _jobsTriangulateHandles.Dispose();
     }
 
     private void UpdateMesh(int3 fromIds, int3 toIds)
     {
-        NativeArray<int3> _cellIndexes = new NativeArray<int3>(_cubesGrid._cellsGrid.indexes.Length / 36, Allocator.TempJob);
-        _jobsHandles.Clear();
+        _jobsTriangulateHandles.Clear();
+
+        NativeArray<int3> _cellsMap = new NativeArray<int3>(_cubesGrid._cellsGrid.indexes.Length / 36, Allocator.TempJob);
         //re-create surface cells
         TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
         {
             points = _cubesGrid._pointsGrid.points,
             pointsGridSize = _cubesGrid._pointsGrid.size,
             indexes = _cubesGrid._cellsGrid.indexes,
-            cellIndexes = _cellIndexes
+            cellsMap = _cellsMap
         };
         for (int x = fromIds.x; x < toIds.x; x++)
         {
@@ -74,20 +84,25 @@ public class DeformableMesh : MonoBehaviour
                 for (int z = fromIds.z; z < toIds.z; z++)
                 {
                     int _index = (x * _gridSize.y * _gridSize.z) + (y * _gridSize.z) + z;
-                    _cellIndexes[_index] = new int3(x, y, z);
+                    _cellsMap[_index] = new int3(x, y, z);
                 }
             }
         }
-        var _handle = _triangulateJob.ScheduleBatch(_triangulateJob.indexes.Length, 36);
-        _jobsHandles.Add(_handle);
-        JobHandle.CompleteAll(_jobsHandles);
-        _triangulateJob.cellIndexes.Dispose();
-        // _cubesGrid.PullVerticesInRange(fromIds, toIds);
-        _cubesGrid.GetMesh(_meshFilter);
+        var _handle = _triangulateJob.ScheduleBatch(_triangulateJob.indexes.Length, 36, JobHandle.CombineDependencies(_jobsCutHandles));
+        _jobsTriangulateHandles.Add(_handle);
+        _jobsHandles.AddRange(_jobsTriangulateHandles);
+        
+        _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
     }
 
     public void CutSphere(float3 sphereCenter, float sphereRadius)
     {
+        _jobsHandles.Clear();
+        _jobsCutHandles.Clear();
+        _jobsPullHandles.Clear();
+
+        NativeArray<int3> _pointsMap = new NativeArray<int3>(_cubesGrid._pointsGrid.points.Length, Allocator.TempJob);
+
         //find cubes to cut
         int _cellsCount = (int)(sphereRadius / _cellSize + 1);
         int3 _from, _to;
@@ -102,26 +117,37 @@ public class DeformableMesh : MonoBehaviour
             sphereCenter = sphereCenter,
             sphereRadius = sphereRadius,
             cellSize = _cellSize,
-            zStart = _from.z
+            pointsMap = _pointsMap
         };
         //iterate in active points
         for (int x = _from.x; x < (_to.x + 1); x++)
         {
             for (int y = _from.y; y < (_to.y + 1); y++)
             {
-                //code on jobs
-                _cutJob.x = x;
-                _cutJob.y = y;
-                _cutJob.startIndex = (x * (_gridSize.y + 1) * (_gridSize.z + 1)) + (y * (_gridSize.z + 1)) + _from.z;
-                var _count = ((_to.z + 1) - _from.z);
-                var _handle = _cutJob.Schedule(_count, _count);
-                _jobsHandles.Add(_handle);
+                for (int z = _from.z; z < (_to.z + 1); z++)
+                {
+                    int _index = (x * (_gridSize.y + 1) * (_gridSize.z + 1)) + (y * (_gridSize.z + 1)) + z;
+                    _pointsMap[_index] = new int3(x, y, z);
+                }
             }
         }
+        var _handle = _cutJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10));
+        _jobsCutHandles.Add(_handle);
+        _jobsHandles.AddRange(_jobsCutHandles);
 
-        //complete jobs
-        JobHandle.CompleteAll(_jobsHandles);
-        _jobsHandles.Clear();
+        //pull vertices
+        PullVerticesJob _pullVerticesJob = new PullVerticesJob
+        {
+            points = _cubesGrid._pointsGrid.points,
+            pointsMap = _pointsMap,
+            cellSize = _cellSize,
+            gridSize = _gridSize,
+            vertices = _cubesGrid._verticesArray
+        };
+
+        _handle = _pullVerticesJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10), JobHandle.CombineDependencies(_jobsCutHandles));
+        _jobsPullHandles.Add(_handle);
+        _jobsHandles.AddRange(_jobsPullHandles);
 
         UpdateMesh(_from, _to);
     }
@@ -131,11 +157,6 @@ public class DeformableMesh : MonoBehaviour
         public float cellSize;
         public int3 gridSize;
 
-        public NativeArray<float>[,] points;
-        public Cell[,,] grid;
-
-        private Vector3[] _vertices;
-        private List<int> _triangles;
         private Mesh _mesh;
 
         VertexAttributeDescriptor[] _layout;
@@ -206,28 +227,7 @@ public class DeformableMesh : MonoBehaviour
             _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
         }
 
-        public void PullVerticesInRange(int3 fromIds, int3 toIds)
-        {
-            toIds += new int3(1, 1, 1);
-            for (int x = fromIds.x; x < toIds.x; x++)
-            {
-                for (int y = fromIds.y; y < toIds.y; y++)
-                {
-                    for (int z = fromIds.z; z < toIds.z; z++)
-                    {
-                        int3 _pointId = new int3(x, y, z);
-                        float3 _pointPos = GetPointPosition(_pointId);
-                        float _pointValue = points[x, y][z];
-                        if (PullPointToConnected(ref _pointPos, _pointId, _pointValue))
-                        {
-                            _vertices[GetPointToVertexIndex(_pointId)] = _pointPos;
-                        }
-                    }
-                }
-            }
-        }
-
-        public void GetMesh(MeshFilter filter)
+        public void GetMesh(MeshFilter filter, NativeList<JobHandle> jobHandles)
         {
             _indexesList = new NativeList<int>(_cellsGrid.indexes.Length, Allocator.TempJob);
 
@@ -237,7 +237,9 @@ public class DeformableMesh : MonoBehaviour
                 indexesList = _indexesList
             };
 
-            _copyIndexesJob.Schedule().Complete();
+            var _handle = _copyIndexesJob.Schedule(JobHandle.CombineDependencies(jobHandles));
+            jobHandles.Add(_handle);
+            JobHandle.CompleteAll(jobHandles);
 
             _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
             _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
@@ -254,376 +256,12 @@ public class DeformableMesh : MonoBehaviour
             _indexesList.Dispose();
         }
         
-        private int GetPointToVertexIndex(int3 pointId)
-        {
-            return (pointId.x * (gridSize.y + 1) * (gridSize.z + 1)) + (pointId.y * (gridSize.z + 1)) + pointId.z;
-        }
-
         public float3 GetPointPosition(int3 pointId)
         {
             return new float3((cellSize * pointId.x), (cellSize * pointId.y), (cellSize * pointId.z));
         }
-
-        private bool PullPointToConnected(ref float3 pointPosition, int3 pointId, float pointValue)
-        {
-            int _connectedCount = 0;
-            float3 _pullVector;
-            float _pullValue = 1 - pointValue;
-
-            // return true;
-            //pull on x
-            if (pointId.x >= 0 && pointId.x <= gridSize.x)
-            {
-                if (pointId.x == 0)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x + 1, pointId.y, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (pointId.x == gridSize.x)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x - 1, pointId.y, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                } 
-                else if (points[pointId.x - 1, pointId.y][pointId.z] > 0 && points[pointId.x + 1, pointId.y][pointId.z] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x - 1, pointId.y, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (points[pointId.x + 1, pointId.y][pointId.z] > 0 && points[pointId.x - 1, pointId.y][pointId.z] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x + 1, pointId.y, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-            }
-            //pull on y
-            if (pointId.y >= 0 && pointId.y <= gridSize.y)
-            {
-                if (pointId.y == 0)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y + 1, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (pointId.y == gridSize.y)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y - 1, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                } 
-                else if (points[pointId.x, pointId.y - 1][pointId.z] > 0 && points[pointId.x, pointId.y + 1][pointId.z] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y - 1, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (points[pointId.x, pointId.y + 1][pointId.z] > 0 && points[pointId.x, pointId.y - 1][pointId.z] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y + 1, pointId.z)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-            }
-            //pull on z
-            if (pointId.z >= 0 && pointId.z <= gridSize.z)
-            {
-                if (pointId.z == 0)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y, pointId.z + 1)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (pointId.z == gridSize.z)
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y, pointId.z - 1)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                } 
-                else if (points[pointId.x, pointId.y][pointId.z - 1] > 0 && points[pointId.x, pointId.y][pointId.z + 1] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y, pointId.z - 1)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-                else if (points[pointId.x, pointId.y][pointId.z + 1] > 0 && points[pointId.x, pointId.y][pointId.z - 1] <= 0)//if connected is active point
-                {
-                    _connectedCount++;
-                    _pullVector = GetPointPosition(new int3(pointId.x, pointId.y, pointId.z + 1)) - pointPosition;
-                    pointPosition += (_pullVector * _pullValue);
-                }
-            }
-            if (_connectedCount == 6)
-                return false;
-            else
-                return true;
-        }
-    
-        private int[] _faceIndexes, _mirrorFaceIndexes;
-
-        public void TriangulateCube(int3 index)
-        {
-            //check if already created
-            if (grid[index.x, index.y, index.z].triangles == null)
-            {
-                grid[index.x, index.y, index.z].Create(index);
-            }
-            else
-            {
-                grid[index.x, index.y, index.z].triangles.Clear();
-            }
-            //check faces visibility
-            int3 _faceNormal;
-
-            //check front face
-            _faceIndexes[0] = 0;
-            _faceIndexes[1] = 1;
-            _faceIndexes[2] = 2;
-            _faceIndexes[3] = 3;
-            //
-            _mirrorFaceIndexes[0] = 4;
-            _mirrorFaceIndexes[1] = 5;
-            _mirrorFaceIndexes[2] = 6;
-            _mirrorFaceIndexes[3] = 7;
-            //
-            _faceNormal = new int3(0, 0, -1);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-
-            //check back face
-            _faceIndexes[0] = 7;
-            _faceIndexes[1] = 6;
-            _faceIndexes[2] = 5;
-            _faceIndexes[3] = 4;
-            //
-            _mirrorFaceIndexes[0] = 3;
-            _mirrorFaceIndexes[1] = 2;
-            _mirrorFaceIndexes[2] = 1;
-            _mirrorFaceIndexes[3] = 0;
-            //
-            _faceNormal = new int3(0, 0, 1);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-
-            //check left face
-            _faceIndexes[0] = 4;
-            _faceIndexes[1] = 5;
-            _faceIndexes[2] = 1;
-            _faceIndexes[3] = 0;
-            //
-            _mirrorFaceIndexes[0] = 7;
-            _mirrorFaceIndexes[1] = 6;
-            _mirrorFaceIndexes[2] = 2;
-            _mirrorFaceIndexes[3] = 3;
-            //
-            _faceNormal = new int3(-1, 0, 0);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-
-            //check right face
-            _faceIndexes[0] = 3;
-            _faceIndexes[1] = 2;
-            _faceIndexes[2] = 6;
-            _faceIndexes[3] = 7;
-            //
-            _mirrorFaceIndexes[0] = 0;
-            _mirrorFaceIndexes[1] = 1;
-            _mirrorFaceIndexes[2] = 5;
-            _mirrorFaceIndexes[3] = 4;
-            //
-            _faceNormal = new int3(1, 0, 0);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-
-            //check top face
-            _faceIndexes[0] = 1;
-            _faceIndexes[1] = 5;
-            _faceIndexes[2] = 6;
-            _faceIndexes[3] = 2;
-            //
-            _mirrorFaceIndexes[0] = 0;
-            _mirrorFaceIndexes[1] = 4;
-            _mirrorFaceIndexes[2] = 7;
-            _mirrorFaceIndexes[3] = 3;
-            //
-            _faceNormal = new int3(0, 1, 0);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-
-            //check bottom face
-            _faceIndexes[0] = 3;
-            _faceIndexes[1] = 7;
-            _faceIndexes[2] = 4;
-            _faceIndexes[3] = 0;
-            //
-            _mirrorFaceIndexes[0] = 2;
-            _mirrorFaceIndexes[1] = 6;
-            _mirrorFaceIndexes[2] = 5;
-            _mirrorFaceIndexes[3] = 1;
-            //
-            _faceNormal = new int3(0, -1, 0);
-            if (CheckFaceVisible(_faceIndexes, _faceNormal, index))
-            {
-                TriangulateFace(_faceIndexes, _mirrorFaceIndexes, index);
-            }
-        }
-
-        private bool[] _pointStates;
-
-        private bool CheckFaceVisible(int[] faceIndexes, int3 faceNormal, int3 cellId)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                var _pointId = grid[cellId.x, cellId.y, cellId.z].vertexIndexes[faceIndexes[i]] + faceNormal;
-                //check boundaries
-                if (faceNormal.x != 0)
-                {
-                    if (_pointId.x < 0 || _pointId.x > gridSize.x)//always visible if on edge
-                        return true;
-                }
-                if (faceNormal.y != 0)
-                {
-                    if (_pointId.y < 0 || _pointId.y > gridSize.y)//always visible if on edge
-                        return true;
-                }
-                if (faceNormal.z != 0)
-                {
-                    if (_pointId.z < 0 || _pointId.z > gridSize.z)//always visible if on edge
-                        return true;
-                }
-                //check visible
-                if (points[_pointId.x, _pointId.y][_pointId.z] <= 0)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-    
-        private void TriangulateFace(int[] faceIndexes, int[] mirrorFaceIndexes, int3 cellId)
-        {
-            var _cubeTriangles = grid[cellId.x, cellId.y, cellId.z].triangles;
-            var _cubePoints = grid[cellId.x, cellId.y, cellId.z].vertexIndexes;
-
-            //check face points
-            for (int i = 0; i < 4; i++)
-            {
-                var _pointId = _cubePoints[faceIndexes[i]];
-                var _pointValue = points[_pointId.x, _pointId.y][_pointId.z];
-
-                _pointStates[i] = true;
-
-                if (_pointValue <= 0)
-                {
-                    _pointId = _cubePoints[mirrorFaceIndexes[i]];
-                    _pointValue = points[_pointId.x, _pointId.y][_pointId.z];
-
-                    if (_pointValue > 0)
-                    {
-                        faceIndexes[i] = mirrorFaceIndexes[i];
-                    }
-                    else
-                    {
-                        _pointStates[i] = false;
-                    }
-                }
-            }
-
-            //try take first triangle
-            if (_pointStates[0])
-            {
-                bool _oneFound = false;
-                if (_pointStates[1])
-                {
-                    if (_pointStates[2])
-                    {
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
-                        _oneFound = true;
-                    }
-                }
-                //try take second triangle
-                if (_pointStates[2])
-                {
-                    if (_pointStates[3])
-                    {
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
-                        _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
-                        _oneFound = true;
-                    }
-                }
-                //try different pattern
-                if (!_oneFound)
-                {
-                    if (_pointStates[1])
-                    {
-                        if (_pointStates[3])
-                        {
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[0]]));
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
-                        }
-                    }
-                }
-            }
-            else //try start from second point
-            {
-                if (_pointStates[1])
-                {
-                    if (_pointStates[2])
-                    {
-                        if (_pointStates[3])
-                        {
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[1]]));
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[2]]));
-                            _cubeTriangles.Add(GetPointToVertexIndex(_cubePoints[faceIndexes[3]]));
-                        }
-                    }
-                    //only one triangle can be built in that situation
-                }
-            }
-        }
     }
 
-    public struct Cell
-    {
-        public List<int> triangles;
-
-        public int3[] vertexIndexes;
-
-        public void Create(int3 index)
-        {
-            triangles = new List<int>(36);
-            vertexIndexes = new int3[8];
-
-            //associate vertices and points
-            vertexIndexes[0] = index;
-            vertexIndexes[1] = new int3(index.x, index.y + 1, index.z);
-            vertexIndexes[2] = new int3(index.x + 1, index.y + 1, index.z);
-            vertexIndexes[3] = new int3(index.x + 1, index.y, index.z);
-            vertexIndexes[4] = new int3(index.x, index.y, index.z + 1);
-            vertexIndexes[5] = new int3(index.x, index.y + 1, index.z + 1);
-            vertexIndexes[6] = new int3(index.x + 1, index.y + 1, index.z + 1);
-            vertexIndexes[7] = new int3(index.x + 1, index.y, index.z + 1);
-        }
-    }
-
-    [BurstCompile]
     public struct NativeCubeGrid : System.IDisposable
     {
         public NativeArray<byte> points;
@@ -688,7 +326,6 @@ public class DeformableMesh : MonoBehaviour
         }
     }
 
-    [BurstCompile]
     public struct NativeCellGrid : System.IDisposable
     {
         public NativeArray<int> indexes;
@@ -727,14 +364,12 @@ public class DeformableMesh : MonoBehaviour
         }
     }
 
-    [BurstCompile]
     public struct Cube
     {
         public int3 zero, one, two, three, four, five, six, seven;
         public bool isZero, isOne, isTwo, isThree, isFour, isFive, isSix, isSeven;
     }
 
-    [BurstCompile]
     public struct Face
     {
         public int3 zero, one, two, three;
@@ -746,21 +381,23 @@ public class DeformableMesh : MonoBehaviour
     [BurstCompile]
     private struct CutSphereJob : IJobParallelFor
     {
-        [Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestriction] 
         public NativeArray<byte> points;
 
-        [ReadOnly] public float3 sphereCenter;
-        [ReadOnly] public float cellSize, sphereRadius;
-        [ReadOnly] public int x, y, zStart;
-        [ReadOnly] public int startIndex;
+        [ReadOnly] public NativeArray<int3> pointsMap;
+
+        public float3 sphereCenter;
+        public float cellSize, sphereRadius;
 
         public void Execute(int index)
         {
-            var _pointId = index + startIndex;
+            int3 _currentPointId = pointsMap[index];
+            if (_currentPointId.Equals(int3.zero) && index != 0)
+                return;
 
-            if (points[_pointId] > 0)
+
+            if (points[index] > 0)
             {
-                float3 _toPoint = GetPointPosition(new int3(x, y, (zStart + index)), cellSize) - sphereCenter;
+                float3 _toPoint = GetPointPosition(_currentPointId) - sphereCenter;
                 _toPoint *= _toPoint; //square
                 float _dist = math.sqrt(_toPoint.x + _toPoint.y + _toPoint.z);
                 _dist -= sphereRadius;
@@ -769,14 +406,84 @@ public class DeformableMesh : MonoBehaviour
                 float _value = math.clamp(_dist, 0, 1);
 
                 byte _pValue = (byte)math.lerp(0, 255, _value);
-                if (_pValue < 200)
+                if (_pValue < 130)
                     _pValue = 0;
-                if (_dist < points[_pointId])
-                    points[_pointId] = _pValue;
+                if (_pValue < points[index])
+                    points[index] = _pValue;
             }
         }
 
-        private float3 GetPointPosition(int3 pointId, float cellSize)
+        private float3 GetPointPosition(int3 pointId)
+        {
+            return new float3((cellSize * pointId.x), (cellSize * pointId.y), (cellSize * pointId.z));
+        }
+    }
+
+    [BurstCompile]
+    private struct PullVerticesJob : IJobParallelFor
+    {
+        [ReadOnly] public NativeArray<byte> points;
+        [ReadOnly][DeallocateOnJobCompletion] public NativeArray<int3> pointsMap;
+
+        public float cellSize;
+        public int3 gridSize;
+
+        [WriteOnly] public NativeArray<float3> vertices;
+
+        public void Execute(int index)
+        {
+            int3 _currentPointId = pointsMap[index];
+            if (_currentPointId.Equals(int3.zero) && index != 0)
+                return;
+
+            float3 _vertexPos = GetPointPosition(_currentPointId);
+            float3 _pointPos = _vertexPos;
+            float3 _pullVector = float3.zero;
+            float _pullValue = 1 - ((float)points[index] / 255);
+            int3 _firstAnchorId, _secondAnchorId;
+            float3 _firstAnchor, _secondAnchor;
+
+            //pull on x
+            _firstAnchorId = math.clamp(_currentPointId + new int3(1, 0, 0), int3.zero, gridSize);
+            _secondAnchorId = math.clamp(_currentPointId + new int3(-1, 0, 0), int3.zero, gridSize);
+            _firstAnchor = GetPointPosition(_firstAnchorId);
+            _secondAnchor = GetPointPosition(_secondAnchorId);
+            //pull to first
+            _pullVector = (_firstAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+            //pull to second
+            _pullVector = (_secondAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+
+            //pull on y
+            _firstAnchorId = math.clamp(_currentPointId + new int3(0, 1, 0), int3.zero, gridSize);
+            _secondAnchorId = math.clamp(_currentPointId + new int3(0, -1, 0), int3.zero, gridSize);
+            _firstAnchor = GetPointPosition(_firstAnchorId);
+            _secondAnchor = GetPointPosition(_secondAnchorId);
+            //pull to first
+            _pullVector = (_firstAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+            //pull to second
+            _pullVector = (_secondAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+
+            //pull on z
+            _firstAnchorId = math.clamp(_currentPointId + new int3(0, 0, 1), int3.zero, gridSize);
+            _secondAnchorId = math.clamp(_currentPointId + new int3(0, 0, -1), int3.zero, gridSize);
+            _firstAnchor = GetPointPosition(_firstAnchorId);
+            _secondAnchor = GetPointPosition(_secondAnchorId);
+            //pull to first
+            _pullVector = (_firstAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+            //pull to second
+            _pullVector = (_secondAnchor - _vertexPos) * _pullValue;
+            _vertexPos += _pullVector;
+
+            //write new vertex pos
+            vertices[index] = _vertexPos;
+        }
+
+        private float3 GetPointPosition(int3 pointId)
         {
             return new float3((cellSize * pointId.x), (cellSize * pointId.y), (cellSize * pointId.z));
         }
@@ -788,14 +495,14 @@ public class DeformableMesh : MonoBehaviour
         [ReadOnly] public NativeArray<byte> points;
         [ReadOnly] public int3 pointsGridSize;
 
-        [ReadOnly] public NativeArray<int3> cellIndexes;
+        [ReadOnly][DeallocateOnJobCompletion] public NativeArray<int3> cellsMap;
 
         [WriteOnly] public NativeArray<int> indexes;
 
         public void Execute(int startIndex, int count)
         {
             // bool _miss = true;
-            int3 _currentCellId = cellIndexes[startIndex / 36];
+            int3 _currentCellId = cellsMap[startIndex / 36];
             if (_currentCellId.Equals(int3.zero) && startIndex != 0)
                 return;
 
