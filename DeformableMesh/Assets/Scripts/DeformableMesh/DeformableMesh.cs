@@ -9,6 +9,8 @@ using UnityEngine.Rendering;
 
 public class DeformableMesh : MonoBehaviour
 {
+    [SerializeField] Material _meshMaterial;
+
     //
     [SerializeField] private float _cellSize;
     [SerializeField] private int3 _gridSize;
@@ -17,11 +19,20 @@ public class DeformableMesh : MonoBehaviour
 
     private MeshGridData _cubesGrid;
 
+    //for batches
+    [SerializeField] private int _maxBatchCellSize;
+
+    private MeshBatch[,,] _meshBatches;
+    private int3 _batchesGridSize;
+    private int _batchIndexesCount;
+    private int _batchVerticesCount;
+
     //for jobs
     private NativeList<JobHandle> _jobsHandles;
     private NativeList<JobHandle> _jobsCutHandles;
     private NativeList<JobHandle> _jobsPullHandles;
     private NativeList<JobHandle> _jobsTriangulateHandles;
+    private NativeList<JobHandle> _jobsUpdateBatchesHandles;
 
     void Update()
     {
@@ -35,11 +46,15 @@ public class DeformableMesh : MonoBehaviour
 
         _cubesGrid.Create(_cellSize, _gridSize);
 
-        _meshFilter = GetComponent<MeshFilter>();
+        InitializeBatchGrid();
+        // _meshFilter = GetComponent<MeshFilter>();
         UpdateMesh(new int3(0, 0, 0), _gridSize);
         var _boxCollider = gameObject.AddComponent<BoxCollider>();
         _boxCollider.size = new Vector3(_gridSize.x * _cellSize, _gridSize.y * _cellSize, _gridSize.z * _cellSize);
         _boxCollider.center = new Vector3(_gridSize.x * _cellSize / 2, _gridSize.y * _cellSize / 2, _gridSize.z * _cellSize / 2);
+
+        //
+
     }
 
     void OnDestroy()
@@ -54,6 +69,7 @@ public class DeformableMesh : MonoBehaviour
         _jobsCutHandles = new NativeList<JobHandle>(Allocator.Persistent);
         _jobsPullHandles = new NativeList<JobHandle>(Allocator.Persistent);
         _jobsTriangulateHandles = new NativeList<JobHandle>(Allocator.Persistent);
+        _jobsUpdateBatchesHandles = new NativeList<JobHandle>(Allocator.Persistent);
     }
 
     private void DisposeContainers()
@@ -62,6 +78,7 @@ public class DeformableMesh : MonoBehaviour
         _jobsCutHandles.Dispose();
         _jobsPullHandles.Dispose();
         _jobsTriangulateHandles.Dispose();
+        _jobsUpdateBatchesHandles.Dispose();
     }
 
     private void UpdateMesh(int3 fromIds, int3 toIds)
@@ -92,7 +109,10 @@ public class DeformableMesh : MonoBehaviour
         _jobsTriangulateHandles.Add(_handle);
         _jobsHandles.AddRange(_jobsTriangulateHandles);
         
-        _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
+        // _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
+
+        //batches
+        UpdateBatches(int3.zero, new int3(2, 2, 2));
     }
 
     public void CutSphere(float3 sphereCenter, float sphereRadius)
@@ -152,6 +172,146 @@ public class DeformableMesh : MonoBehaviour
         UpdateMesh(_from, _to);
     }
 
+    private void InitializeBatchGrid()
+    {
+        //find batches grid size
+        //find x
+        _batchesGridSize.x = _gridSize.x / _maxBatchCellSize;
+        if (_gridSize.x % _maxBatchCellSize != 0)
+            _batchesGridSize.x++;
+        //find y
+        _batchesGridSize.y = _gridSize.y / _maxBatchCellSize;
+        if (_gridSize.y % _maxBatchCellSize != 0)
+            _batchesGridSize.y++;
+        //find z
+        _batchesGridSize.z = _gridSize.z / _maxBatchCellSize;
+        if (_gridSize.z % _maxBatchCellSize != 0)
+            _batchesGridSize.z++;
+
+        //find max indexes and vertices count for batch
+        _batchIndexesCount = _maxBatchCellSize * _maxBatchCellSize * _maxBatchCellSize * 36;
+        _batchVerticesCount = (_maxBatchCellSize + 1) * (_maxBatchCellSize + 1) * (_maxBatchCellSize + 1);
+
+        //create batches grid
+        _meshBatches = new MeshBatch[_batchesGridSize.x, _batchesGridSize.y, _batchesGridSize.z];
+        for (int x = 0; x < _batchesGridSize.x; x++)
+        {
+            for (int y = 0; y < _batchesGridSize.y; y++)
+            {
+                for (int z = 0; z < _batchesGridSize.z; z++)
+                {
+                    _meshBatches[x, y, z].instance = new GameObject("Batch: " + new int3(x, y, z).ToString());
+                    _meshBatches[x, y, z].instance.transform.parent = transform;
+                    //set position
+                    float _batchSideSize = _maxBatchCellSize * _cellSize;
+                    Vector3 _pos = new Vector3((x * _batchSideSize), (y * _batchSideSize), (z * _batchSideSize));
+                    _meshBatches[x, y, z].instance.transform.localPosition = _pos;
+                    //add mesh components
+                    _meshBatches[x, y, z].meshFilter = _meshBatches[x, y, z].instance.AddComponent<MeshFilter>();
+                    _meshBatches[x, y, z].instance.AddComponent<MeshRenderer>().sharedMaterial = _meshMaterial;
+                }
+            }
+        }
+    }
+
+    private void UpdateBatches(int3 fromIds, int3 toIds)
+    {
+        _jobsUpdateBatchesHandles.Clear();
+
+        CopyBatchIndexesJob _copyBatchIndexesJob = new CopyBatchIndexesJob
+        {
+            indexes = _cubesGrid._cellsGrid.indexes,
+            gridSize = _gridSize,
+            batchSize = _maxBatchCellSize
+        };
+
+        CopyBatchVerticesJob _copyBatchVerticesJob = new CopyBatchVerticesJob
+        {
+            vertices = _cubesGrid._verticesArray,
+            gridSize = _gridSize,
+            cellSize = _cellSize,
+            batchSize = _maxBatchCellSize
+        };
+
+        var _dependencyIndexes = JobHandle.CombineDependencies(_jobsTriangulateHandles);
+        var _dependencyVertices = JobHandle.CombineDependencies(_jobsPullHandles);
+
+        for (int x = fromIds.x; x < toIds.x; x++)
+        {
+            for (int y = fromIds.y; y < toIds.y; y++)
+            {
+                for (int z = fromIds.z; z < toIds.z; z++)
+                {
+                    int3 _batchId = new int3(x, y, z);
+                    _meshBatches[x, y, z].batchIndexes = new NativeList<int>(_batchIndexesCount, Allocator.TempJob);
+                    _meshBatches[x, y, z].batchVertices = new NativeList<float3>(_batchVerticesCount, Allocator.TempJob);
+                    //schedule job indexes
+                    _copyBatchIndexesJob.batchId = _batchId;
+                    _copyBatchIndexesJob.batchIndexes = _meshBatches[x, y, z].batchIndexes;
+                    var _handle = _copyBatchIndexesJob.Schedule(_dependencyIndexes);
+                    _jobsUpdateBatchesHandles.Add(_handle);
+                    //schedule job vertices
+                    _copyBatchVerticesJob.batchId = _batchId;
+                    _copyBatchVerticesJob.batchVertices = _meshBatches[x, y, z].batchVertices;
+                    _handle = _copyBatchVerticesJob.Schedule(_dependencyVertices);
+                    _jobsUpdateBatchesHandles.Add(_handle);
+                }
+            }
+        }
+
+        _jobsHandles.AddRange(_jobsUpdateBatchesHandles);
+        UpdateBatchesMeshes(fromIds, toIds);
+    }
+
+    private void UpdateBatchesMeshes(int3 fromIds, int3 toIds)
+    {
+        JobHandle.CompleteAll(_jobsHandles);
+
+        //update meshes
+        for (int x = fromIds.x; x < toIds.x; x++)
+        {
+            for (int y = fromIds.y; y < toIds.y; y++)
+            {
+                for (int z = fromIds.z; z < toIds.z; z++)
+                {
+                    if (_meshBatches[x, y, z].batchIndexes.Length > 0) //check if any indexes were added
+                    {
+                        if (_meshBatches[x, y, z].meshFilter.sharedMesh == null)
+                            _meshBatches[x, y, z].meshFilter.sharedMesh = new Mesh();
+
+                        //update batch vertices and indexes
+                        // var _mesh = _meshBatches[x, y, z].meshFilter.sharedMesh;
+                        // int _indexesCount = _meshBatches[x, y, z].batchIndexes.Length;
+                        int _vertexCount = _meshBatches[x, y, z].batchVertices.Length;
+                        print(_vertexCount);
+                        // _mesh.SetVertexBufferParams(_vertexCount, _cubesGrid._layout);
+                        // _mesh.SetVertexBufferData(_meshBatches[x, y, z].batchVertices.AsArray(), 0, 0, _vertexCount);
+                        // _mesh.SetIndexBufferParams(_indexesCount, IndexFormat.UInt32);
+                        // _mesh.SetIndexBufferData(_meshBatches[x, y, z].batchIndexes.AsArray(), 0, 0, _indexesCount);
+                        // SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesCount);
+                        // _mesh.subMeshCount = 1;
+                        // _mesh.SetSubMesh(0, _smd);
+                        // _mesh.RecalculateBounds();
+                        // _mesh.RecalculateNormals();
+                        // _mesh.RecalculateTangents();
+                    }
+                    //deallocate temporal containers
+                    _meshBatches[x, y, z].batchIndexes.Dispose();
+                    _meshBatches[x, y, z].batchVertices.Dispose();
+                }
+            }
+        }
+    }
+
+
+    public struct MeshBatch
+    {
+        public GameObject instance;
+        public MeshFilter meshFilter;
+        public NativeList<int> batchIndexes;
+        public NativeList<float3> batchVertices;
+    }
+
     public struct MeshGridData : System.IDisposable
     {
         public float cellSize;
@@ -159,7 +319,7 @@ public class DeformableMesh : MonoBehaviour
 
         private Mesh _mesh;
 
-        VertexAttributeDescriptor[] _layout;
+        public VertexAttributeDescriptor[] _layout;
 
 
         #region Native
@@ -172,7 +332,6 @@ public class DeformableMesh : MonoBehaviour
         public NativeList<int> _indexesList;
             
         #endregion
-
 
 
         public void Create(float cellSize, int3 gridSize)
@@ -869,9 +1028,89 @@ public class DeformableMesh : MonoBehaviour
         {
             for (int i = 0; i < indexes.Length; i++)
             {
-                if (indexes[i] >= 0)
-                    indexesList.Add(indexes[i]);
+                int _index = indexes[i];
+                if (_index >= 0)
+                    indexesList.Add(_index);
             }
+        }
+    }
+
+    [BurstCompile]
+    private struct CopyBatchIndexesJob : IJob
+    {
+        [ReadOnly] public NativeArray<int> indexes;
+
+        public int3 gridSize;
+        public int3 batchId;
+        public int batchSize;
+
+        [WriteOnly] public NativeList<int> batchIndexes;
+
+        public void Execute()
+        {
+            int3 _from = batchId * batchSize;
+            int3 _to = math.clamp((_from + new int3(batchSize, batchSize, batchSize)), _from, gridSize);
+
+            for (int x = _from.x; x < _to.x; x++)
+            {
+                for (int y = _from.y; y < _to.y; y++)
+                {
+                    for (int z = _from.z; z < _to.z; z++)
+                    {
+                        int _startIndex = GetCellStartIndex(new int3(x, y, z));
+                        int _endIndex = _startIndex + 36;
+                        //copy cell indexes
+                        for (int i = _startIndex; i < _endIndex; i++)
+                        {
+                            int _index = indexes[i];
+                            if (_index >= 0)
+                                batchIndexes.Add(_index - _startIndex);
+                        }
+                    }
+                }
+            }
+        }
+
+        private int GetCellStartIndex(int3 cellIds)
+        {
+            return ((cellIds.x * gridSize.y * gridSize.z) + (cellIds.y * gridSize.z) + cellIds.z) * 36;
+        }
+    }
+
+    [BurstCompile]
+    private struct CopyBatchVerticesJob : IJob
+    {
+        [ReadOnly] public NativeArray<float3> vertices;
+
+        public int3 gridSize;
+        public int3 batchId;
+        public int batchSize;
+        public float cellSize;
+
+        [WriteOnly] public NativeList<float3> batchVertices;
+
+        public void Execute()
+        {
+            int3 _from = batchId * batchSize;
+            int3 _to = math.clamp((_from + new int3((batchSize + 1), (batchSize + 1), (batchSize + 1))), _from, (gridSize + new int3(1, 1, 1)));
+
+            float3 _batchOffset = new float3((batchId.x * batchSize * cellSize), (batchId.y * batchSize * cellSize), (batchId.z * batchSize * cellSize));
+
+            for (int x = _from.x; x < _to.x; x++)
+            {
+                for (int y = _from.y; y < _to.y; y++)
+                {
+                    for (int z = _from.z; z < _to.z; z++)
+                    {
+                        batchVertices.Add(vertices[0] - _batchOffset);
+                    }
+                }
+            }
+        }
+
+        private int GetPointIndex(int3 pointIds)
+        {
+            return ((pointIds.x * (gridSize.y + 1) * (gridSize.z + 1)) + (pointIds.y * (gridSize.z + 1)) + pointIds.z) * 36;
         }
     }
 

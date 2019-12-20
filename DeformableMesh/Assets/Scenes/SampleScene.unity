@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 1619971438}
   - component: {fileID: 1619971437}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DeformableMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,11 +795,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fee3b3ddd963b546b042b00cd3a934c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshMaterial: {fileID: 2100000, guid: 9b8eadc4de0544646b75ddcc43f8fd06, type: 2}
   _cellSize: 0.02
   _gridSize:
     x: 40
     y: 40
     z: 40
+  _maxBatchCellSize: 20
 --- !u!23 &1619971438
 MeshRenderer:
   m_ObjectHideFlags: 0
