@@ -112,7 +112,7 @@ public class DeformableMesh : MonoBehaviour
         // _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
 
         //batches
-        UpdateBatches(int3.zero, new int3(2, 2, 2));
+        UpdateBatches(int3.zero, new int3(1, 1, 1));
     }
 
     public void CutSphere(float3 sphereCenter, float sphereRadius)
@@ -280,20 +280,19 @@ public class DeformableMesh : MonoBehaviour
                             _meshBatches[x, y, z].meshFilter.sharedMesh = new Mesh();
 
                         //update batch vertices and indexes
-                        // var _mesh = _meshBatches[x, y, z].meshFilter.sharedMesh;
-                        // int _indexesCount = _meshBatches[x, y, z].batchIndexes.Length;
+                        var _mesh = _meshBatches[x, y, z].meshFilter.sharedMesh;
+                        int _indexesCount = _meshBatches[x, y, z].batchIndexes.Length;
                         int _vertexCount = _meshBatches[x, y, z].batchVertices.Length;
-                        print(_vertexCount);
-                        // _mesh.SetVertexBufferParams(_vertexCount, _cubesGrid._layout);
-                        // _mesh.SetVertexBufferData(_meshBatches[x, y, z].batchVertices.AsArray(), 0, 0, _vertexCount);
-                        // _mesh.SetIndexBufferParams(_indexesCount, IndexFormat.UInt32);
-                        // _mesh.SetIndexBufferData(_meshBatches[x, y, z].batchIndexes.AsArray(), 0, 0, _indexesCount);
-                        // SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesCount);
-                        // _mesh.subMeshCount = 1;
-                        // _mesh.SetSubMesh(0, _smd);
-                        // _mesh.RecalculateBounds();
-                        // _mesh.RecalculateNormals();
-                        // _mesh.RecalculateTangents();
+                        _mesh.SetVertexBufferParams(_vertexCount, _cubesGrid._layout);
+                        _mesh.SetVertexBufferData(_meshBatches[x, y, z].batchVertices.AsArray(), 0, 0, _vertexCount);
+                        _mesh.SetIndexBufferParams(_indexesCount, IndexFormat.UInt32);
+                        _mesh.SetIndexBufferData(_meshBatches[x, y, z].batchIndexes.AsArray(), 0, 0, _indexesCount);
+                        SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesCount);
+                        _mesh.subMeshCount = 1;
+                        _mesh.SetSubMesh(0, _smd);
+                        _mesh.RecalculateBounds();
+                        _mesh.RecalculateNormals();
+                        _mesh.RecalculateTangents();
                     }
                     //deallocate temporal containers
                     _meshBatches[x, y, z].batchIndexes.Dispose();
@@ -1059,12 +1058,15 @@ public class DeformableMesh : MonoBehaviour
                     {
                         int _startIndex = GetCellStartIndex(new int3(x, y, z));
                         int _endIndex = _startIndex + 36;
+                        int _startVertex = _startIndex / 36;
                         //copy cell indexes
                         for (int i = _startIndex; i < _endIndex; i++)
                         {
                             int _index = indexes[i];
+                            int _cubeIndex = _index - _startVertex;
+                            Debug.Log(_cubeIndex);
                             if (_index >= 0)
-                                batchIndexes.Add(_index - _startIndex);
+                                batchIndexes.Add(_cubeIndex);
                         }
                     }
                 }
@@ -1102,15 +1104,15 @@ public class DeformableMesh : MonoBehaviour
                 {
                     for (int z = _from.z; z < _to.z; z++)
                     {
-                        batchVertices.Add(vertices[0] - _batchOffset);
+                        batchVertices.Add(vertices[GetPointIndex(new int3(x, y, z))] - _batchOffset);
                     }
                 }
             }
         }
 
-        private int GetPointIndex(int3 pointIds)
+        private int GetPointIndex(int3 pointId)
         {
-            return ((pointIds.x * (gridSize.y + 1) * (gridSize.z + 1)) + (pointIds.y * (gridSize.z + 1)) + pointIds.z) * 36;
+            return (pointId.x * (gridSize.y + 1) * (gridSize.z + 1)) + (pointId.y * (gridSize.z + 1)) + pointId.z;
         }
     }
 
