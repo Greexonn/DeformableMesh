@@ -92,7 +92,8 @@ public class DeformableMesh : MonoBehaviour
             points = _cubesGrid._pointsGrid.points,
             pointsGridSize = _cubesGrid._pointsGrid.size,
             indexes = _cubesGrid._cellsGrid.indexes,
-            cellsMap = _cellsMap
+            cellsMap = _cellsMap,
+            batchSize = _maxBatchCellSize
         };
         for (int x = fromIds.x; x < toIds.x; x++)
         {
@@ -112,7 +113,7 @@ public class DeformableMesh : MonoBehaviour
         // _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
 
         //batches
-        UpdateBatches(int3.zero, new int3(1, 1, 1));
+        UpdateBatches(int3.zero, new int3(2, 2, 2));
     }
 
     public void CutSphere(float3 sphereCenter, float sphereRadius)
@@ -651,7 +652,9 @@ public class DeformableMesh : MonoBehaviour
     private struct TriangulateCubeJob : IJobParallelForBatch
     {
         [ReadOnly] public NativeArray<byte> points;
-        [ReadOnly] public int3 pointsGridSize;
+        public int3 pointsGridSize;
+        public int batchSize;
+        private int3 _batchOffset;
 
         [ReadOnly][DeallocateOnJobCompletion] public NativeArray<int3> cellsMap;
 
@@ -663,6 +666,10 @@ public class DeformableMesh : MonoBehaviour
             int3 _currentCellId = cellsMap[startIndex / 36];
             if (_currentCellId.Equals(int3.zero) && startIndex != 0)
                 return;
+
+            //get batch offset
+            _batchOffset = _currentCellId / batchSize;
+            _batchOffset *= batchSize;
 
             //get cell points
             Cube _cube = new Cube
@@ -884,7 +891,8 @@ public class DeformableMesh : MonoBehaviour
 
         private int GetPointBufferIndex(int3 pointIds)
         {
-            return (pointIds.x * pointsGridSize.y * pointsGridSize.z) + (pointIds.y * pointsGridSize.z) + pointIds.z;
+            pointIds -= _batchOffset;
+            return (pointIds.x * (batchSize + 1) * (batchSize + 1)) + (pointIds.y * (batchSize + 1)) + pointIds.z;
         }
 
         private int GetCellBufferIndex(int3 cellIds)
@@ -1058,15 +1066,12 @@ public class DeformableMesh : MonoBehaviour
                     {
                         int _startIndex = GetCellStartIndex(new int3(x, y, z));
                         int _endIndex = _startIndex + 36;
-                        int _startVertex = _startIndex / 36;
                         //copy cell indexes
                         for (int i = _startIndex; i < _endIndex; i++)
                         {
                             int _index = indexes[i];
-                            int _cubeIndex = _index - _startVertex;
-                            Debug.Log(_cubeIndex);
                             if (_index >= 0)
-                                batchIndexes.Add(_cubeIndex);
+                                batchIndexes.Add(_index);
                         }
                     }
                 }
