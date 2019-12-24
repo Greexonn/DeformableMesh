@@ -45,8 +45,8 @@ public class DeformableMesh : MonoBehaviour
         AllocateContainers();
 
         _cubesGrid.Create(_cellSize, _gridSize);
-
         InitializeBatchGrid();
+
         // _meshFilter = GetComponent<MeshFilter>();
         UpdateMesh(new int3(0, 0, 0), _gridSize);
         var _boxCollider = gameObject.AddComponent<BoxCollider>();
@@ -113,7 +113,16 @@ public class DeformableMesh : MonoBehaviour
         // _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
 
         //batches
-        UpdateBatches(int3.zero, new int3(2, 2, 2));
+        int3 _fromBatch = fromIds / _maxBatchCellSize;
+        int3 _toBatch = toIds / _maxBatchCellSize;
+        if (toIds.x % _maxBatchCellSize != 0)
+            _toBatch.x++;
+        if (toIds.y % _maxBatchCellSize != 0)
+            _toBatch.y++;
+        if (toIds.z % _maxBatchCellSize != 0)
+            _toBatch.z++;
+        
+        UpdateBatches(_fromBatch, _toBatch);
     }
 
     public void CutSphere(float3 sphereCenter, float sphereRadius)
