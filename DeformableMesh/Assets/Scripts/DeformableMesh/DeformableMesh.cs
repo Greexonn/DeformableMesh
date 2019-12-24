@@ -15,8 +15,6 @@ public class DeformableMesh : MonoBehaviour
     [SerializeField] private float _cellSize;
     [SerializeField] private int3 _gridSize;
 
-    private MeshFilter _meshFilter;
-
     private MeshGridData _cubesGrid;
 
     //for batches
@@ -47,14 +45,10 @@ public class DeformableMesh : MonoBehaviour
         _cubesGrid.Create(_cellSize, _gridSize);
         InitializeBatchGrid();
 
-        // _meshFilter = GetComponent<MeshFilter>();
         UpdateMesh(new int3(0, 0, 0), _gridSize);
         var _boxCollider = gameObject.AddComponent<BoxCollider>();
         _boxCollider.size = new Vector3(_gridSize.x * _cellSize, _gridSize.y * _cellSize, _gridSize.z * _cellSize);
         _boxCollider.center = new Vector3(_gridSize.x * _cellSize / 2, _gridSize.y * _cellSize / 2, _gridSize.z * _cellSize / 2);
-
-        //
-
     }
 
     void OnDestroy()
@@ -110,8 +104,6 @@ public class DeformableMesh : MonoBehaviour
         _jobsTriangulateHandles.Add(_handle);
         _jobsHandles.AddRange(_jobsTriangulateHandles);
         
-        // _cubesGrid.GetMesh(_meshFilter, _jobsHandles);
-
         //batches
         int3 _fromBatch = fromIds / _maxBatchCellSize;
         int3 _toBatch = toIds / _maxBatchCellSize;
@@ -391,37 +383,6 @@ public class DeformableMesh : MonoBehaviour
             };
             _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
             _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
-        }
-
-        public void GetMesh(MeshFilter filter, NativeList<JobHandle> jobHandles)
-        {
-            _indexesList = new NativeList<int>(_cellsGrid.indexes.Length, Allocator.TempJob);
-
-            CopyIndexesToListJob _copyIndexesJob = new CopyIndexesToListJob
-            {
-                indexes = _cellsGrid.indexes,
-                indexesList = _indexesList
-            };
-
-            var _handle = _copyIndexesJob.Schedule(JobHandle.CombineDependencies(jobHandles));
-            jobHandles.Add(_handle);
-            JobHandle.CompleteAll(jobHandles);
-
-            _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
-            _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
-            _mesh.SetIndexBufferParams(_indexesList.Length, IndexFormat.UInt32);
-            _mesh.SetIndexBufferData(_indexesList.AsArray(), 0, 0, _indexesList.Length);
-            SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesList.Length);
-            _mesh.subMeshCount = 1;
-            _mesh.SetSubMesh(0, _smd);
-            _mesh.RecalculateBounds();
-            _mesh.RecalculateNormals();
-            _mesh.RecalculateTangents();
-
-            if (filter.sharedMesh == null)
-                filter.sharedMesh = _mesh;
-
-            _indexesList.Dispose();
         }
         
         public float3 GetPointPosition(int3 pointId)
@@ -1029,24 +990,6 @@ public class DeformableMesh : MonoBehaviour
                         }
                     }
                 }
-            }
-        }
-    }
-
-    [BurstCompile]
-    private struct CopyIndexesToListJob : IJob
-    {
-        [ReadOnly] public NativeArray<int> indexes;
-
-        [WriteOnly] public NativeList<int> indexesList;
-
-        public void Execute()
-        {
-            for (int i = 0; i < indexes.Length; i++)
-            {
-                int _index = indexes[i];
-                if (_index >= 0)
-                    indexesList.Add(_index);
             }
         }
     }
