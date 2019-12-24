@@ -85,52 +85,6 @@ public:
 };
 
 
-// System.Boolean
-struct  Boolean_tB53F6830F670160873277339AA58F15CAED4399C 
-{
-public:
-	// System.Boolean System.Boolean::m_value
-	bool ___m_value_0;
-
-public:
-	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(Boolean_tB53F6830F670160873277339AA58F15CAED4399C, ___m_value_0)); }
-	inline bool get_m_value_0() const { return ___m_value_0; }
-	inline bool* get_address_of_m_value_0() { return &___m_value_0; }
-	inline void set_m_value_0(bool value)
-	{
-		___m_value_0 = value;
-	}
-};
-
-struct Boolean_tB53F6830F670160873277339AA58F15CAED4399C_StaticFields
-{
-public:
-	// System.String System.Boolean::TrueString
-	String_t* ___TrueString_5;
-	// System.String System.Boolean::FalseString
-	String_t* ___FalseString_6;
-
-public:
-	inline static int32_t get_offset_of_TrueString_5() { return static_cast<int32_t>(offsetof(Boolean_tB53F6830F670160873277339AA58F15CAED4399C_StaticFields, ___TrueString_5)); }
-	inline String_t* get_TrueString_5() const { return ___TrueString_5; }
-	inline String_t** get_address_of_TrueString_5() { return &___TrueString_5; }
-	inline void set_TrueString_5(String_t* value)
-	{
-		___TrueString_5 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___TrueString_5), (void*)value);
-	}
-
-	inline static int32_t get_offset_of_FalseString_6() { return static_cast<int32_t>(offsetof(Boolean_tB53F6830F670160873277339AA58F15CAED4399C_StaticFields, ___FalseString_6)); }
-	inline String_t* get_FalseString_6() const { return ___FalseString_6; }
-	inline String_t** get_address_of_FalseString_6() { return &___FalseString_6; }
-	inline void set_FalseString_6(String_t* value)
-	{
-		___FalseString_6 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&___FalseString_6), (void*)value);
-	}
-};
-
-
 // System.Byte
 struct  Byte_tF87C579059BD4633E6840EBBBEEF899C6E33EF07 
 {
@@ -380,7 +334,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_AddRange_mC434EBD98CA0BD8EA8C
 // System.Int32 Unity.Collections.CollectionHelper::CeilPow2(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CollectionHelper_CeilPow2_m131444FF929807D97EDB9E6C5672315232897928 (int32_t ___i0, const RuntimeMethod* method)
 {
-	int32_t V_0 = 0;
 	{
 		// i -= 1;
 		int32_t L_0 = ___i0;
@@ -407,15 +360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CollectionHelper_CeilPow2_m131444FF92
 		___i0 = ((int32_t)((int32_t)L_9|(int32_t)((int32_t)((int32_t)L_10>>(int32_t)((int32_t)16)))));
 		// return i + 1;
 		int32_t L_11 = ___i0;
-		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_11, (int32_t)1));
-		goto IL_0030;
-	}
-
-IL_0030:
-	{
-		// }
-		int32_t L_12 = V_0;
-		return L_12;
+		return ((int32_t)il2cpp_codegen_add((int32_t)L_11, (int32_t)1));
 	}
 }
 #ifdef __clang__
@@ -436,10 +381,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF
 		s_Il2CppMethodInitialized = true;
 	}
 	UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * V_0 = NULL;
-	bool V_1 = false;
-	bool V_2 = false;
-	UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * V_3 = NULL;
-	int32_t G_B5_0 = 0;
 	{
 		// UnsafeList* listData = (UnsafeList*)UnsafeUtility.Malloc(UnsafeUtility.SizeOf<UnsafeList>(), UnsafeUtility.AlignOf<UnsafeList>(), allocator);
 		int32_t L_0 = UnsafeUtility_SizeOf_TisUnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A_mF5121761EBFDF720A7C139604AFCBAA28008C170(/*hidden argument*/UnsafeUtility_SizeOf_TisUnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A_mF5121761EBFDF720A7C139604AFCBAA28008C170_RuntimeMethod_var);
@@ -458,79 +399,56 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF
 		L_6->set_Allocator_3(L_7);
 		// if (initialCapacity != 0)
 		int32_t L_8 = ___initialCapacity2;
-		V_1 = (bool)((!(((uint32_t)L_8) <= ((uint32_t)0)))? 1 : 0);
-		bool L_9 = V_1;
-		if (!L_9)
+		if (!L_8)
 		{
-			goto IL_003b;
+			goto IL_0031;
 		}
 	}
 	{
 		// listData->SetCapacity(sizeOf, alignOf, initialCapacity);
-		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_10 = V_0;
-		int32_t L_11 = ___sizeOf0;
-		int32_t L_12 = ___alignOf1;
-		int32_t L_13 = ___initialCapacity2;
-		UnsafeList_SetCapacity_mF763B8AEDC2E1E65FFA068955326306EDB3B22C7((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)(UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)L_10, L_11, L_12, L_13, /*hidden argument*/NULL);
+		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_9 = V_0;
+		int32_t L_10 = ___sizeOf0;
+		int32_t L_11 = ___alignOf1;
+		int32_t L_12 = ___initialCapacity2;
+		UnsafeList_SetCapacity_mF763B8AEDC2E1E65FFA068955326306EDB3B22C7((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)(UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)L_9, L_10, L_11, L_12, /*hidden argument*/NULL);
 	}
 
-IL_003b:
+IL_0031:
 	{
 		// if (options == NativeArrayOptions.ClearMemory
 		// && listData->Ptr != null)
-		int32_t L_14 = ___options4;
-		if ((!(((uint32_t)L_14) == ((uint32_t)1))))
+		int32_t L_13 = ___options4;
+		if ((!(((uint32_t)L_13) == ((uint32_t)1))))
 		{
-			goto IL_004f;
+			goto IL_0054;
 		}
 	}
 	{
-		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_15 = V_0;
-		NullCheck(L_15);
-		void* L_16 = L_15->get_Ptr_0();
-		G_B5_0 = ((((int32_t)((((intptr_t)L_16) == ((intptr_t)(((uintptr_t)0))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		goto IL_0050;
-	}
-
-IL_004f:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_0050:
-	{
-		V_2 = (bool)G_B5_0;
-		bool L_17 = V_2;
-		if (!L_17)
+		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_14 = V_0;
+		NullCheck(L_14);
+		void* L_15 = L_14->get_Ptr_0();
+		if ((((intptr_t)L_15) == ((intptr_t)(((uintptr_t)0)))))
 		{
-			goto IL_006b;
+			goto IL_0054;
 		}
 	}
 	{
 		// UnsafeUtility.MemClear(listData->Ptr, listData->Capacity * sizeOf);
+		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_16 = V_0;
+		NullCheck(L_16);
+		void* L_17 = L_16->get_Ptr_0();
 		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_18 = V_0;
 		NullCheck(L_18);
-		void* L_19 = L_18->get_Ptr_0();
-		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_20 = V_0;
-		NullCheck(L_20);
-		int32_t L_21 = L_20->get_Capacity_2();
-		int32_t L_22 = ___sizeOf0;
-		UnsafeUtility_MemClear_m288BC0ABEB3E1A7B941FB28033D391E661887545((void*)(void*)L_19, (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_21, (int32_t)L_22))))), /*hidden argument*/NULL);
+		int32_t L_19 = L_18->get_Capacity_2();
+		int32_t L_20 = ___sizeOf0;
+		UnsafeUtility_MemClear_m288BC0ABEB3E1A7B941FB28033D391E661887545((void*)(void*)L_17, (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_19, (int32_t)L_20))))), /*hidden argument*/NULL);
 	}
 
-IL_006b:
+IL_0054:
 	{
 		// return listData;
-		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_23 = V_0;
-		V_3 = (UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)L_23;
-		goto IL_006f;
-	}
-
-IL_006f:
-	{
-		// }
-		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_24 = V_3;
-		return (UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)(L_24);
+		UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * L_21 = V_0;
+		return (UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)(L_21);
 	}
 }
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeList::Destroy(Unity.Collections.LowLevel.Unsafe.UnsafeList*)
@@ -557,27 +475,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_Destroy_mCB345E35771EEF73569E
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeList::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_Dispose_m7095D947A629CEFDBE98667D4A832AEBCE34D73D (UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * __this, const RuntimeMethod* method)
 {
-	bool V_0 = false;
 	{
 		// if (Allocator != Allocator.Invalid)
 		int32_t L_0 = __this->get_Allocator_3();
-		V_0 = (bool)((!(((uint32_t)L_0) <= ((uint32_t)0)))? 1 : 0);
-		bool L_1 = V_0;
-		if (!L_1)
+		if (!L_0)
 		{
-			goto IL_0029;
+			goto IL_0020;
 		}
 	}
 	{
 		// UnsafeUtility.Free(Ptr, Allocator);
-		void* L_2 = __this->get_Ptr_0();
-		int32_t L_3 = __this->get_Allocator_3();
-		UnsafeUtility_Free_mAC082BB03B10D20CA9E5AD7FBA33164DF2B52E89((void*)(void*)L_2, L_3, /*hidden argument*/NULL);
+		void* L_1 = __this->get_Ptr_0();
+		int32_t L_2 = __this->get_Allocator_3();
+		UnsafeUtility_Free_mAC082BB03B10D20CA9E5AD7FBA33164DF2B52E89((void*)(void*)L_1, L_2, /*hidden argument*/NULL);
 		// Allocator = Allocator.Invalid;
 		__this->set_Allocator_3(0);
 	}
 
-IL_0029:
+IL_0020:
 	{
 		// Ptr = null;
 		__this->set_Ptr_0((void*)(((uintptr_t)0)));
@@ -615,11 +530,8 @@ IL2CPP_EXTERN_C  void UnsafeList_Clear_mE7B1A02E25F65569A525FA0D7CF2BBCB0A0F53AE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_Resize_m07DF56383367580C079E9DE31C33866F80054CBF (UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A * __this, int32_t ___sizeOf0, int32_t ___alignOf1, int32_t ___length2, int32_t ___options3, const RuntimeMethod* method)
 {
 	int32_t V_0 = 0;
-	bool V_1 = false;
-	bool V_2 = false;
-	int32_t V_3 = 0;
-	uint8_t* V_4 = NULL;
-	int32_t G_B5_0 = 0;
+	int32_t V_1 = 0;
+	uint8_t* V_2 = NULL;
 	{
 		// var oldLength = Length;
 		int32_t L_0 = __this->get_Length_1();
@@ -627,73 +539,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_Resize_m07DF56383367580C079E9
 		// if (length > Capacity)
 		int32_t L_1 = ___length2;
 		int32_t L_2 = __this->get_Capacity_2();
-		V_1 = (bool)((((int32_t)L_1) > ((int32_t)L_2))? 1 : 0);
-		bool L_3 = V_1;
-		if (!L_3)
+		if ((((int32_t)L_1) <= ((int32_t)L_2)))
 		{
-			goto IL_0021;
+			goto IL_0019;
 		}
 	}
 	{
 		// SetCapacity(sizeOf, alignOf, length);
-		int32_t L_4 = ___sizeOf0;
-		int32_t L_5 = ___alignOf1;
-		int32_t L_6 = ___length2;
-		UnsafeList_SetCapacity_mF763B8AEDC2E1E65FFA068955326306EDB3B22C7((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_4, L_5, L_6, /*hidden argument*/NULL);
+		int32_t L_3 = ___sizeOf0;
+		int32_t L_4 = ___alignOf1;
+		int32_t L_5 = ___length2;
+		UnsafeList_SetCapacity_mF763B8AEDC2E1E65FFA068955326306EDB3B22C7((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_3, L_4, L_5, /*hidden argument*/NULL);
 	}
 
-IL_0021:
+IL_0019:
 	{
 		// Length = length;
-		int32_t L_7 = ___length2;
-		__this->set_Length_1(L_7);
+		int32_t L_6 = ___length2;
+		__this->set_Length_1(L_6);
 		// if (options == NativeArrayOptions.ClearMemory
 		// && oldLength < length)
-		int32_t L_8 = ___options3;
-		if ((!(((uint32_t)L_8) == ((uint32_t)1))))
+		int32_t L_7 = ___options3;
+		if ((!(((uint32_t)L_7) == ((uint32_t)1))))
 		{
-			goto IL_0033;
+			goto IL_0042;
 		}
 	}
 	{
-		int32_t L_9 = V_0;
-		int32_t L_10 = ___length2;
-		G_B5_0 = ((((int32_t)L_9) < ((int32_t)L_10))? 1 : 0);
-		goto IL_0034;
-	}
-
-IL_0033:
-	{
-		G_B5_0 = 0;
-	}
-
-IL_0034:
-	{
-		V_2 = (bool)G_B5_0;
-		bool L_11 = V_2;
-		if (!L_11)
+		int32_t L_8 = V_0;
+		int32_t L_9 = ___length2;
+		if ((((int32_t)L_8) >= ((int32_t)L_9)))
 		{
-			goto IL_0056;
+			goto IL_0042;
 		}
 	}
 	{
 		// var num = length - oldLength;
-		int32_t L_12 = ___length2;
-		int32_t L_13 = V_0;
-		V_3 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_12, (int32_t)L_13));
+		int32_t L_10 = ___length2;
+		int32_t L_11 = V_0;
+		V_1 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_10, (int32_t)L_11));
 		// byte* ptr = (byte*)Ptr;
-		void* L_14 = __this->get_Ptr_0();
-		V_4 = (uint8_t*)L_14;
+		void* L_12 = __this->get_Ptr_0();
+		V_2 = (uint8_t*)L_12;
 		// UnsafeUtility.MemClear(ptr + oldLength * sizeOf, num * sizeOf);
-		uint8_t* L_15 = V_4;
-		int32_t L_16 = V_0;
+		uint8_t* L_13 = V_2;
+		int32_t L_14 = V_0;
+		int32_t L_15 = ___sizeOf0;
+		int32_t L_16 = V_1;
 		int32_t L_17 = ___sizeOf0;
-		int32_t L_18 = V_3;
-		int32_t L_19 = ___sizeOf0;
-		UnsafeUtility_MemClear_m288BC0ABEB3E1A7B941FB28033D391E661887545((void*)(void*)((uint8_t*)il2cpp_codegen_add((intptr_t)L_15, (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_16, (int32_t)L_17)))), (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_18, (int32_t)L_19))))), /*hidden argument*/NULL);
+		UnsafeUtility_MemClear_m288BC0ABEB3E1A7B941FB28033D391E661887545((void*)(void*)((uint8_t*)il2cpp_codegen_add((intptr_t)L_13, (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_14, (int32_t)L_15)))), (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_16, (int32_t)L_17))))), /*hidden argument*/NULL);
 	}
 
-IL_0056:
+IL_0042:
 	{
 		// }
 		return;
@@ -715,83 +612,67 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_Realloc_m7708AC993EFD44BC6DEA
 		s_Il2CppMethodInitialized = true;
 	}
 	void* V_0 = NULL;
-	bool V_1 = false;
-	int32_t V_2 = 0;
-	bool V_3 = false;
-	int32_t V_4 = 0;
-	int32_t V_5 = 0;
+	int32_t V_1 = 0;
 	{
 		// void* newPointer = null;
 		V_0 = (void*)(((uintptr_t)0));
 		// if (capacity > 0)
 		int32_t L_0 = ___capacity2;
-		V_1 = (bool)((((int32_t)L_0) > ((int32_t)0))? 1 : 0);
-		bool L_1 = V_1;
-		if (!L_1)
+		if ((((int32_t)L_0) <= ((int32_t)0)))
 		{
-			goto IL_0054;
+			goto IL_003e;
 		}
 	}
 	{
 		// var bytesToMalloc = sizeOf * capacity;
-		int32_t L_2 = ___sizeOf0;
-		int32_t L_3 = ___capacity2;
-		V_2 = ((int32_t)il2cpp_codegen_multiply((int32_t)L_2, (int32_t)L_3));
+		int32_t L_1 = ___sizeOf0;
+		int32_t L_2 = ___capacity2;
 		// newPointer = UnsafeUtility.Malloc(bytesToMalloc, alignOf, Allocator);
-		int32_t L_4 = V_2;
-		int32_t L_5 = ___alignOf1;
-		int32_t L_6 = __this->get_Allocator_3();
-		void* L_7 = UnsafeUtility_Malloc_m43BC7C9BE1437A70DD9A236418B0906CD3617331((((int64_t)((int64_t)L_4))), L_5, L_6, /*hidden argument*/NULL);
-		V_0 = (void*)L_7;
+		int32_t L_3 = ___alignOf1;
+		int32_t L_4 = __this->get_Allocator_3();
+		void* L_5 = UnsafeUtility_Malloc_m43BC7C9BE1437A70DD9A236418B0906CD3617331((((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_1, (int32_t)L_2))))), L_3, L_4, /*hidden argument*/NULL);
+		V_0 = (void*)L_5;
 		// if (Capacity > 0)
-		int32_t L_8 = __this->get_Capacity_2();
-		V_3 = (bool)((((int32_t)L_8) > ((int32_t)0))? 1 : 0);
-		bool L_9 = V_3;
-		if (!L_9)
+		int32_t L_6 = __this->get_Capacity_2();
+		if ((((int32_t)L_6) <= ((int32_t)0)))
 		{
-			goto IL_0053;
+			goto IL_003e;
 		}
 	}
 	{
 		// var itemsToCopy = Math.Min(capacity, Capacity);
-		int32_t L_10 = ___capacity2;
-		int32_t L_11 = __this->get_Capacity_2();
+		int32_t L_7 = ___capacity2;
+		int32_t L_8 = __this->get_Capacity_2();
 		IL2CPP_RUNTIME_CLASS_INIT(Math_tFB388E53C7FDC6FCCF9A19ABF5A4E521FBD52E19_il2cpp_TypeInfo_var);
-		int32_t L_12 = Math_Min_mC950438198519FB2B0260FCB91220847EE4BB525(L_10, L_11, /*hidden argument*/NULL);
-		V_4 = L_12;
+		int32_t L_9 = Math_Min_mC950438198519FB2B0260FCB91220847EE4BB525(L_7, L_8, /*hidden argument*/NULL);
 		// var bytesToCopy = itemsToCopy * sizeOf;
-		int32_t L_13 = V_4;
-		int32_t L_14 = ___sizeOf0;
-		V_5 = ((int32_t)il2cpp_codegen_multiply((int32_t)L_13, (int32_t)L_14));
+		int32_t L_10 = ___sizeOf0;
+		V_1 = ((int32_t)il2cpp_codegen_multiply((int32_t)L_9, (int32_t)L_10));
 		// UnsafeUtility.MemCpy(newPointer, Ptr, bytesToCopy);
-		void* L_15 = V_0;
-		void* L_16 = __this->get_Ptr_0();
-		int32_t L_17 = V_5;
-		UnsafeUtility_MemCpy_mA675903DD7350CC5EC22947C0899B18944E3578C((void*)(void*)L_15, (void*)(void*)L_16, (((int64_t)((int64_t)L_17))), /*hidden argument*/NULL);
+		void* L_11 = V_0;
+		void* L_12 = __this->get_Ptr_0();
+		int32_t L_13 = V_1;
+		UnsafeUtility_MemCpy_mA675903DD7350CC5EC22947C0899B18944E3578C((void*)(void*)L_11, (void*)(void*)L_12, (((int64_t)((int64_t)L_13))), /*hidden argument*/NULL);
 	}
 
-IL_0053:
-	{
-	}
-
-IL_0054:
+IL_003e:
 	{
 		// UnsafeUtility.Free(Ptr, Allocator);
-		void* L_18 = __this->get_Ptr_0();
-		int32_t L_19 = __this->get_Allocator_3();
-		UnsafeUtility_Free_mAC082BB03B10D20CA9E5AD7FBA33164DF2B52E89((void*)(void*)L_18, L_19, /*hidden argument*/NULL);
+		void* L_14 = __this->get_Ptr_0();
+		int32_t L_15 = __this->get_Allocator_3();
+		UnsafeUtility_Free_mAC082BB03B10D20CA9E5AD7FBA33164DF2B52E89((void*)(void*)L_14, L_15, /*hidden argument*/NULL);
 		// Ptr = newPointer;
-		void* L_20 = V_0;
-		__this->set_Ptr_0((void*)L_20);
+		void* L_16 = V_0;
+		__this->set_Ptr_0((void*)L_16);
 		// Capacity = capacity;
-		int32_t L_21 = ___capacity2;
-		__this->set_Capacity_2(L_21);
+		int32_t L_17 = ___capacity2;
+		__this->set_Capacity_2(L_17);
 		// Length = Math.Min(Length, capacity);
-		int32_t L_22 = __this->get_Length_1();
-		int32_t L_23 = ___capacity2;
+		int32_t L_18 = __this->get_Length_1();
+		int32_t L_19 = ___capacity2;
 		IL2CPP_RUNTIME_CLASS_INIT(Math_tFB388E53C7FDC6FCCF9A19ABF5A4E521FBD52E19_il2cpp_TypeInfo_var);
-		int32_t L_24 = Math_Min_mC950438198519FB2B0260FCB91220847EE4BB525(L_22, L_23, /*hidden argument*/NULL);
-		__this->set_Length_1(L_24);
+		int32_t L_20 = Math_Min_mC950438198519FB2B0260FCB91220847EE4BB525(L_18, L_19, /*hidden argument*/NULL);
+		__this->set_Length_1(L_20);
 		// }
 		return;
 	}
@@ -812,7 +693,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_SetCapacity_mF763B8AEDC2E1E65
 		s_Il2CppMethodInitialized = true;
 	}
 	int32_t V_0 = 0;
-	bool V_1 = false;
 	{
 		// var newCapacity = Math.Max(capacity, 64 / sizeOf);
 		int32_t L_0 = ___capacity2;
@@ -827,29 +707,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_SetCapacity_mF763B8AEDC2E1E65
 		// if (newCapacity == Capacity)
 		int32_t L_5 = V_0;
 		int32_t L_6 = __this->get_Capacity_2();
-		V_1 = (bool)((((int32_t)L_5) == ((int32_t)L_6))? 1 : 0);
-		bool L_7 = V_1;
-		if (!L_7)
+		if ((!(((uint32_t)L_5) == ((uint32_t)L_6))))
 		{
-			goto IL_0023;
+			goto IL_001c;
 		}
 	}
 	{
 		// return;
-		goto IL_002d;
+		return;
 	}
 
-IL_0023:
+IL_001c:
 	{
 		// Realloc(sizeOf, alignOf, newCapacity);
-		int32_t L_8 = ___sizeOf0;
-		int32_t L_9 = ___alignOf1;
-		int32_t L_10 = V_0;
-		UnsafeList_Realloc_m7708AC993EFD44BC6DEA7192961F58B82C464023((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_8, L_9, L_10, /*hidden argument*/NULL);
-	}
-
-IL_002d:
-	{
+		int32_t L_7 = ___sizeOf0;
+		int32_t L_8 = ___alignOf1;
+		int32_t L_9 = V_0;
+		UnsafeList_Realloc_m7708AC993EFD44BC6DEA7192961F58B82C464023((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_7, L_8, L_9, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -865,7 +739,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_AddRange_mC434EBD98CA0BD8EA8C
 {
 	int32_t V_0 = 0;
 	void* V_1 = NULL;
-	bool V_2 = false;
 	{
 		// var idx = Length;
 		int32_t L_0 = __this->get_Length_1();
@@ -874,44 +747,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeList_AddRange_mC434EBD98CA0BD8EA8C
 		int32_t L_1 = __this->get_Length_1();
 		int32_t L_2 = ___length3;
 		int32_t L_3 = __this->get_Capacity_2();
-		V_2 = (bool)((((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_1, (int32_t)L_2))) > ((int32_t)L_3))? 1 : 0);
-		bool L_4 = V_2;
-		if (!L_4)
+		if ((((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_1, (int32_t)L_2))) <= ((int32_t)L_3)))
 		{
-			goto IL_0034;
+			goto IL_002c;
 		}
 	}
 	{
 		// Resize(sizeOf, alignOf, Length + length);
-		int32_t L_5 = ___sizeOf0;
-		int32_t L_6 = ___alignOf1;
-		int32_t L_7 = __this->get_Length_1();
-		int32_t L_8 = ___length3;
-		UnsafeList_Resize_m07DF56383367580C079E9DE31C33866F80054CBF((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_5, L_6, ((int32_t)il2cpp_codegen_add((int32_t)L_7, (int32_t)L_8)), 0, /*hidden argument*/NULL);
-		goto IL_0045;
+		int32_t L_4 = ___sizeOf0;
+		int32_t L_5 = ___alignOf1;
+		int32_t L_6 = __this->get_Length_1();
+		int32_t L_7 = ___length3;
+		UnsafeList_Resize_m07DF56383367580C079E9DE31C33866F80054CBF((UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A *)__this, L_4, L_5, ((int32_t)il2cpp_codegen_add((int32_t)L_6, (int32_t)L_7)), 0, /*hidden argument*/NULL);
+		// }
+		goto IL_003b;
 	}
 
-IL_0034:
+IL_002c:
 	{
 		// Length += length;
-		int32_t L_9 = __this->get_Length_1();
-		int32_t L_10 = ___length3;
-		__this->set_Length_1(((int32_t)il2cpp_codegen_add((int32_t)L_9, (int32_t)L_10)));
+		int32_t L_8 = __this->get_Length_1();
+		int32_t L_9 = ___length3;
+		__this->set_Length_1(((int32_t)il2cpp_codegen_add((int32_t)L_8, (int32_t)L_9)));
 	}
 
-IL_0045:
+IL_003b:
 	{
 		// void* dst = (byte*)Ptr + idx * sizeOf;
-		void* L_11 = __this->get_Ptr_0();
-		int32_t L_12 = V_0;
-		int32_t L_13 = ___sizeOf0;
-		V_1 = (void*)((void*)il2cpp_codegen_add((intptr_t)L_11, (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_12, (int32_t)L_13))));
+		void* L_10 = __this->get_Ptr_0();
+		int32_t L_11 = V_0;
+		int32_t L_12 = ___sizeOf0;
+		V_1 = (void*)((void*)il2cpp_codegen_add((intptr_t)L_10, (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_11, (int32_t)L_12))));
 		// UnsafeUtility.MemCpy(dst, ptr, length * sizeOf);
-		void* L_14 = V_1;
-		void* L_15 = ___ptr2;
-		int32_t L_16 = ___length3;
-		int32_t L_17 = ___sizeOf0;
-		UnsafeUtility_MemCpy_mA675903DD7350CC5EC22947C0899B18944E3578C((void*)(void*)L_14, (void*)(void*)L_15, (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_16, (int32_t)L_17))))), /*hidden argument*/NULL);
+		void* L_13 = V_1;
+		void* L_14 = ___ptr2;
+		int32_t L_15 = ___length3;
+		int32_t L_16 = ___sizeOf0;
+		UnsafeUtility_MemCpy_mA675903DD7350CC5EC22947C0899B18944E3578C((void*)(void*)L_13, (void*)(void*)L_14, (((int64_t)((int64_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_15, (int32_t)L_16))))), /*hidden argument*/NULL);
 		// }
 		return;
 	}

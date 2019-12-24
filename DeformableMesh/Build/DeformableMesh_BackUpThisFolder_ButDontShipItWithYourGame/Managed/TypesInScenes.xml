@@ -90,6 +90,7 @@
 		<type fullname="UnityEngine.Rendering.Universal.Tonemapping" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.Vignette" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.XR.Management">

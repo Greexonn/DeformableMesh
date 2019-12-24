@@ -46,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.Tonemapping
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
+    - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
     - UnityEngine.Rendering.Universal.Vignette
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
@@ -103,101 +104,101 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11306}
+      Script: {instanceID: 11316}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11370}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11446}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11564}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 11632}
     - Class: 114
-      Script: {instanceID: 11630}
-    - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11640}
     - Class: 114
       Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11714}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 11828}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 12036}
+      Script: {instanceID: 12008}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12522}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 12818}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 13060}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13112}
+      Script: {instanceID: 13070}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13122}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13584}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13622}
+      Script: {instanceID: 13594}
     - Class: 114
-      Script: {instanceID: 13650}
+      Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13660}
     - Class: 114
-      Script: {instanceID: 13996}
+      Script: {instanceID: 13812}
     - Class: 114
-      Script: {instanceID: 14070}
+      Script: {instanceID: 14006}
     - Class: 114
-      Script: {instanceID: 14088}
+      Script: {instanceID: 14080}
     - Class: 114
-      Script: {instanceID: 14160}
+      Script: {instanceID: 14098}
     - Class: 114
-      Script: {instanceID: 14238}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 14274}
+      Script: {instanceID: 14248}
     - Class: 114
       Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 14336}
+      Script: {instanceID: 14294}
     - Class: 114
-      Script: {instanceID: 14638}
+      Script: {instanceID: 14346}
     - Class: 114
-      Script: {instanceID: 14656}
+      Script: {instanceID: 14648}
     - Class: 114
-      Script: {instanceID: 14720}
+      Script: {instanceID: 14666}
     - Class: 114
-      Script: {instanceID: 14896}
+      Script: {instanceID: 14730}
     - Class: 114
-      Script: {instanceID: 14988}
+      Script: {instanceID: 14906}
     - Class: 114
-      Script: {instanceID: 15188}
+      Script: {instanceID: 14998}
     - Class: 114
-      Script: {instanceID: 15248}
+      Script: {instanceID: 15198}
     - Class: 114
-      Script: {instanceID: 15494}
+      Script: {instanceID: 15258}
     - Class: 114
-      Script: {instanceID: 15500}
+      Script: {instanceID: 15504}
     - Class: 114
-      Script: {instanceID: 15558}
+      Script: {instanceID: 15510}
     - Class: 114
-      Script: {instanceID: 15560}
+      Script: {instanceID: 15568}
     - Class: 114
-      Script: {instanceID: 15664}
+      Script: {instanceID: 15570}
     - Class: 114
-      Script: {instanceID: 15680}
+      Script: {instanceID: 15674}
     - Class: 114
-      Script: {instanceID: 15688}
+      Script: {instanceID: 15690}
+    - Class: 114
+      Script: {instanceID: 15698}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -379,6 +380,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -849,7 +862,7 @@ ScriptsOnlyBuild:
     className: CinemachineUniversalPixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: ed8e52305f9442722847a07203bcc01a
+      Hash: f39ea28ba9c5f5e3da13b2009f256af6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DeformableMesh

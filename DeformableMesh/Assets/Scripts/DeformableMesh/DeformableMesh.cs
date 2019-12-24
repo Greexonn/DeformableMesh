@@ -15,6 +15,8 @@ public class DeformableMesh : MonoBehaviour
     [SerializeField] private float _cellSize;
     [SerializeField] private int3 _gridSize;
 
+    public VertexAttributeDescriptor[] _vertexLayout;
+
     private MeshGridData _cubesGrid;
 
     //for batches
@@ -41,6 +43,11 @@ public class DeformableMesh : MonoBehaviour
     void Start()
     {
         AllocateContainers();
+
+        _vertexLayout = new VertexAttributeDescriptor[]
+        {
+            new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3)
+        };
 
         _cubesGrid.Create(_cellSize, _gridSize);
         InitializeBatchGrid();
@@ -79,32 +86,7 @@ public class DeformableMesh : MonoBehaviour
     {
         _jobsTriangulateHandles.Clear();
 
-        NativeArray<int3> _cellsMap = new NativeArray<int3>(_cubesGrid._cellsGrid.indexes.Length / 36, Allocator.TempJob);
-        //re-create surface cells
-        TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
-        {
-            points = _cubesGrid._pointsGrid.points,
-            pointsGridSize = _cubesGrid._pointsGrid.size,
-            indexes = _cubesGrid._cellsGrid.indexes,
-            cellsMap = _cellsMap,
-            batchSize = _maxBatchCellSize
-        };
-        for (int x = fromIds.x; x < toIds.x; x++)
-        {
-            for (int y = fromIds.y; y < toIds.y; y++)
-            {
-                for (int z = fromIds.z; z < toIds.z; z++)
-                {
-                    int _index = (x * _gridSize.y * _gridSize.z) + (y * _gridSize.z) + z;
-                    _cellsMap[_index] = new int3(x, y, z);
-                }
-            }
-        }
-        var _handle = _triangulateJob.ScheduleBatch(_triangulateJob.indexes.Length, 36, JobHandle.CombineDependencies(_jobsCutHandles));
-        _jobsTriangulateHandles.Add(_handle);
-        _jobsHandles.AddRange(_jobsTriangulateHandles);
-        
-        //batches
+        //find affected batches
         int3 _fromBatch = fromIds / _maxBatchCellSize;
         int3 _toBatch = toIds / _maxBatchCellSize;
         if (toIds.x % _maxBatchCellSize != 0)
@@ -113,6 +95,52 @@ public class DeformableMesh : MonoBehaviour
             _toBatch.y++;
         if (toIds.z % _maxBatchCellSize != 0)
             _toBatch.z++;
+
+        //re-create surface cells
+        TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
+        {
+            points = _cubesGrid.pointsGrid.points,
+            pointsGridSize = _cubesGrid.pointsGrid.size,
+            indexes = _cubesGrid.cellsGrid.indexes,
+            batchSize = _maxBatchCellSize
+        };
+        //set cell maps for batches
+        for (int x = fromIds.x; x < toIds.x; x++)
+        {
+            for (int y = fromIds.y; y < toIds.y; y++)
+            {
+                for (int z = fromIds.z; z < toIds.z; z++)
+                {
+                    int3 _batchId = new int3(x / _maxBatchCellSize, y / _maxBatchCellSize, z / _maxBatchCellSize);
+                    int3 _batchOffset = _batchId * _maxBatchCellSize;
+                    int3 _inBatchIds = new int3(x, y, z) - _batchOffset;
+                    int _index = (_inBatchIds.x * _maxBatchCellSize * _maxBatchCellSize) + (_inBatchIds.y * _maxBatchCellSize) + _inBatchIds.z;
+
+                    if (!_meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap.IsCreated)
+                        _meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap = new NativeArray<int3>(_batchIndexesCount / 36, Allocator.TempJob);
+
+                    _meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap[_index] = new int3(x, y, z);
+                }
+            }
+        }
+
+        var _dependency = JobHandle.CombineDependencies(_jobsCutHandles);
+        //schedule triangulation jobs per batch
+        for (int x = _fromBatch.x; x < _toBatch.x; x++)
+        {
+            for (int y = _fromBatch.y; y < _toBatch.y; y++)
+            {
+                for (int z = _fromBatch.z; z < _toBatch.z; z++)
+                {
+                    _triangulateJob.cellsMap = _meshBatches[x, y, z].batchCellsMap;
+                    _triangulateJob.batchOffset = (new int3(x, y, z) * _maxBatchCellSize);
+                    var _handle = _triangulateJob.ScheduleBatch(_batchIndexesCount, 36, _dependency);
+                    _jobsTriangulateHandles.Add(_handle);
+                }
+            }
+        }
+
+        _jobsHandles.AddRange(_jobsTriangulateHandles);
         
         UpdateBatches(_fromBatch, _toBatch);
     }
@@ -123,19 +151,19 @@ public class DeformableMesh : MonoBehaviour
         _jobsCutHandles.Clear();
         _jobsPullHandles.Clear();
 
-        NativeArray<int3> _pointsMap = new NativeArray<int3>(_cubesGrid._pointsGrid.points.Length, Allocator.TempJob);
+        NativeArray<int3> _pointsMap = new NativeArray<int3>(_cubesGrid.pointsGrid.points.Length, Allocator.TempJob);
 
         //find cubes to cut
         int _cellsCount = (int)(sphereRadius / _cellSize + 1);
         int3 _from, _to;
         int3 _cellId = (int3)(sphereCenter / _cellSize);
-        _from = math.clamp((_cellId - new int3(_cellsCount, _cellsCount, _cellsCount)), new int3(0, 0, 0), _gridSize);
-        _to = math.clamp((_cellId + new int3(_cellsCount, _cellsCount, _cellsCount)), new int3(0, 0, 0), _gridSize);
+        _from = math.clamp((_cellId - new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
+        _to = math.clamp((_cellId + new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
 
         //create job for calculations
         CutSphereJob _cutJob = new CutSphereJob
         {
-            points = _cubesGrid._pointsGrid.points,
+            points = _cubesGrid.pointsGrid.points,
             sphereCenter = sphereCenter,
             sphereRadius = sphereRadius,
             cellSize = _cellSize,
@@ -153,21 +181,21 @@ public class DeformableMesh : MonoBehaviour
                 }
             }
         }
-        var _handle = _cutJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10));
+        var _handle = _cutJob.Schedule(_cubesGrid.pointsGrid.points.Length, (_cubesGrid.pointsGrid.points.Length / 10));
         _jobsCutHandles.Add(_handle);
         _jobsHandles.AddRange(_jobsCutHandles);
 
         //pull vertices
         PullVerticesJob _pullVerticesJob = new PullVerticesJob
         {
-            points = _cubesGrid._pointsGrid.points,
+            points = _cubesGrid.pointsGrid.points,
             pointsMap = _pointsMap,
             cellSize = _cellSize,
             gridSize = _gridSize,
-            vertices = _cubesGrid._verticesArray
+            vertices = _cubesGrid.verticesArray
         };
 
-        _handle = _pullVerticesJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10), JobHandle.CombineDependencies(_jobsCutHandles));
+        _handle = _pullVerticesJob.Schedule(_cubesGrid.pointsGrid.points.Length, (_cubesGrid.pointsGrid.points.Length / 10), JobHandle.CombineDependencies(_jobsCutHandles));
         _jobsPullHandles.Add(_handle);
         _jobsHandles.AddRange(_jobsPullHandles);
 
@@ -222,14 +250,14 @@ public class DeformableMesh : MonoBehaviour
 
         CopyBatchIndexesJob _copyBatchIndexesJob = new CopyBatchIndexesJob
         {
-            indexes = _cubesGrid._cellsGrid.indexes,
+            indexes = _cubesGrid.cellsGrid.indexes,
             gridSize = _gridSize,
             batchSize = _maxBatchCellSize
         };
 
         CopyBatchVerticesJob _copyBatchVerticesJob = new CopyBatchVerticesJob
         {
-            vertices = _cubesGrid._verticesArray,
+            vertices = _cubesGrid.verticesArray,
             gridSize = _gridSize,
             cellSize = _cellSize,
             batchSize = _maxBatchCellSize
@@ -285,7 +313,7 @@ public class DeformableMesh : MonoBehaviour
                         var _mesh = _meshBatches[x, y, z].meshFilter.sharedMesh;
                         int _indexesCount = _meshBatches[x, y, z].batchIndexes.Length;
                         int _vertexCount = _meshBatches[x, y, z].batchVertices.Length;
-                        _mesh.SetVertexBufferParams(_vertexCount, _cubesGrid._layout);
+                        _mesh.SetVertexBufferParams(_vertexCount, _vertexLayout);
                         _mesh.SetVertexBufferData(_meshBatches[x, y, z].batchVertices.AsArray(), 0, 0, _vertexCount);
                         _mesh.SetIndexBufferParams(_indexesCount, IndexFormat.UInt32);
                         _mesh.SetIndexBufferData(_meshBatches[x, y, z].batchIndexes.AsArray(), 0, 0, _indexesCount);
@@ -296,9 +324,15 @@ public class DeformableMesh : MonoBehaviour
                         _mesh.RecalculateNormals();
                         _mesh.RecalculateTangents();
                     }
+                    else
+                    {
+                        Destroy(_meshBatches[x, y, z].meshFilter.sharedMesh);
+                        _meshBatches[x, y, z].meshFilter.sharedMesh = null;
+                    }
                     //deallocate temporal containers
                     _meshBatches[x, y, z].batchIndexes.Dispose();
                     _meshBatches[x, y, z].batchVertices.Dispose();
+                    _meshBatches[x, y, z].batchCellsMap.Dispose();
                 }
             }
         }
@@ -311,6 +345,7 @@ public class DeformableMesh : MonoBehaviour
         public MeshFilter meshFilter;
         public NativeList<int> batchIndexes;
         public NativeList<float3> batchVertices;
+        public NativeArray<int3> batchCellsMap;
     }
 
     public struct MeshGridData : System.IDisposable
@@ -318,19 +353,15 @@ public class DeformableMesh : MonoBehaviour
         public float cellSize;
         public int3 gridSize;
 
-        private Mesh _mesh;
-
-        public VertexAttributeDescriptor[] _layout;
-
 
         #region Native
 
-        public NativeCubeGrid _pointsGrid;
+        public NativeCubeGrid pointsGrid;
 
-        public NativeCellGrid _cellsGrid;
+        public NativeCellGrid cellsGrid;
 
-        public NativeArray<float3> _verticesArray;
-        public NativeList<int> _indexesList;
+        public NativeArray<float3> verticesArray;
+        public NativeList<int> indexesList;
             
         #endregion
 
@@ -341,18 +372,18 @@ public class DeformableMesh : MonoBehaviour
             this.gridSize = gridSize;
 
             //create points buffer
-            _pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
-            _cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
-            _verticesArray = new NativeArray<float3>(_pointsGrid.points.Length, Allocator.Persistent);
+            pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
+            cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
+            verticesArray = new NativeArray<float3>(pointsGrid.points.Length, Allocator.Persistent);
 
             StorePointsAndVertices();
         }
 
         public void Dispose()
         {
-            _pointsGrid.Dispose();
-            _cellsGrid.Dispose();
-            _verticesArray.Dispose();
+            pointsGrid.Dispose();
+            cellsGrid.Dispose();
+            verticesArray.Dispose();
         }
 
         private void StorePointsAndVertices()
@@ -367,22 +398,11 @@ public class DeformableMesh : MonoBehaviour
                         int3 _pointId = new int3(x, y, z);
                         float3 _pointPosition = GetPointPosition(_pointId);
                         //add to vertices
-                        _verticesArray[_index] = _pointPosition;
+                        verticesArray[_index] = _pointPosition;
                         _index++;
                     }
                 }
             }
-
-            //
-
-            _mesh = new Mesh();
-
-            _layout = new VertexAttributeDescriptor[]
-            {
-                new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3)
-            };
-            _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
-            _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
         }
         
         public float3 GetPointPosition(int3 pointId)
@@ -624,22 +644,22 @@ public class DeformableMesh : MonoBehaviour
         [ReadOnly] public NativeArray<byte> points;
         public int3 pointsGridSize;
         public int batchSize;
-        private int3 _batchOffset;
+        public int3 batchOffset;
 
-        [ReadOnly][DeallocateOnJobCompletion] public NativeArray<int3> cellsMap;
+        [ReadOnly] public NativeArray<int3> cellsMap;
 
-        [WriteOnly] public NativeArray<int> indexes;
+        [WriteOnly]
+        [Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestriction] 
+        public NativeArray<int> indexes;
 
         public void Execute(int startIndex, int count)
         {
-            // bool _miss = true;
             int3 _currentCellId = cellsMap[startIndex / 36];
+            startIndex = GetCellBufferIndex(_currentCellId);
             if (_currentCellId.Equals(int3.zero) && startIndex != 0)
                 return;
 
-            //get batch offset
-            _batchOffset = _currentCellId / batchSize;
-            _batchOffset *= batchSize;
+            ClearIndexes(startIndex);
 
             //get cell points
             Cube _cube = new Cube
@@ -691,7 +711,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isSix,
                 isThree = _cube.isSeven
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -722,7 +741,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isOne,
                 isThree = _cube.isZero
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -753,7 +771,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isTwo,
                 isThree = _cube.isThree
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -784,7 +801,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isFive,
                 isThree = _cube.isFour
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -815,7 +831,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isTwo,
                 isThree = _cube.isSix
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -846,7 +861,6 @@ public class DeformableMesh : MonoBehaviour
                 isTwo = _cube.isSeven,
                 isThree = _cube.isThree
             };
-            ClearFace(startIndex);
             if (IsFaceVisible(_face, _normal))
             {
                 TriangulateFace(_face, _faceM, startIndex);
@@ -861,7 +875,7 @@ public class DeformableMesh : MonoBehaviour
 
         private int GetPointBufferIndex(int3 pointIds)
         {
-            pointIds -= _batchOffset;
+            pointIds -= batchOffset;
             return (pointIds.x * (batchSize + 1) * (batchSize + 1)) + (pointIds.y * (batchSize + 1)) + pointIds.z;
         }
 
@@ -905,9 +919,9 @@ public class DeformableMesh : MonoBehaviour
             return false;
         }
 
-        private void ClearFace(int startIndex)
+        private void ClearIndexes(int startIndex)
         {
-            for (int i = startIndex; i < (startIndex + 6); i++)
+            for (int i = startIndex; i < (startIndex + 36); i++)
             {
                 indexes[i] = -1;
             }

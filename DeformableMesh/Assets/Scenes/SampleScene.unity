@@ -793,12 +793,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fee3b3ddd963b546b042b00cd3a934c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshMaterial: {fileID: 2100000, guid: b451a052397f03c4f8a04d915d1c0492, type: 3}
+  _meshMaterial: {fileID: 2100000, guid: 2a3eb805c1886d64fa7946c68416af45, type: 2}
   _cellSize: 0.01
   _gridSize:
-    x: 100
-    y: 100
-    z: 100
+    x: 200
+    y: 200
+    z: 200
   _maxBatchCellSize: 20
 --- !u!1 &1687258581
 GameObject:

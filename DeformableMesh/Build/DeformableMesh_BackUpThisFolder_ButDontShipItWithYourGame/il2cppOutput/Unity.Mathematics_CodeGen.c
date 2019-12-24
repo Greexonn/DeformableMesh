@@ -82,30 +82,30 @@ extern void float3_ToString_mB4863B6E2512E53544B02772705EBF221D744416_AdjustorTh
 extern void float3_ToString_m513168CE73E3A1943FBF999282E27D81DB726E1C_AdjustorThunk ();
 // 0x0000001F Unity.Mathematics.float3 Unity.Mathematics.float3::op_Implicit(UnityEngine.Vector3)
 extern void float3_op_Implicit_m46D329E468EFD55FC5BEB36410ED6E8231843319 ();
-// 0x00000020 System.Void Unity.Mathematics.float3_DebuggerProxy::.ctor(Unity.Mathematics.float3)
-extern void DebuggerProxy__ctor_m6902AE5E32A4CF157F1FA7766C3E4B88DC86B33F ();
-// 0x00000021 System.Void Unity.Mathematics.int3::.ctor(System.Int32,System.Int32,System.Int32)
+// 0x00000020 System.Void Unity.Mathematics.int3::.ctor(System.Int32,System.Int32,System.Int32)
 extern void int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_AdjustorThunk ();
-// 0x00000022 System.Void Unity.Mathematics.int3::.ctor(Unity.Mathematics.float3)
+// 0x00000021 System.Void Unity.Mathematics.int3::.ctor(Unity.Mathematics.float3)
 extern void int3__ctor_m2431D6DEB60987A6901C4144B34D53CCFFFF1B99_AdjustorThunk ();
-// 0x00000023 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Explicit(Unity.Mathematics.float3)
+// 0x00000022 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Explicit(Unity.Mathematics.float3)
 extern void int3_op_Explicit_mB6B4795E829257ADA7BB9FAE8B6CFCC73FCD5FA6 ();
+// 0x00000023 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Multiply(Unity.Mathematics.int3,System.Int32)
+extern void int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850 ();
 // 0x00000024 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Addition(Unity.Mathematics.int3,Unity.Mathematics.int3)
 extern void int3_op_Addition_m29CD8694800EF2B90AE64932FA83BD7ADA274570 ();
 // 0x00000025 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Subtraction(Unity.Mathematics.int3,Unity.Mathematics.int3)
 extern void int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D ();
-// 0x00000026 System.Boolean Unity.Mathematics.int3::Equals(Unity.Mathematics.int3)
+// 0x00000026 Unity.Mathematics.int3 Unity.Mathematics.int3::op_Division(Unity.Mathematics.int3,System.Int32)
+extern void int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5 ();
+// 0x00000027 System.Boolean Unity.Mathematics.int3::Equals(Unity.Mathematics.int3)
 extern void int3_Equals_mAFF05DFBF864C060B34AE8B80B73C03A37345C38_AdjustorThunk ();
-// 0x00000027 System.Boolean Unity.Mathematics.int3::Equals(System.Object)
+// 0x00000028 System.Boolean Unity.Mathematics.int3::Equals(System.Object)
 extern void int3_Equals_m90B3A8F615E6EA8BC87C35691CD55169FB5015FB_AdjustorThunk ();
-// 0x00000028 System.Int32 Unity.Mathematics.int3::GetHashCode()
+// 0x00000029 System.Int32 Unity.Mathematics.int3::GetHashCode()
 extern void int3_GetHashCode_m4B79E72F86756251E13B6A559E00EA6404516442_AdjustorThunk ();
-// 0x00000029 System.String Unity.Mathematics.int3::ToString()
+// 0x0000002A System.String Unity.Mathematics.int3::ToString()
 extern void int3_ToString_mFBF0FCDD841B94E9846B3A9604AD402F72159D92_AdjustorThunk ();
-// 0x0000002A System.String Unity.Mathematics.int3::ToString(System.String,System.IFormatProvider)
+// 0x0000002B System.String Unity.Mathematics.int3::ToString(System.String,System.IFormatProvider)
 extern void int3_ToString_m2B0A1E4A526A6E806F05333218254CBBBC81631E_AdjustorThunk ();
-// 0x0000002B System.Void Unity.Mathematics.int3_DebuggerProxy::.ctor(Unity.Mathematics.int3)
-extern void DebuggerProxy__ctor_mC474C7B15695B1AF928262FBDB97B37745268FA4 ();
 // 0x0000002C System.Void Unity.Mathematics.uint3::.ctor(System.UInt32,System.UInt32,System.UInt32)
 extern void uint3__ctor_m83EC50FF1E3D05E4220E4D77C4D2209FE1BDEE37_AdjustorThunk ();
 // 0x0000002D Unity.Mathematics.uint3 Unity.Mathematics.uint3::op_Multiply(Unity.Mathematics.uint3,Unity.Mathematics.uint3)
@@ -120,9 +120,7 @@ extern void uint3_GetHashCode_mB20D3856AF84E5AA5A7222DE08C7F21CA127039D_Adjustor
 extern void uint3_ToString_m02FAB1C4D7D9A4831F7D0D78AF975B8C4B7EF4FD_AdjustorThunk ();
 // 0x00000032 System.String Unity.Mathematics.uint3::ToString(System.String,System.IFormatProvider)
 extern void uint3_ToString_m7705E589BDC0FCC9D87428DEFD95A66EF4A7A6AF_AdjustorThunk ();
-// 0x00000033 System.Void Unity.Mathematics.uint3_DebuggerProxy::.ctor(Unity.Mathematics.uint3)
-extern void DebuggerProxy__ctor_mE211D3695D1283C2EF6A513128EBDB5B6041CDD1 ();
-static Il2CppMethodPointer s_methodPointers[51] = 
+static Il2CppMethodPointer s_methodPointers[50] = 
 {
 	math_hash_m2502AF91810C2607571B2000ECA8A7370055FEF5,
 	math_hash_m4CCD2D8F2C8D26A054255A8033CCC3D07CC902B4,
@@ -155,18 +153,18 @@ static Il2CppMethodPointer s_methodPointers[51] =
 	float3_ToString_mB4863B6E2512E53544B02772705EBF221D744416_AdjustorThunk,
 	float3_ToString_m513168CE73E3A1943FBF999282E27D81DB726E1C_AdjustorThunk,
 	float3_op_Implicit_m46D329E468EFD55FC5BEB36410ED6E8231843319,
-	DebuggerProxy__ctor_m6902AE5E32A4CF157F1FA7766C3E4B88DC86B33F,
 	int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_AdjustorThunk,
 	int3__ctor_m2431D6DEB60987A6901C4144B34D53CCFFFF1B99_AdjustorThunk,
 	int3_op_Explicit_mB6B4795E829257ADA7BB9FAE8B6CFCC73FCD5FA6,
+	int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850,
 	int3_op_Addition_m29CD8694800EF2B90AE64932FA83BD7ADA274570,
 	int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D,
+	int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5,
 	int3_Equals_mAFF05DFBF864C060B34AE8B80B73C03A37345C38_AdjustorThunk,
 	int3_Equals_m90B3A8F615E6EA8BC87C35691CD55169FB5015FB_AdjustorThunk,
 	int3_GetHashCode_m4B79E72F86756251E13B6A559E00EA6404516442_AdjustorThunk,
 	int3_ToString_mFBF0FCDD841B94E9846B3A9604AD402F72159D92_AdjustorThunk,
 	int3_ToString_m2B0A1E4A526A6E806F05333218254CBBBC81631E_AdjustorThunk,
-	DebuggerProxy__ctor_mC474C7B15695B1AF928262FBDB97B37745268FA4,
 	uint3__ctor_m83EC50FF1E3D05E4220E4D77C4D2209FE1BDEE37_AdjustorThunk,
 	uint3_op_Multiply_mC75EC5D3A910BC87EC728F1D02D9766F6CBB5E44,
 	uint3_Equals_mF1A43BF5E958201193205C727DE277A13E8A7877_AdjustorThunk,
@@ -174,67 +172,65 @@ static Il2CppMethodPointer s_methodPointers[51] =
 	uint3_GetHashCode_mB20D3856AF84E5AA5A7222DE08C7F21CA127039D_AdjustorThunk,
 	uint3_ToString_m02FAB1C4D7D9A4831F7D0D78AF975B8C4B7EF4FD_AdjustorThunk,
 	uint3_ToString_m7705E589BDC0FCC9D87428DEFD95A66EF4A7A6AF_AdjustorThunk,
-	DebuggerProxy__ctor_mE211D3695D1283C2EF6A513128EBDB5B6041CDD1,
 };
-static const int32_t s_InvokerIndices[51] = 
+static const int32_t s_InvokerIndices[50] = 
 {
+	1664,
+	1665,
+	231,
+	1666,
+	231,
+	1667,
+	138,
 	1668,
+	392,
+	138,
+	1668,
+	392,
+	1268,
 	1669,
-	231,
-	1670,
-	231,
-	1671,
-	138,
-	1672,
-	392,
-	138,
-	1672,
-	392,
-	1271,
-	1673,
-	1271,
+	1268,
 	391,
+	1670,
+	1671,
+	1670,
+	1225,
+	1672,
+	1673,
+	1672,
+	1672,
+	1673,
 	1674,
+	9,
+	10,
+	14,
+	113,
 	1675,
-	1674,
-	1228,
-	1676,
-	1677,
-	1676,
+	38,
 	1676,
 	1677,
 	1678,
+	1668,
+	1668,
+	1678,
+	1679,
 	9,
 	10,
 	14,
 	113,
-	1679,
-	1680,
 	38,
 	1680,
 	1681,
-	1672,
-	1672,
-	1682,
 	9,
 	10,
 	14,
 	113,
-	1683,
-	38,
-	1684,
-	1685,
-	9,
-	10,
-	14,
-	113,
-	1686,
 };
 extern const Il2CppCodeGenModule g_Unity_MathematicsCodeGenModule;
 const Il2CppCodeGenModule g_Unity_MathematicsCodeGenModule = 
 {
 	"Unity.Mathematics.dll",
-	51,
+	50,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,

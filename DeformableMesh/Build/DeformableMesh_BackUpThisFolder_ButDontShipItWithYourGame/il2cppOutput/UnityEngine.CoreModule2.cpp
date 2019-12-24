@@ -9650,6 +9650,10 @@ public:
 	bool ___U3CoverridesOtherLightingSettingsU3Ek__BackingField_14;
 	// System.Boolean UnityEngine.Rendering.SupportedRenderingFeatures::<editableMaterialRenderQueue>k__BackingField
 	bool ___U3CeditableMaterialRenderQueueU3Ek__BackingField_15;
+	// System.Boolean UnityEngine.Rendering.SupportedRenderingFeatures::<overridesLODBias>k__BackingField
+	bool ___U3CoverridesLODBiasU3Ek__BackingField_16;
+	// System.Boolean UnityEngine.Rendering.SupportedRenderingFeatures::<overridesMaximumLODLevel>k__BackingField
+	bool ___U3CoverridesMaximumLODLevelU3Ek__BackingField_17;
 
 public:
 	inline static int32_t get_offset_of_U3CreflectionProbeModesU3Ek__BackingField_1() { return static_cast<int32_t>(offsetof(SupportedRenderingFeatures_t746CFCCA30199A73BEF15FE62C0951C4F5063097, ___U3CreflectionProbeModesU3Ek__BackingField_1)); }
@@ -9770,6 +9774,22 @@ public:
 	inline void set_U3CeditableMaterialRenderQueueU3Ek__BackingField_15(bool value)
 	{
 		___U3CeditableMaterialRenderQueueU3Ek__BackingField_15 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CoverridesLODBiasU3Ek__BackingField_16() { return static_cast<int32_t>(offsetof(SupportedRenderingFeatures_t746CFCCA30199A73BEF15FE62C0951C4F5063097, ___U3CoverridesLODBiasU3Ek__BackingField_16)); }
+	inline bool get_U3CoverridesLODBiasU3Ek__BackingField_16() const { return ___U3CoverridesLODBiasU3Ek__BackingField_16; }
+	inline bool* get_address_of_U3CoverridesLODBiasU3Ek__BackingField_16() { return &___U3CoverridesLODBiasU3Ek__BackingField_16; }
+	inline void set_U3CoverridesLODBiasU3Ek__BackingField_16(bool value)
+	{
+		___U3CoverridesLODBiasU3Ek__BackingField_16 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CoverridesMaximumLODLevelU3Ek__BackingField_17() { return static_cast<int32_t>(offsetof(SupportedRenderingFeatures_t746CFCCA30199A73BEF15FE62C0951C4F5063097, ___U3CoverridesMaximumLODLevelU3Ek__BackingField_17)); }
+	inline bool get_U3CoverridesMaximumLODLevelU3Ek__BackingField_17() const { return ___U3CoverridesMaximumLODLevelU3Ek__BackingField_17; }
+	inline bool* get_address_of_U3CoverridesMaximumLODLevelU3Ek__BackingField_17() { return &___U3CoverridesMaximumLODLevelU3Ek__BackingField_17; }
+	inline void set_U3CoverridesMaximumLODLevelU3Ek__BackingField_17(bool value)
+	{
+		___U3CoverridesMaximumLODLevelU3Ek__BackingField_17 = value;
 	}
 };
 
@@ -17810,6 +17830,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SupportedRenderingFeatures__ctor_mFA6FBB
 		__this->set_U3CoverridesFogU3Ek__BackingField_13((bool)0);
 		__this->set_U3CoverridesOtherLightingSettingsU3Ek__BackingField_14((bool)0);
 		__this->set_U3CeditableMaterialRenderQueueU3Ek__BackingField_15((bool)1);
+		__this->set_U3CoverridesLODBiasU3Ek__BackingField_16((bool)0);
+		__this->set_U3CoverridesMaximumLODLevelU3Ek__BackingField_17((bool)0);
 		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(__this, /*hidden argument*/NULL);
 		return;
 	}
