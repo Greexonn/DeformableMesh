@@ -24,7 +24,7 @@ struct Cutter_t6C31E1C851DDD13EAEDB6C2CA4541581995A115C;
 // DeformableMesh
 struct DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D;
 // DeformableMesh/MeshBatch[0...,0...,0...]
-struct MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9;
+struct MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1;
 // DeformableMesh/NativeCellGrid
 struct NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B;
 // DeformableMesh/NativeCubeGrid
@@ -106,7 +106,7 @@ IL2CPP_EXTERN_C RuntimeClass* GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F
 IL2CPP_EXTERN_C RuntimeClass* Int32_t585191389E07734F19F3156FF88FB3EF4800D102_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* KeyframeU5BU5D_tF4DC3E9BD9E6DB77FFF7BDC0B1545B5D6071513D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Mathf_tFBDE6467D269BFE410605C7D806FD9991D4A89CB_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Quaternion_t319F3319A7D43FFA5D819AD6C0A98851F0095357_il2cpp_TypeInfo_var;
@@ -133,12 +133,14 @@ IL2CPP_EXTERN_C const RuntimeMethod* IJobParallelForExtensions_Schedule_TisPullV
 IL2CPP_EXTERN_C const RuntimeMethod* Mesh_SetIndexBufferData_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m3467A767D52405E6D1DFA684C8E03A5B4DB55DF9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_Dispose_m265E0AD1B3EF228EBBCC6E67212F96B863C7FC52_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_Dispose_m72FCF63D7F1D0FD0F0C2B067D9B0CFBCAEB292D1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_Dispose_mCCF1C8209E27BE62EBC0FAB288D1038BB7C4ED79_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1__ctor_m04FF841AD87EFB01E8FB5EBE65DA2E967D968DAD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1__ctor_m1F612D56A04DDB37F1BE0D0A470FCDA5D864BFBE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1__ctor_m42C050ADFBB7F7ECBF1C0ADCC2330635833E0F4B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeList_1_Add_m4EB8B3FEE5386509F965C642E9C83028FE8F9D7F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var;
@@ -174,7 +176,6 @@ IL2CPP_EXTERN_C const uint32_t DeformableMesh_UpdateMesh_m88312893DEEC63D56BDE70
 IL2CPP_EXTERN_C const uint32_t FPSDisplay_OnGUI_mBD59BE8E75936F4CEEA5D97FC32AD8BE1F1FEFEF_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MeshGridData_Create_mC05A452D098073DE0A2B49B03178FDE07F0F4BF9_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t MeshGridData_Dispose_m3C640F28A0FF5DA44A0EECBC616D0EBEFF8E70A5_MetadataUsageId;
-IL2CPP_EXTERN_C const uint32_t MeshGridData_StorePointsAndVertices_m47B7330230C76F72568CECA06E69695B1835FA00_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NativeCellGrid_Dispose_m1E1456569549D46D63E50ACF3FEE6975F15DB657_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NativeCellGrid__ctor_m288C554A8505A1E6F3CECFAF611C8ACF88667AF3_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t NativeCellGrid__ctor_mEAC748BECFB2B7CEC16139C91FF8357AD769C879_MetadataUsageId;
@@ -204,9 +205,8 @@ struct NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_pinvok
 struct NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_pinvoke;;
 struct RectOffset_tED44B1176E93501050480416699D1F11BAE8C87A_marshaled_com;
 struct UnsafeList_t63311B831D16D018CEB25902C3C9B9BFF02CD34A ;
-struct VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 ;
 
-struct MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9;
+struct MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1;
 struct KeyframeU5BU5D_tF4DC3E9BD9E6DB77FFF7BDC0B1545B5D6071513D;
 struct VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9;
 
@@ -3102,6 +3102,8 @@ public:
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	// Unity.Collections.NativeList`1<Unity.Mathematics.float3> DeformableMesh_MeshBatch::batchVertices
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	// Unity.Collections.NativeArray`1<Unity.Mathematics.int3> DeformableMesh_MeshBatch::batchCellsMap
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 
 public:
 	inline static int32_t get_offset_of_instance_0() { return static_cast<int32_t>(offsetof(MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A, ___instance_0)); }
@@ -3137,6 +3139,14 @@ public:
 	{
 		___batchVertices_3 = value;
 	}
+
+	inline static int32_t get_offset_of_batchCellsMap_4() { return static_cast<int32_t>(offsetof(MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A, ___batchCellsMap_4)); }
+	inline NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  get_batchCellsMap_4() const { return ___batchCellsMap_4; }
+	inline NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * get_address_of_batchCellsMap_4() { return &___batchCellsMap_4; }
+	inline void set_batchCellsMap_4(NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  value)
+	{
+		___batchCellsMap_4 = value;
+	}
 };
 
 // Native definition for P/Invoke marshalling of DeformableMesh/MeshBatch
@@ -3146,6 +3156,7 @@ struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_pinvoke
 	MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * ___meshFilter_1;
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 };
 // Native definition for COM marshalling of DeformableMesh/MeshBatch
 struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_com
@@ -3154,6 +3165,7 @@ struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_com
 	MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * ___meshFilter_1;
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 };
 
 // DeformableMesh_NativeCellGrid
@@ -3322,8 +3334,8 @@ public:
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointsGridSize_1;
 	// System.Int32 DeformableMesh_TriangulateCubeJob::batchSize
 	int32_t ___batchSize_2;
-	// Unity.Mathematics.int3 DeformableMesh_TriangulateCubeJob::_batchOffset
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____batchOffset_3;
+	// Unity.Mathematics.int3 DeformableMesh_TriangulateCubeJob::batchOffset
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___batchOffset_3;
 	// Unity.Collections.NativeArray`1<Unity.Mathematics.int3> DeformableMesh_TriangulateCubeJob::cellsMap
 	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___cellsMap_4;
 	// Unity.Collections.NativeArray`1<System.Int32> DeformableMesh_TriangulateCubeJob::indexes
@@ -3354,12 +3366,12 @@ public:
 		___batchSize_2 = value;
 	}
 
-	inline static int32_t get_offset_of__batchOffset_3() { return static_cast<int32_t>(offsetof(TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD, ____batchOffset_3)); }
-	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  get__batchOffset_3() const { return ____batchOffset_3; }
-	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * get_address_of__batchOffset_3() { return &____batchOffset_3; }
-	inline void set__batchOffset_3(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  value)
+	inline static int32_t get_offset_of_batchOffset_3() { return static_cast<int32_t>(offsetof(TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD, ___batchOffset_3)); }
+	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  get_batchOffset_3() const { return ___batchOffset_3; }
+	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * get_address_of_batchOffset_3() { return &___batchOffset_3; }
+	inline void set_batchOffset_3(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  value)
 	{
-		____batchOffset_3 = value;
+		___batchOffset_3 = value;
 	}
 
 	inline static int32_t get_offset_of_cellsMap_4() { return static_cast<int32_t>(offsetof(TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD, ___cellsMap_4)); }
@@ -3385,7 +3397,7 @@ struct TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_marshaled_pi
 	NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  ___points_0;
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointsGridSize_1;
 	int32_t ___batchSize_2;
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____batchOffset_3;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___batchOffset_3;
 	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___cellsMap_4;
 	NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  ___indexes_5;
 };
@@ -3395,7 +3407,7 @@ struct TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_marshaled_co
 	NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  ___points_0;
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointsGridSize_1;
 	int32_t ___batchSize_2;
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____batchOffset_3;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___batchOffset_3;
 	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___cellsMap_4;
 	NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  ___indexes_5;
 };
@@ -3504,18 +3516,14 @@ public:
 	float ___cellSize_0;
 	// Unity.Mathematics.int3 DeformableMesh_MeshGridData::gridSize
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___gridSize_1;
-	// UnityEngine.Mesh DeformableMesh_MeshGridData::_mesh
-	Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * ____mesh_2;
-	// UnityEngine.Rendering.VertexAttributeDescriptor[] DeformableMesh_MeshGridData::_layout
-	VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* ____layout_3;
-	// DeformableMesh_NativeCubeGrid DeformableMesh_MeshGridData::_pointsGrid
-	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  ____pointsGrid_4;
-	// DeformableMesh_NativeCellGrid DeformableMesh_MeshGridData::_cellsGrid
-	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  ____cellsGrid_5;
-	// Unity.Collections.NativeArray`1<Unity.Mathematics.float3> DeformableMesh_MeshGridData::_verticesArray
-	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ____verticesArray_6;
-	// Unity.Collections.NativeList`1<System.Int32> DeformableMesh_MeshGridData::_indexesList
-	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ____indexesList_7;
+	// DeformableMesh_NativeCubeGrid DeformableMesh_MeshGridData::pointsGrid
+	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  ___pointsGrid_2;
+	// DeformableMesh_NativeCellGrid DeformableMesh_MeshGridData::cellsGrid
+	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  ___cellsGrid_3;
+	// Unity.Collections.NativeArray`1<Unity.Mathematics.float3> DeformableMesh_MeshGridData::verticesArray
+	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ___verticesArray_4;
+	// Unity.Collections.NativeList`1<System.Int32> DeformableMesh_MeshGridData::indexesList
+	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___indexesList_5;
 
 public:
 	inline static int32_t get_offset_of_cellSize_0() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ___cellSize_0)); }
@@ -3534,54 +3542,36 @@ public:
 		___gridSize_1 = value;
 	}
 
-	inline static int32_t get_offset_of__mesh_2() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____mesh_2)); }
-	inline Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * get__mesh_2() const { return ____mesh_2; }
-	inline Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C ** get_address_of__mesh_2() { return &____mesh_2; }
-	inline void set__mesh_2(Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * value)
+	inline static int32_t get_offset_of_pointsGrid_2() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ___pointsGrid_2)); }
+	inline NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  get_pointsGrid_2() const { return ___pointsGrid_2; }
+	inline NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * get_address_of_pointsGrid_2() { return &___pointsGrid_2; }
+	inline void set_pointsGrid_2(NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  value)
 	{
-		____mesh_2 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&____mesh_2), (void*)value);
+		___pointsGrid_2 = value;
 	}
 
-	inline static int32_t get_offset_of__layout_3() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____layout_3)); }
-	inline VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* get__layout_3() const { return ____layout_3; }
-	inline VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9** get_address_of__layout_3() { return &____layout_3; }
-	inline void set__layout_3(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* value)
+	inline static int32_t get_offset_of_cellsGrid_3() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ___cellsGrid_3)); }
+	inline NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  get_cellsGrid_3() const { return ___cellsGrid_3; }
+	inline NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * get_address_of_cellsGrid_3() { return &___cellsGrid_3; }
+	inline void set_cellsGrid_3(NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  value)
 	{
-		____layout_3 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&____layout_3), (void*)value);
+		___cellsGrid_3 = value;
 	}
 
-	inline static int32_t get_offset_of__pointsGrid_4() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____pointsGrid_4)); }
-	inline NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  get__pointsGrid_4() const { return ____pointsGrid_4; }
-	inline NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * get_address_of__pointsGrid_4() { return &____pointsGrid_4; }
-	inline void set__pointsGrid_4(NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  value)
+	inline static int32_t get_offset_of_verticesArray_4() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ___verticesArray_4)); }
+	inline NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  get_verticesArray_4() const { return ___verticesArray_4; }
+	inline NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * get_address_of_verticesArray_4() { return &___verticesArray_4; }
+	inline void set_verticesArray_4(NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  value)
 	{
-		____pointsGrid_4 = value;
+		___verticesArray_4 = value;
 	}
 
-	inline static int32_t get_offset_of__cellsGrid_5() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____cellsGrid_5)); }
-	inline NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  get__cellsGrid_5() const { return ____cellsGrid_5; }
-	inline NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * get_address_of__cellsGrid_5() { return &____cellsGrid_5; }
-	inline void set__cellsGrid_5(NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  value)
+	inline static int32_t get_offset_of_indexesList_5() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ___indexesList_5)); }
+	inline NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  get_indexesList_5() const { return ___indexesList_5; }
+	inline NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * get_address_of_indexesList_5() { return &___indexesList_5; }
+	inline void set_indexesList_5(NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  value)
 	{
-		____cellsGrid_5 = value;
-	}
-
-	inline static int32_t get_offset_of__verticesArray_6() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____verticesArray_6)); }
-	inline NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  get__verticesArray_6() const { return ____verticesArray_6; }
-	inline NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * get_address_of__verticesArray_6() { return &____verticesArray_6; }
-	inline void set__verticesArray_6(NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  value)
-	{
-		____verticesArray_6 = value;
-	}
-
-	inline static int32_t get_offset_of__indexesList_7() { return static_cast<int32_t>(offsetof(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68, ____indexesList_7)); }
-	inline NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  get__indexesList_7() const { return ____indexesList_7; }
-	inline NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * get_address_of__indexesList_7() { return &____indexesList_7; }
-	inline void set__indexesList_7(NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  value)
-	{
-		____indexesList_7 = value;
+		___indexesList_5 = value;
 	}
 };
 
@@ -3590,24 +3580,20 @@ struct MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_pinvoke
 {
 	float ___cellSize_0;
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___gridSize_1;
-	Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * ____mesh_2;
-	VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * ____layout_3;
-	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_pinvoke ____pointsGrid_4;
-	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B_marshaled_pinvoke ____cellsGrid_5;
-	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ____verticesArray_6;
-	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ____indexesList_7;
+	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_pinvoke ___pointsGrid_2;
+	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B_marshaled_pinvoke ___cellsGrid_3;
+	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ___verticesArray_4;
+	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___indexesList_5;
 };
 // Native definition for COM marshalling of DeformableMesh/MeshGridData
 struct MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_com
 {
 	float ___cellSize_0;
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___gridSize_1;
-	Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * ____mesh_2;
-	VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * ____layout_3;
-	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_com ____pointsGrid_4;
-	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B_marshaled_com ____cellsGrid_5;
-	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ____verticesArray_6;
-	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ____indexesList_7;
+	NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898_marshaled_com ___pointsGrid_2;
+	NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B_marshaled_com ___cellsGrid_3;
+	NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  ___verticesArray_4;
+	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___indexesList_5;
 };
 
 // UnityEngine.BoxCollider
@@ -3685,28 +3671,30 @@ public:
 	float ____cellSize_5;
 	// Unity.Mathematics.int3 DeformableMesh::_gridSize
 	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____gridSize_6;
+	// UnityEngine.Rendering.VertexAttributeDescriptor[] DeformableMesh::_vertexLayout
+	VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* ____vertexLayout_7;
 	// DeformableMesh_MeshGridData DeformableMesh::_cubesGrid
-	MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  ____cubesGrid_7;
+	MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  ____cubesGrid_8;
 	// System.Int32 DeformableMesh::_maxBatchCellSize
-	int32_t ____maxBatchCellSize_8;
+	int32_t ____maxBatchCellSize_9;
 	// DeformableMesh_MeshBatch[0...,0...,0...] DeformableMesh::_meshBatches
-	MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* ____meshBatches_9;
+	MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* ____meshBatches_10;
 	// Unity.Mathematics.int3 DeformableMesh::_batchesGridSize
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____batchesGridSize_10;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ____batchesGridSize_11;
 	// System.Int32 DeformableMesh::_batchIndexesCount
-	int32_t ____batchIndexesCount_11;
+	int32_t ____batchIndexesCount_12;
 	// System.Int32 DeformableMesh::_batchVerticesCount
-	int32_t ____batchVerticesCount_12;
+	int32_t ____batchVerticesCount_13;
 	// Unity.Collections.NativeList`1<Unity.Jobs.JobHandle> DeformableMesh::_jobsHandles
-	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsHandles_13;
+	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsHandles_14;
 	// Unity.Collections.NativeList`1<Unity.Jobs.JobHandle> DeformableMesh::_jobsCutHandles
-	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsCutHandles_14;
+	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsCutHandles_15;
 	// Unity.Collections.NativeList`1<Unity.Jobs.JobHandle> DeformableMesh::_jobsPullHandles
-	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsPullHandles_15;
+	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsPullHandles_16;
 	// Unity.Collections.NativeList`1<Unity.Jobs.JobHandle> DeformableMesh::_jobsTriangulateHandles
-	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsTriangulateHandles_16;
+	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsTriangulateHandles_17;
 	// Unity.Collections.NativeList`1<Unity.Jobs.JobHandle> DeformableMesh::_jobsUpdateBatchesHandles
-	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsUpdateBatchesHandles_17;
+	NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  ____jobsUpdateBatchesHandles_18;
 
 public:
 	inline static int32_t get_offset_of__meshMaterial_4() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____meshMaterial_4)); }
@@ -3734,97 +3722,102 @@ public:
 		____gridSize_6 = value;
 	}
 
-	inline static int32_t get_offset_of__cubesGrid_7() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____cubesGrid_7)); }
-	inline MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  get__cubesGrid_7() const { return ____cubesGrid_7; }
-	inline MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * get_address_of__cubesGrid_7() { return &____cubesGrid_7; }
-	inline void set__cubesGrid_7(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  value)
+	inline static int32_t get_offset_of__vertexLayout_7() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____vertexLayout_7)); }
+	inline VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* get__vertexLayout_7() const { return ____vertexLayout_7; }
+	inline VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9** get_address_of__vertexLayout_7() { return &____vertexLayout_7; }
+	inline void set__vertexLayout_7(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* value)
 	{
-		____cubesGrid_7 = value;
-		Il2CppCodeGenWriteBarrier((void**)&(((&____cubesGrid_7))->____mesh_2), (void*)NULL);
-		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((&____cubesGrid_7))->____layout_3), (void*)NULL);
-		#endif
+		____vertexLayout_7 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____vertexLayout_7), (void*)value);
 	}
 
-	inline static int32_t get_offset_of__maxBatchCellSize_8() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____maxBatchCellSize_8)); }
-	inline int32_t get__maxBatchCellSize_8() const { return ____maxBatchCellSize_8; }
-	inline int32_t* get_address_of__maxBatchCellSize_8() { return &____maxBatchCellSize_8; }
-	inline void set__maxBatchCellSize_8(int32_t value)
+	inline static int32_t get_offset_of__cubesGrid_8() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____cubesGrid_8)); }
+	inline MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  get__cubesGrid_8() const { return ____cubesGrid_8; }
+	inline MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * get_address_of__cubesGrid_8() { return &____cubesGrid_8; }
+	inline void set__cubesGrid_8(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68  value)
 	{
-		____maxBatchCellSize_8 = value;
+		____cubesGrid_8 = value;
 	}
 
-	inline static int32_t get_offset_of__meshBatches_9() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____meshBatches_9)); }
-	inline MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* get__meshBatches_9() const { return ____meshBatches_9; }
-	inline MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9** get_address_of__meshBatches_9() { return &____meshBatches_9; }
-	inline void set__meshBatches_9(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* value)
+	inline static int32_t get_offset_of__maxBatchCellSize_9() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____maxBatchCellSize_9)); }
+	inline int32_t get__maxBatchCellSize_9() const { return ____maxBatchCellSize_9; }
+	inline int32_t* get_address_of__maxBatchCellSize_9() { return &____maxBatchCellSize_9; }
+	inline void set__maxBatchCellSize_9(int32_t value)
 	{
-		____meshBatches_9 = value;
-		Il2CppCodeGenWriteBarrier((void**)(&____meshBatches_9), (void*)value);
+		____maxBatchCellSize_9 = value;
 	}
 
-	inline static int32_t get_offset_of__batchesGridSize_10() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchesGridSize_10)); }
-	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  get__batchesGridSize_10() const { return ____batchesGridSize_10; }
-	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * get_address_of__batchesGridSize_10() { return &____batchesGridSize_10; }
-	inline void set__batchesGridSize_10(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  value)
+	inline static int32_t get_offset_of__meshBatches_10() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____meshBatches_10)); }
+	inline MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* get__meshBatches_10() const { return ____meshBatches_10; }
+	inline MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1** get_address_of__meshBatches_10() { return &____meshBatches_10; }
+	inline void set__meshBatches_10(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* value)
 	{
-		____batchesGridSize_10 = value;
+		____meshBatches_10 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____meshBatches_10), (void*)value);
 	}
 
-	inline static int32_t get_offset_of__batchIndexesCount_11() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchIndexesCount_11)); }
-	inline int32_t get__batchIndexesCount_11() const { return ____batchIndexesCount_11; }
-	inline int32_t* get_address_of__batchIndexesCount_11() { return &____batchIndexesCount_11; }
-	inline void set__batchIndexesCount_11(int32_t value)
+	inline static int32_t get_offset_of__batchesGridSize_11() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchesGridSize_11)); }
+	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  get__batchesGridSize_11() const { return ____batchesGridSize_11; }
+	inline int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * get_address_of__batchesGridSize_11() { return &____batchesGridSize_11; }
+	inline void set__batchesGridSize_11(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  value)
 	{
-		____batchIndexesCount_11 = value;
+		____batchesGridSize_11 = value;
 	}
 
-	inline static int32_t get_offset_of__batchVerticesCount_12() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchVerticesCount_12)); }
-	inline int32_t get__batchVerticesCount_12() const { return ____batchVerticesCount_12; }
-	inline int32_t* get_address_of__batchVerticesCount_12() { return &____batchVerticesCount_12; }
-	inline void set__batchVerticesCount_12(int32_t value)
+	inline static int32_t get_offset_of__batchIndexesCount_12() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchIndexesCount_12)); }
+	inline int32_t get__batchIndexesCount_12() const { return ____batchIndexesCount_12; }
+	inline int32_t* get_address_of__batchIndexesCount_12() { return &____batchIndexesCount_12; }
+	inline void set__batchIndexesCount_12(int32_t value)
 	{
-		____batchVerticesCount_12 = value;
+		____batchIndexesCount_12 = value;
 	}
 
-	inline static int32_t get_offset_of__jobsHandles_13() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsHandles_13)); }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsHandles_13() const { return ____jobsHandles_13; }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsHandles_13() { return &____jobsHandles_13; }
-	inline void set__jobsHandles_13(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	inline static int32_t get_offset_of__batchVerticesCount_13() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____batchVerticesCount_13)); }
+	inline int32_t get__batchVerticesCount_13() const { return ____batchVerticesCount_13; }
+	inline int32_t* get_address_of__batchVerticesCount_13() { return &____batchVerticesCount_13; }
+	inline void set__batchVerticesCount_13(int32_t value)
 	{
-		____jobsHandles_13 = value;
+		____batchVerticesCount_13 = value;
 	}
 
-	inline static int32_t get_offset_of__jobsCutHandles_14() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsCutHandles_14)); }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsCutHandles_14() const { return ____jobsCutHandles_14; }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsCutHandles_14() { return &____jobsCutHandles_14; }
-	inline void set__jobsCutHandles_14(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	inline static int32_t get_offset_of__jobsHandles_14() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsHandles_14)); }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsHandles_14() const { return ____jobsHandles_14; }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsHandles_14() { return &____jobsHandles_14; }
+	inline void set__jobsHandles_14(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
 	{
-		____jobsCutHandles_14 = value;
+		____jobsHandles_14 = value;
 	}
 
-	inline static int32_t get_offset_of__jobsPullHandles_15() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsPullHandles_15)); }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsPullHandles_15() const { return ____jobsPullHandles_15; }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsPullHandles_15() { return &____jobsPullHandles_15; }
-	inline void set__jobsPullHandles_15(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	inline static int32_t get_offset_of__jobsCutHandles_15() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsCutHandles_15)); }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsCutHandles_15() const { return ____jobsCutHandles_15; }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsCutHandles_15() { return &____jobsCutHandles_15; }
+	inline void set__jobsCutHandles_15(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
 	{
-		____jobsPullHandles_15 = value;
+		____jobsCutHandles_15 = value;
 	}
 
-	inline static int32_t get_offset_of__jobsTriangulateHandles_16() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsTriangulateHandles_16)); }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsTriangulateHandles_16() const { return ____jobsTriangulateHandles_16; }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsTriangulateHandles_16() { return &____jobsTriangulateHandles_16; }
-	inline void set__jobsTriangulateHandles_16(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	inline static int32_t get_offset_of__jobsPullHandles_16() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsPullHandles_16)); }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsPullHandles_16() const { return ____jobsPullHandles_16; }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsPullHandles_16() { return &____jobsPullHandles_16; }
+	inline void set__jobsPullHandles_16(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
 	{
-		____jobsTriangulateHandles_16 = value;
+		____jobsPullHandles_16 = value;
 	}
 
-	inline static int32_t get_offset_of__jobsUpdateBatchesHandles_17() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsUpdateBatchesHandles_17)); }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsUpdateBatchesHandles_17() const { return ____jobsUpdateBatchesHandles_17; }
-	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsUpdateBatchesHandles_17() { return &____jobsUpdateBatchesHandles_17; }
-	inline void set__jobsUpdateBatchesHandles_17(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	inline static int32_t get_offset_of__jobsTriangulateHandles_17() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsTriangulateHandles_17)); }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsTriangulateHandles_17() const { return ____jobsTriangulateHandles_17; }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsTriangulateHandles_17() { return &____jobsTriangulateHandles_17; }
+	inline void set__jobsTriangulateHandles_17(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
 	{
-		____jobsUpdateBatchesHandles_17 = value;
+		____jobsTriangulateHandles_17 = value;
+	}
+
+	inline static int32_t get_offset_of__jobsUpdateBatchesHandles_18() { return static_cast<int32_t>(offsetof(DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D, ____jobsUpdateBatchesHandles_18)); }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  get__jobsUpdateBatchesHandles_18() const { return ____jobsUpdateBatchesHandles_18; }
+	inline NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * get_address_of__jobsUpdateBatchesHandles_18() { return &____jobsUpdateBatchesHandles_18; }
+	inline void set__jobsUpdateBatchesHandles_18(NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  value)
+	{
+		____jobsUpdateBatchesHandles_18 = value;
 	}
 };
 
@@ -3930,8 +3923,43 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// DeformableMesh_MeshBatch[0...,0...,0...]
-struct MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9  : public RuntimeArray
+// UnityEngine.Rendering.VertexAttributeDescriptor[]
+struct VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  m_Items[1];
+
+public:
+	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  value)
+	{
+		m_Items[index] = value;
+	}
+};
+// DeformableMesh_MeshBatch[,,]
+struct MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1  : public RuntimeArray
 {
 public:
 	ALIGN_FIELD (8) MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A  m_Items[1];
@@ -4041,41 +4069,6 @@ public:
 		#endif
 	}
 };
-// UnityEngine.Rendering.VertexAttributeDescriptor[]
-struct VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  m_Items[1];
-
-public:
-	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  value)
-	{
-		m_Items[index] = value;
-	}
-};
 // UnityEngine.Keyframe[]
 struct KeyframeU5BU5D_tF4DC3E9BD9E6DB77FFF7BDC0B1545B5D6071513D  : public RuntimeArray
 {
@@ -4137,6 +4130,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1__ctor_m89A39334085A2173A999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_gshared (NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * __this, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<Unity.Jobs.JobHandle>::Clear()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_gshared (NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * __this, const RuntimeMethod* method);
+// System.Boolean Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::get_IsCreated()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8_gshared (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3_gshared (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method);
 // Unity.Collections.NativeArray`1<!0> Unity.Collections.NativeList`1<Unity.Jobs.JobHandle>::op_Implicit(Unity.Collections.NativeList`1<!0>)
@@ -4175,6 +4170,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Mesh_SetIndexBufferData_TisInt32_t585191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975_gshared (NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * __this, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<Unity.Mathematics.float3>::Dispose()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4_gshared (NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * __this, const RuntimeMethod* method);
+// System.Void Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C_gshared (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<System.Int32>::Add(!0)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeList_1_Add_mCCF8022C051868D308A2440025E7520DB76F5816_gshared (NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<Unity.Mathematics.float3>::Add(!0)
@@ -4224,6 +4221,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_mEAEC84B222C60319D593E456D769B3311DFCEF97 (MonoBehaviour_t4A60845CF505405AF8BE8C61CC07F75CADEF6429 * __this, const RuntimeMethod* method);
 // System.Void DeformableMesh::AllocateContainers()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_AllocateContainers_m05C2021CC2C9CCFFF76F7420BB28653BAFCCB3C6 (DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Rendering.VertexAttributeDescriptor::.ctor(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VertexAttributeDescriptor__ctor_m27E0321BB3652EC579323E31D752B6E753826703 (VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * __this, int32_t ___attribute0, int32_t ___format1, int32_t ___dimension2, int32_t ___stream3, const RuntimeMethod* method);
 // System.Void DeformableMesh/MeshGridData::Create(System.Single,Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshGridData_Create_mC05A452D098073DE0A2B49B03178FDE07F0F4BF9 (MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * __this, float ___cellSize0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___gridSize1, const RuntimeMethod* method);
 // System.Void DeformableMesh::InitializeBatchGrid()
@@ -4264,6 +4263,17 @@ inline void NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90 (Native
 {
 	((  void (*) (NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *, const RuntimeMethod*))NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_gshared)(__this, method);
 }
+// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Division(Unity.Mathematics.int3,System.Int32)
+IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method);
+// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Multiply(Unity.Mathematics.int3,System.Int32)
+IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method);
+// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Subtraction(Unity.Mathematics.int3,Unity.Mathematics.int3)
+IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___rhs1, const RuntimeMethod* method);
+// System.Boolean Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::get_IsCreated()
+inline bool NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8 (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *, const RuntimeMethod*))NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8_gshared)(__this, method);
+}
 // System.Void Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3 (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
@@ -4291,16 +4301,12 @@ inline void NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA (Nat
 {
 	((  void (*) (NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *, NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3 , const RuntimeMethod*))NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_gshared)(__this, ___elements0, method);
 }
-// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Division(Unity.Mathematics.int3,System.Int32)
-IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method);
 // System.Void DeformableMesh::UpdateBatches(Unity.Mathematics.int3,Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_UpdateBatches_mEE1907C71F30349E845EB68099A2CB631AE0ADB6 (DeformableMesh_tE891364377C2C4DFA0857D86B4E4D5181A3ABE5D * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___fromIds0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___toIds1, const RuntimeMethod* method);
 // Unity.Mathematics.float3 Unity.Mathematics.float3::op_Division(Unity.Mathematics.float3,System.Single)
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  float3_op_Division_mEA9DF1BD901A127A69DB2146EE9618646F6D1EE8_inline (float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  ___lhs0, float ___rhs1, const RuntimeMethod* method);
 // Unity.Mathematics.int3 Unity.Mathematics.int3::op_Explicit(Unity.Mathematics.float3)
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Explicit_mB6B4795E829257ADA7BB9FAE8B6CFCC73FCD5FA6_inline (float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  ___v0, const RuntimeMethod* method);
-// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Subtraction(Unity.Mathematics.int3,Unity.Mathematics.int3)
-IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___rhs1, const RuntimeMethod* method);
 // Unity.Mathematics.int3 Unity.Mathematics.math::clamp(Unity.Mathematics.int3,Unity.Mathematics.int3,Unity.Mathematics.int3)
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  math_clamp_mEE22F45E95FBE7751113DDE64D76ACA1A39B620F_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___x0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___a1, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___b2, const RuntimeMethod* method);
 // Unity.Mathematics.int3 Unity.Mathematics.int3::op_Addition(Unity.Mathematics.int3,Unity.Mathematics.int3)
@@ -4417,6 +4423,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Mesh_RecalculateBounds_m1BF701FE2CEA4E8E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Mesh_RecalculateNormals_m9F5DF412F81F250419D9887C76F549B692B7D027 (Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Mesh::RecalculateTangents()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Mesh_RecalculateTangents_mAF768120847C2BCEB8DF6F49F550C8918AE46726 (Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A (Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0 * ___obj0, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<System.Int32>::Dispose()
 inline void NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975 (NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * __this, const RuntimeMethod* method)
 {
@@ -4427,8 +4435,11 @@ inline void NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4 (Nati
 {
 	((  void (*) (NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *, const RuntimeMethod*))NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4_gshared)(__this, method);
 }
-// Unity.Mathematics.int3 Unity.Mathematics.int3::op_Multiply(Unity.Mathematics.int3,System.Int32)
-IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method);
+// System.Void Unity.Collections.NativeArray`1<Unity.Mathematics.int3>::Dispose()
+inline void NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * __this, const RuntimeMethod* method)
+{
+	((  void (*) (NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *, const RuntimeMethod*))NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C_gshared)(__this, method);
+}
 // System.Int32 DeformableMesh/CopyBatchIndexesJob::GetCellStartIndex(Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CopyBatchIndexesJob_GetCellStartIndex_mACB06479467D2362BF3B92579F1E9EDEAEEC8EC5 (CopyBatchIndexesJob_tC828FCA4EDEEAB9D096D787D87B0A37CD064485F * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___cellIds0, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeList`1<System.Int32>::Add(!0)
@@ -4487,8 +4498,6 @@ inline void NativeArray_1_Dispose_m265E0AD1B3EF228EBBCC6E67212F96B863C7FC52 (Nat
 }
 // Unity.Mathematics.float3 DeformableMesh/MeshGridData::GetPointPosition(Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  MeshGridData_GetPointPosition_mB4F372816224FB251C86BC9FD10971F243311760 (MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointId0, const RuntimeMethod* method);
-// System.Void UnityEngine.Rendering.VertexAttributeDescriptor::.ctor(UnityEngine.Rendering.VertexAttribute,UnityEngine.Rendering.VertexAttributeFormat,System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VertexAttributeDescriptor__ctor_m27E0321BB3652EC579323E31D752B6E753826703 (VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 * __this, int32_t ___attribute0, int32_t ___format1, int32_t ___dimension2, int32_t ___stream3, const RuntimeMethod* method);
 // System.Void Unity.Collections.NativeArray`1<System.Int32>::.ctor(System.Int32,Unity.Collections.Allocator,Unity.Collections.NativeArrayOptions)
 inline void NativeArray_1__ctor_m42C050ADFBB7F7ECBF1C0ADCC2330635833E0F4B (NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF * __this, int32_t ___length0, int32_t ___allocator1, int32_t ___options2, const RuntimeMethod* method)
 {
@@ -4535,10 +4544,12 @@ IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR float3_tB3DB6E304B40D8C4DA63622603E16
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  float3_op_Addition_mAC094AA119118FFD28ABADEA18C46849CF2D4609_inline (float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  ___lhs0, float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  ___rhs1, const RuntimeMethod* method);
 // System.Void DeformableMesh/PullVerticesJob::Execute(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PullVerticesJob_Execute_m53D8719A162E99D864A06B18D01A491A5402A5AC (PullVerticesJob_tF044E59C529936B1EA550A87FB3F2A2A28FAF308 * __this, int32_t ___index0, const RuntimeMethod* method);
+// System.Int32 DeformableMesh/TriangulateCubeJob::GetCellBufferIndex(Unity.Mathematics.int3)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TriangulateCubeJob_GetCellBufferIndex_m42FFB9EA2FCDFC6DEE56D23DE83C5C1992D1740D (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___cellIds0, const RuntimeMethod* method);
+// System.Void DeformableMesh/TriangulateCubeJob::ClearIndexes(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_ClearIndexes_m4C4D1D99519B3BE12B8064FA433CB90A574315AC (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int32_t ___startIndex0, const RuntimeMethod* method);
 // System.Boolean DeformableMesh/TriangulateCubeJob::GetPointActive(Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointIds0, const RuntimeMethod* method);
-// System.Void DeformableMesh/TriangulateCubeJob::ClearFace(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int32_t ___startIndex0, const RuntimeMethod* method);
 // System.Boolean DeformableMesh/TriangulateCubeJob::IsFaceVisible(DeformableMesh/Face,Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, Face_tDB51ED785B43D097A18B55813F281017DF743099  ___face0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___normal1, const RuntimeMethod* method);
 // System.Void DeformableMesh/TriangulateCubeJob::TriangulateFace(DeformableMesh/Face,DeformableMesh/Face,System.Int32)
@@ -4547,8 +4558,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_TriangulateFace_m6287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_Execute_mF7DEB7331535B31F1005B3C944F9556B92CB27F6 (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int32_t ___startIndex0, int32_t ___count1, const RuntimeMethod* method);
 // System.Int32 DeformableMesh/TriangulateCubeJob::GetPointBufferIndex(Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TriangulateCubeJob_GetPointBufferIndex_m51D24C8DB941308E876F571672DAB32606945F36 (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointIds0, const RuntimeMethod* method);
-// System.Int32 DeformableMesh/TriangulateCubeJob::GetCellBufferIndex(Unity.Mathematics.int3)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TriangulateCubeJob_GetCellBufferIndex_m42FFB9EA2FCDFC6DEE56D23DE83C5C1992D1740D (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___cellIds0, const RuntimeMethod* method);
 // System.Boolean DeformableMesh/TriangulateCubeJob::IsVertexOpen(Unity.Mathematics.int3,Unity.Mathematics.int3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulateCubeJob_IsVertexOpen_m9B09B6870C34D4A57ABC93E9D3DDBDD03DA9EE10 (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___vertex0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___normal1, const RuntimeMethod* method);
 // System.Single UnityEngine.Time::get_unscaledDeltaTime()
@@ -4812,54 +4821,66 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_Start_m598E01267F285B6246
 	{
 		// AllocateContainers();
 		DeformableMesh_AllocateContainers_m05C2021CC2C9CCFFF76F7420BB28653BAFCCB3C6(__this, /*hidden argument*/NULL);
+		// _vertexLayout = new VertexAttributeDescriptor[]
+		// {
+		//     new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3)
+		// };
+		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_0 = (VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9*)(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9*)SZArrayNew(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9_il2cpp_TypeInfo_var, (uint32_t)1);
+		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_1 = L_0;
+		VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  L_2;
+		memset((&L_2), 0, sizeof(L_2));
+		VertexAttributeDescriptor__ctor_m27E0321BB3652EC579323E31D752B6E753826703((&L_2), 0, 0, 3, 0, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 )L_2);
+		__this->set__vertexLayout_7(L_1);
 		// _cubesGrid.Create(_cellSize, _gridSize);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_0 = __this->get_address_of__cubesGrid_7();
-		float L_1 = __this->get__cellSize_5();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = __this->get__gridSize_6();
-		MeshGridData_Create_mC05A452D098073DE0A2B49B03178FDE07F0F4BF9((MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 *)L_0, L_1, L_2, /*hidden argument*/NULL);
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_3 = __this->get_address_of__cubesGrid_8();
+		float L_4 = __this->get__cellSize_5();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_5 = __this->get__gridSize_6();
+		MeshGridData_Create_mC05A452D098073DE0A2B49B03178FDE07F0F4BF9((MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 *)L_3, L_4, L_5, /*hidden argument*/NULL);
 		// InitializeBatchGrid();
 		DeformableMesh_InitializeBatchGrid_mC481DB39327DED43DFF4992FA19B54EEB9C89BBB(__this, /*hidden argument*/NULL);
 		// UpdateMesh(new int3(0, 0, 0), _gridSize);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3;
-		memset((&L_3), 0, sizeof(L_3));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_3), 0, 0, 0, /*hidden argument*/NULL);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = __this->get__gridSize_6();
-		DeformableMesh_UpdateMesh_m88312893DEEC63D56BDE70F47A4CFCE48786A370(__this, L_3, L_4, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6;
+		memset((&L_6), 0, sizeof(L_6));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_6), 0, 0, 0, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_7 = __this->get__gridSize_6();
+		DeformableMesh_UpdateMesh_m88312893DEEC63D56BDE70F47A4CFCE48786A370(__this, L_6, L_7, /*hidden argument*/NULL);
 		// var _boxCollider = gameObject.AddComponent<BoxCollider>();
-		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_5 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
-		NullCheck(L_5);
-		BoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA * L_6 = GameObject_AddComponent_TisBoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA_m94D5E6D9493DE6A574C28A9517C792D607653FE2(L_5, /*hidden argument*/GameObject_AddComponent_TisBoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA_m94D5E6D9493DE6A574C28A9517C792D607653FE2_RuntimeMethod_var);
+		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_8 = Component_get_gameObject_m0B0570BA8DDD3CD78A9DB568EA18D7317686603C(__this, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		BoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA * L_9 = GameObject_AddComponent_TisBoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA_m94D5E6D9493DE6A574C28A9517C792D607653FE2(L_8, /*hidden argument*/GameObject_AddComponent_TisBoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA_m94D5E6D9493DE6A574C28A9517C792D607653FE2_RuntimeMethod_var);
 		// _boxCollider.size = new Vector3(_gridSize.x * _cellSize, _gridSize.y * _cellSize, _gridSize.z * _cellSize);
-		BoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA * L_7 = L_6;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_8 = __this->get_address_of__gridSize_6();
-		int32_t L_9 = L_8->get_x_0();
-		float L_10 = __this->get__cellSize_5();
+		BoxCollider_t2DF257BBBFCABE0B9D78B21D238298D1942BFBAA * L_10 = L_9;
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_11 = __this->get_address_of__gridSize_6();
-		int32_t L_12 = L_11->get_y_1();
+		int32_t L_12 = L_11->get_x_0();
 		float L_13 = __this->get__cellSize_5();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_14 = __this->get_address_of__gridSize_6();
-		int32_t L_15 = L_14->get_z_2();
+		int32_t L_15 = L_14->get_y_1();
 		float L_16 = __this->get__cellSize_5();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_17;
-		memset((&L_17), 0, sizeof(L_17));
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_17), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_9))), (float)L_10)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_12))), (float)L_13)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_15))), (float)L_16)), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		BoxCollider_set_size_m65F9B4BD610D3094313EC8D1C5CE58D1D345A176(L_7, L_17, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_17 = __this->get_address_of__gridSize_6();
+		int32_t L_18 = L_17->get_z_2();
+		float L_19 = __this->get__cellSize_5();
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_20;
+		memset((&L_20), 0, sizeof(L_20));
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_20), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_12))), (float)L_13)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_15))), (float)L_16)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_18))), (float)L_19)), /*hidden argument*/NULL);
+		NullCheck(L_10);
+		BoxCollider_set_size_m65F9B4BD610D3094313EC8D1C5CE58D1D345A176(L_10, L_20, /*hidden argument*/NULL);
 		// _boxCollider.center = new Vector3(_gridSize.x * _cellSize / 2, _gridSize.y * _cellSize / 2, _gridSize.z * _cellSize / 2);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_18 = __this->get_address_of__gridSize_6();
-		int32_t L_19 = L_18->get_x_0();
-		float L_20 = __this->get__cellSize_5();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_21 = __this->get_address_of__gridSize_6();
-		int32_t L_22 = L_21->get_y_1();
+		int32_t L_22 = L_21->get_x_0();
 		float L_23 = __this->get__cellSize_5();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_24 = __this->get_address_of__gridSize_6();
-		int32_t L_25 = L_24->get_z_2();
+		int32_t L_25 = L_24->get_y_1();
 		float L_26 = __this->get__cellSize_5();
-		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_27;
-		memset((&L_27), 0, sizeof(L_27));
-		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_27), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_19))), (float)L_20))/(float)(2.0f))), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_22))), (float)L_23))/(float)(2.0f))), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_25))), (float)L_26))/(float)(2.0f))), /*hidden argument*/NULL);
-		NullCheck(L_7);
-		BoxCollider_set_center_m8A871056CA383C9932A7694FE396A1EFA247FC69(L_7, L_27, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_27 = __this->get_address_of__gridSize_6();
+		int32_t L_28 = L_27->get_z_2();
+		float L_29 = __this->get__cellSize_5();
+		Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720  L_30;
+		memset((&L_30), 0, sizeof(L_30));
+		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((&L_30), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_22))), (float)L_23))/(float)(2.0f))), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_25))), (float)L_26))/(float)(2.0f))), ((float)((float)((float)il2cpp_codegen_multiply((float)(((float)((float)L_28))), (float)L_29))/(float)(2.0f))), /*hidden argument*/NULL);
+		NullCheck(L_10);
+		BoxCollider_set_center_m8A871056CA383C9932A7694FE396A1EFA247FC69(L_10, L_30, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -4869,7 +4890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_OnDestroy_m82584B749452B2
 {
 	{
 		// _cubesGrid.Dispose();
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_0 = __this->get_address_of__cubesGrid_7();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_0 = __this->get_address_of__cubesGrid_8();
 		MeshGridData_Dispose_m3C640F28A0FF5DA44A0EECBC616D0EBEFF8E70A5((MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 *)L_0, /*hidden argument*/NULL);
 		// DisposeContainers();
 		DeformableMesh_DisposeContainers_m80D4256EFFE63D54C453E29C68D00A37E76C1810(__this, /*hidden argument*/NULL);
@@ -4891,27 +4912,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_AllocateContainers_m05C20
 		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE((&L_0), 4, /*hidden argument*/NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE_RuntimeMethod_var);
-		__this->set__jobsHandles_13(L_0);
+		__this->set__jobsHandles_14(L_0);
 		// _jobsCutHandles = new NativeList<JobHandle>(Allocator.Persistent);
 		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE((&L_1), 4, /*hidden argument*/NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE_RuntimeMethod_var);
-		__this->set__jobsCutHandles_14(L_1);
+		__this->set__jobsCutHandles_15(L_1);
 		// _jobsPullHandles = new NativeList<JobHandle>(Allocator.Persistent);
 		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE((&L_2), 4, /*hidden argument*/NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE_RuntimeMethod_var);
-		__this->set__jobsPullHandles_15(L_2);
+		__this->set__jobsPullHandles_16(L_2);
 		// _jobsTriangulateHandles = new NativeList<JobHandle>(Allocator.Persistent);
 		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_3;
 		memset((&L_3), 0, sizeof(L_3));
 		NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE((&L_3), 4, /*hidden argument*/NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE_RuntimeMethod_var);
-		__this->set__jobsTriangulateHandles_16(L_3);
+		__this->set__jobsTriangulateHandles_17(L_3);
 		// _jobsUpdateBatchesHandles = new NativeList<JobHandle>(Allocator.Persistent);
 		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE((&L_4), 4, /*hidden argument*/NativeList_1__ctor_m89A39334085A2173A9996F92CA14107B6A2076AE_RuntimeMethod_var);
-		__this->set__jobsUpdateBatchesHandles_17(L_4);
+		__this->set__jobsUpdateBatchesHandles_18(L_4);
 		// }
 		return;
 	}
@@ -4927,19 +4948,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_DisposeContainers_m80D425
 	}
 	{
 		// _jobsHandles.Dispose();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsHandles_13();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsHandles_14();
 		NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_0, /*hidden argument*/NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_RuntimeMethod_var);
 		// _jobsCutHandles.Dispose();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_1 = __this->get_address_of__jobsCutHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_1 = __this->get_address_of__jobsCutHandles_15();
 		NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_1, /*hidden argument*/NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_RuntimeMethod_var);
 		// _jobsPullHandles.Dispose();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_2 = __this->get_address_of__jobsPullHandles_15();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_2 = __this->get_address_of__jobsPullHandles_16();
 		NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_2, /*hidden argument*/NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_RuntimeMethod_var);
 		// _jobsTriangulateHandles.Dispose();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_3 = __this->get_address_of__jobsTriangulateHandles_16();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_3 = __this->get_address_of__jobsTriangulateHandles_17();
 		NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_3, /*hidden argument*/NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_RuntimeMethod_var);
 		// _jobsUpdateBatchesHandles.Dispose();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_4 = __this->get_address_of__jobsUpdateBatchesHandles_17();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_4 = __this->get_address_of__jobsUpdateBatchesHandles_18();
 		NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_4, /*hidden argument*/NativeList_1_Dispose_m0AAC105E98900F80D1318B42A15D588BEBC0530C_RuntimeMethod_var);
 		// }
 		return;
@@ -4954,246 +4975,415 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_UpdateMesh_m88312893DEEC6
 		il2cpp_codegen_initialize_method (DeformableMesh_UpdateMesh_m88312893DEEC63D56BDE70F47A4CFCE48786A370_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  V_0;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_0;
 	memset((&V_0), 0, sizeof(V_0));
-	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  V_1;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_1;
 	memset((&V_1), 0, sizeof(V_1));
-	JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  V_2;
+	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  V_2;
 	memset((&V_2), 0, sizeof(V_2));
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_3;
+	JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  V_3;
 	memset((&V_3), 0, sizeof(V_3));
-	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_4;
+	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  V_4;
 	memset((&V_4), 0, sizeof(V_4));
-	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  V_5;
-	memset((&V_5), 0, sizeof(V_5));
+	int32_t V_5 = 0;
 	int32_t V_6 = 0;
 	int32_t V_7 = 0;
-	int32_t V_8 = 0;
-	int32_t V_9 = 0;
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_9;
+	memset((&V_9), 0, sizeof(V_9));
+	int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	int32_t V_11 = 0;
+	int32_t V_12 = 0;
+	int32_t V_13 = 0;
+	int32_t V_14 = 0;
+	JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  V_15;
+	memset((&V_15), 0, sizeof(V_15));
 	{
 		// _jobsTriangulateHandles.Clear();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsTriangulateHandles_16();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsTriangulateHandles_17();
 		NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_0, /*hidden argument*/NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_RuntimeMethod_var);
-		// NativeArray<int3> _cellsMap = new NativeArray<int3>(_cubesGrid._cellsGrid.indexes.Length / 36, Allocator.TempJob);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_1 = __this->get_address_of__cubesGrid_7();
-		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_2 = L_1->get_address_of__cellsGrid_5();
-		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF * L_3 = L_2->get_address_of_indexes_0();
-		int32_t L_4 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF *)L_3)->___m_Length_1);
-		NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)(&V_0), ((int32_t)((int32_t)L_4/(int32_t)((int32_t)36))), 3, 1, /*hidden argument*/NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3_RuntimeMethod_var);
-		// TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
-		// {
-		//     points = _cubesGrid._pointsGrid.points,
-		//     pointsGridSize = _cubesGrid._pointsGrid.size,
-		//     indexes = _cubesGrid._cellsGrid.indexes,
-		//     cellsMap = _cellsMap,
-		//     batchSize = _maxBatchCellSize
-		// };
-		il2cpp_codegen_initobj((&V_5), sizeof(TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD ));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_5 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_6 = L_5->get_address_of__pointsGrid_4();
-		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  L_7 = L_6->get_points_0();
-		(&V_5)->set_points_0(L_7);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_8 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_9 = L_8->get_address_of__pointsGrid_4();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_10 = L_9->get_size_1();
-		(&V_5)->set_pointsGridSize_1(L_10);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_11 = __this->get_address_of__cubesGrid_7();
-		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_12 = L_11->get_address_of__cellsGrid_5();
-		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  L_13 = L_12->get_indexes_0();
-		(&V_5)->set_indexes_5(L_13);
-		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  L_14 = V_0;
-		(&V_5)->set_cellsMap_4(L_14);
-		int32_t L_15 = __this->get__maxBatchCellSize_8();
-		(&V_5)->set_batchSize_2(L_15);
-		TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  L_16 = V_5;
-		V_1 = L_16;
-		// for (int x = fromIds.x; x < toIds.x; x++)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_17 = ___fromIds0;
-		int32_t L_18 = L_17.get_x_0();
-		V_6 = L_18;
-		goto IL_0117;
-	}
-
-IL_009b:
-	{
-		// for (int y = fromIds.y; y < toIds.y; y++)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19 = ___fromIds0;
-		int32_t L_20 = L_19.get_y_1();
-		V_7 = L_20;
-		goto IL_0107;
-	}
-
-IL_00a5:
-	{
-		// for (int z = fromIds.z; z < toIds.z; z++)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_21 = ___fromIds0;
-		int32_t L_22 = L_21.get_z_2();
-		V_8 = L_22;
-		goto IL_00f7;
-	}
-
-IL_00af:
-	{
-		// int _index = (x * _gridSize.y * _gridSize.z) + (y * _gridSize.z) + z;
-		int32_t L_23 = V_6;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_24 = __this->get_address_of__gridSize_6();
-		int32_t L_25 = L_24->get_y_1();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_26 = __this->get_address_of__gridSize_6();
-		int32_t L_27 = L_26->get_z_2();
-		int32_t L_28 = V_7;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_29 = __this->get_address_of__gridSize_6();
-		int32_t L_30 = L_29->get_z_2();
-		int32_t L_31 = V_8;
-		V_9 = ((int32_t)il2cpp_codegen_add((int32_t)((int32_t)il2cpp_codegen_add((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_23, (int32_t)L_25)), (int32_t)L_27)), (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_28, (int32_t)L_30)))), (int32_t)L_31));
-		// _cellsMap[_index] = new int3(x, y, z);
-		int32_t L_32 = V_9;
-		int32_t L_33 = V_6;
-		int32_t L_34 = V_7;
-		int32_t L_35 = V_8;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_36;
-		memset((&L_36), 0, sizeof(L_36));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_36), L_33, L_34, L_35, /*hidden argument*/NULL);
-		IL2CPP_NATIVEARRAY_SET_ITEM(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F , ((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)(&V_0))->___m_Buffer_0, L_32, L_36);
-		// for (int z = fromIds.z; z < toIds.z; z++)
-		int32_t L_37 = V_8;
-		V_8 = ((int32_t)il2cpp_codegen_add((int32_t)L_37, (int32_t)1));
-	}
-
-IL_00f7:
-	{
-		// for (int z = fromIds.z; z < toIds.z; z++)
-		int32_t L_38 = V_8;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_39 = ___toIds1;
-		int32_t L_40 = L_39.get_z_2();
-		if ((((int32_t)L_38) < ((int32_t)L_40)))
-		{
-			goto IL_00af;
-		}
-	}
-	{
-		// for (int y = fromIds.y; y < toIds.y; y++)
-		int32_t L_41 = V_7;
-		V_7 = ((int32_t)il2cpp_codegen_add((int32_t)L_41, (int32_t)1));
-	}
-
-IL_0107:
-	{
-		// for (int y = fromIds.y; y < toIds.y; y++)
-		int32_t L_42 = V_7;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_43 = ___toIds1;
-		int32_t L_44 = L_43.get_y_1();
-		if ((((int32_t)L_42) < ((int32_t)L_44)))
-		{
-			goto IL_00a5;
-		}
-	}
-	{
-		// for (int x = fromIds.x; x < toIds.x; x++)
-		int32_t L_45 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add((int32_t)L_45, (int32_t)1));
-	}
-
-IL_0117:
-	{
-		// for (int x = fromIds.x; x < toIds.x; x++)
-		int32_t L_46 = V_6;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_47 = ___toIds1;
-		int32_t L_48 = L_47.get_x_0();
-		if ((((int32_t)L_46) < ((int32_t)L_48)))
-		{
-			goto IL_009b;
-		}
-	}
-	{
-		// var _handle = _triangulateJob.ScheduleBatch(_triangulateJob.indexes.Length, 36, JobHandle.CombineDependencies(_jobsCutHandles));
-		TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  L_49 = V_1;
-		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF * L_50 = (&V_1)->get_address_of_indexes_5();
-		int32_t L_51 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF *)L_50)->___m_Length_1);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_52 = __this->get__jobsCutHandles_14();
-		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_53 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_52, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
-		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_54 = JobHandle_CombineDependencies_m8E9EC3033A407EAF869406030058BBF467BE4E80(L_53, /*hidden argument*/NULL);
-		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_55 = IJobParallelForBatchExtensions_ScheduleBatch_TisTriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_m0A65754CE1431238275976F893A4CE3D595FC980(L_49, L_51, ((int32_t)36), L_54, /*hidden argument*/IJobParallelForBatchExtensions_ScheduleBatch_TisTriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_m0A65754CE1431238275976F893A4CE3D595FC980_RuntimeMethod_var);
-		V_2 = L_55;
-		// _jobsTriangulateHandles.Add(_handle);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_56 = __this->get_address_of__jobsTriangulateHandles_16();
-		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_57 = V_2;
-		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_56, L_57, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
-		// _jobsHandles.AddRange(_jobsTriangulateHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_58 = __this->get_address_of__jobsHandles_13();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_59 = __this->get__jobsTriangulateHandles_16();
-		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_60 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_59, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
-		NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_58, L_60, /*hidden argument*/NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var);
 		// int3 _fromBatch = fromIds / _maxBatchCellSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_61 = ___fromIds0;
-		int32_t L_62 = __this->get__maxBatchCellSize_8();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_63 = int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline(L_61, L_62, /*hidden argument*/NULL);
-		V_3 = L_63;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_1 = ___fromIds0;
+		int32_t L_2 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline(L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
 		// int3 _toBatch = toIds / _maxBatchCellSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_64 = ___toIds1;
-		int32_t L_65 = __this->get__maxBatchCellSize_8();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_66 = int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline(L_64, L_65, /*hidden argument*/NULL);
-		V_4 = L_66;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = ___toIds1;
+		int32_t L_5 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline(L_4, L_5, /*hidden argument*/NULL);
+		V_1 = L_6;
 		// if (toIds.x % _maxBatchCellSize != 0)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_67 = ___toIds1;
-		int32_t L_68 = L_67.get_x_0();
-		int32_t L_69 = __this->get__maxBatchCellSize_8();
-		if (!((int32_t)((int32_t)L_68%(int32_t)L_69)))
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_7 = ___toIds1;
+		int32_t L_8 = L_7.get_x_0();
+		int32_t L_9 = __this->get__maxBatchCellSize_9();
+		if (!((int32_t)((int32_t)L_8%(int32_t)L_9)))
 		{
-			goto IL_01a1;
+			goto IL_0040;
 		}
 	}
 	{
 		// _toBatch.x++;
-		int32_t* L_70 = (&V_4)->get_address_of_x_0();
-		int32_t* L_71 = L_70;
-		int32_t L_72 = *((int32_t*)L_71);
-		*((int32_t*)L_71) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_72, (int32_t)1));
+		int32_t* L_10 = (&V_1)->get_address_of_x_0();
+		int32_t* L_11 = L_10;
+		int32_t L_12 = *((int32_t*)L_11);
+		*((int32_t*)L_11) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_12, (int32_t)1));
 	}
 
-IL_01a1:
+IL_0040:
 	{
 		// if (toIds.y % _maxBatchCellSize != 0)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_73 = ___toIds1;
-		int32_t L_74 = L_73.get_y_1();
-		int32_t L_75 = __this->get__maxBatchCellSize_8();
-		if (!((int32_t)((int32_t)L_74%(int32_t)L_75)))
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_13 = ___toIds1;
+		int32_t L_14 = L_13.get_y_1();
+		int32_t L_15 = __this->get__maxBatchCellSize_9();
+		if (!((int32_t)((int32_t)L_14%(int32_t)L_15)))
 		{
-			goto IL_01bc;
+			goto IL_005b;
 		}
 	}
 	{
 		// _toBatch.y++;
-		int32_t* L_76 = (&V_4)->get_address_of_y_1();
-		int32_t* L_77 = L_76;
-		int32_t L_78 = *((int32_t*)L_77);
-		*((int32_t*)L_77) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_78, (int32_t)1));
+		int32_t* L_16 = (&V_1)->get_address_of_y_1();
+		int32_t* L_17 = L_16;
+		int32_t L_18 = *((int32_t*)L_17);
+		*((int32_t*)L_17) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_18, (int32_t)1));
 	}
 
-IL_01bc:
+IL_005b:
 	{
 		// if (toIds.z % _maxBatchCellSize != 0)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_79 = ___toIds1;
-		int32_t L_80 = L_79.get_z_2();
-		int32_t L_81 = __this->get__maxBatchCellSize_8();
-		if (!((int32_t)((int32_t)L_80%(int32_t)L_81)))
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19 = ___toIds1;
+		int32_t L_20 = L_19.get_z_2();
+		int32_t L_21 = __this->get__maxBatchCellSize_9();
+		if (!((int32_t)((int32_t)L_20%(int32_t)L_21)))
 		{
-			goto IL_01d7;
+			goto IL_0076;
 		}
 	}
 	{
 		// _toBatch.z++;
-		int32_t* L_82 = (&V_4)->get_address_of_z_2();
-		int32_t* L_83 = L_82;
-		int32_t L_84 = *((int32_t*)L_83);
-		*((int32_t*)L_83) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_84, (int32_t)1));
+		int32_t* L_22 = (&V_1)->get_address_of_z_2();
+		int32_t* L_23 = L_22;
+		int32_t L_24 = *((int32_t*)L_23);
+		*((int32_t*)L_23) = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_24, (int32_t)1));
 	}
 
-IL_01d7:
+IL_0076:
 	{
+		// TriangulateCubeJob _triangulateJob = new TriangulateCubeJob
+		// {
+		//     points = _cubesGrid.pointsGrid.points,
+		//     pointsGridSize = _cubesGrid.pointsGrid.size,
+		//     indexes = _cubesGrid.cellsGrid.indexes,
+		//     batchSize = _maxBatchCellSize
+		// };
+		il2cpp_codegen_initobj((&V_4), sizeof(TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD ));
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_25 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_26 = L_25->get_address_of_pointsGrid_2();
+		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  L_27 = L_26->get_points_0();
+		(&V_4)->set_points_0(L_27);
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_28 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_29 = L_28->get_address_of_pointsGrid_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_30 = L_29->get_size_1();
+		(&V_4)->set_pointsGridSize_1(L_30);
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_31 = __this->get_address_of__cubesGrid_8();
+		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_32 = L_31->get_address_of_cellsGrid_3();
+		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  L_33 = L_32->get_indexes_0();
+		(&V_4)->set_indexes_5(L_33);
+		int32_t L_34 = __this->get__maxBatchCellSize_9();
+		(&V_4)->set_batchSize_2(L_34);
+		TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  L_35 = V_4;
+		V_2 = L_35;
+		// for (int x = fromIds.x; x < toIds.x; x++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_36 = ___fromIds0;
+		int32_t L_37 = L_36.get_x_0();
+		V_5 = L_37;
+		goto IL_0231;
+	}
+
+IL_00e0:
+	{
+		// for (int y = fromIds.y; y < toIds.y; y++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_38 = ___fromIds0;
+		int32_t L_39 = L_38.get_y_1();
+		V_6 = L_39;
+		goto IL_021e;
+	}
+
+IL_00ed:
+	{
+		// for (int z = fromIds.z; z < toIds.z; z++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_40 = ___fromIds0;
+		int32_t L_41 = L_40.get_z_2();
+		V_7 = L_41;
+		goto IL_020b;
+	}
+
+IL_00fa:
+	{
+		// int3 _batchId = new int3(x / _maxBatchCellSize, y / _maxBatchCellSize, z / _maxBatchCellSize);
+		int32_t L_42 = V_5;
+		int32_t L_43 = __this->get__maxBatchCellSize_9();
+		int32_t L_44 = V_6;
+		int32_t L_45 = __this->get__maxBatchCellSize_9();
+		int32_t L_46 = V_7;
+		int32_t L_47 = __this->get__maxBatchCellSize_9();
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_8), ((int32_t)((int32_t)L_42/(int32_t)L_43)), ((int32_t)((int32_t)L_44/(int32_t)L_45)), ((int32_t)((int32_t)L_46/(int32_t)L_47)), /*hidden argument*/NULL);
+		// int3 _batchOffset = _batchId * _maxBatchCellSize;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_48 = V_8;
+		int32_t L_49 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_50 = int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline(L_48, L_49, /*hidden argument*/NULL);
+		V_9 = L_50;
+		// int3 _inBatchIds = new int3(x, y, z) - _batchOffset;
+		int32_t L_51 = V_5;
+		int32_t L_52 = V_6;
+		int32_t L_53 = V_7;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_54;
+		memset((&L_54), 0, sizeof(L_54));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_54), L_51, L_52, L_53, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_55 = V_9;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_56 = int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline(L_54, L_55, /*hidden argument*/NULL);
+		V_10 = L_56;
+		// int _index = (_inBatchIds.x * _maxBatchCellSize * _maxBatchCellSize) + (_inBatchIds.y * _maxBatchCellSize) + _inBatchIds.z;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_57 = V_10;
+		int32_t L_58 = L_57.get_x_0();
+		int32_t L_59 = __this->get__maxBatchCellSize_9();
+		int32_t L_60 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_61 = V_10;
+		int32_t L_62 = L_61.get_y_1();
+		int32_t L_63 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_64 = V_10;
+		int32_t L_65 = L_64.get_z_2();
+		V_11 = ((int32_t)il2cpp_codegen_add((int32_t)((int32_t)il2cpp_codegen_add((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_58, (int32_t)L_59)), (int32_t)L_60)), (int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_62, (int32_t)L_63)))), (int32_t)L_65));
+		// if (!_meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap.IsCreated)
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_66 = __this->get__meshBatches_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_67 = V_8;
+		int32_t L_68 = L_67.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_69 = V_8;
+		int32_t L_70 = L_69.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_71 = V_8;
+		int32_t L_72 = L_71.get_z_2();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_66);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_73 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_66)->GetAddressAt(L_68, L_70, L_72);
+		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * L_74 = L_73->get_address_of_batchCellsMap_4();
+		bool L_75 = NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)L_74, /*hidden argument*/NativeArray_1_get_IsCreated_m20F09970ADDFF4A12FA104E37C884DBE7021DAE8_RuntimeMethod_var);
+		if (L_75)
+		{
+			goto IL_01ce;
+		}
+	}
+	{
+		// _meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap = new NativeArray<int3>(_batchIndexesCount / 36, Allocator.TempJob);
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_76 = __this->get__meshBatches_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_77 = V_8;
+		int32_t L_78 = L_77.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_79 = V_8;
+		int32_t L_80 = L_79.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_81 = V_8;
+		int32_t L_82 = L_81.get_z_2();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_76);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_83 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_76)->GetAddressAt(L_78, L_80, L_82);
+		int32_t L_84 = __this->get__batchIndexesCount_12();
+		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  L_85;
+		memset((&L_85), 0, sizeof(L_85));
+		NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3((&L_85), ((int32_t)((int32_t)L_84/(int32_t)((int32_t)36))), 3, 1, /*hidden argument*/NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3_RuntimeMethod_var);
+		L_83->set_batchCellsMap_4(L_85);
+	}
+
+IL_01ce:
+	{
+		// _meshBatches[_batchId.x, _batchId.y, _batchId.z].batchCellsMap[_index] = new int3(x, y, z);
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_86 = __this->get__meshBatches_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_87 = V_8;
+		int32_t L_88 = L_87.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_89 = V_8;
+		int32_t L_90 = L_89.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_91 = V_8;
+		int32_t L_92 = L_91.get_z_2();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_86);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_93 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_86)->GetAddressAt(L_88, L_90, L_92);
+		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * L_94 = L_93->get_address_of_batchCellsMap_4();
+		int32_t L_95 = V_11;
+		int32_t L_96 = V_5;
+		int32_t L_97 = V_6;
+		int32_t L_98 = V_7;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_99;
+		memset((&L_99), 0, sizeof(L_99));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_99), L_96, L_97, L_98, /*hidden argument*/NULL);
+		IL2CPP_NATIVEARRAY_SET_ITEM(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F , ((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)L_94)->___m_Buffer_0, L_95, L_99);
+		// for (int z = fromIds.z; z < toIds.z; z++)
+		int32_t L_100 = V_7;
+		V_7 = ((int32_t)il2cpp_codegen_add((int32_t)L_100, (int32_t)1));
+	}
+
+IL_020b:
+	{
+		// for (int z = fromIds.z; z < toIds.z; z++)
+		int32_t L_101 = V_7;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_102 = ___toIds1;
+		int32_t L_103 = L_102.get_z_2();
+		if ((((int32_t)L_101) < ((int32_t)L_103)))
+		{
+			goto IL_00fa;
+		}
+	}
+	{
+		// for (int y = fromIds.y; y < toIds.y; y++)
+		int32_t L_104 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add((int32_t)L_104, (int32_t)1));
+	}
+
+IL_021e:
+	{
+		// for (int y = fromIds.y; y < toIds.y; y++)
+		int32_t L_105 = V_6;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_106 = ___toIds1;
+		int32_t L_107 = L_106.get_y_1();
+		if ((((int32_t)L_105) < ((int32_t)L_107)))
+		{
+			goto IL_00ed;
+		}
+	}
+	{
+		// for (int x = fromIds.x; x < toIds.x; x++)
+		int32_t L_108 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add((int32_t)L_108, (int32_t)1));
+	}
+
+IL_0231:
+	{
+		// for (int x = fromIds.x; x < toIds.x; x++)
+		int32_t L_109 = V_5;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_110 = ___toIds1;
+		int32_t L_111 = L_110.get_x_0();
+		if ((((int32_t)L_109) < ((int32_t)L_111)))
+		{
+			goto IL_00e0;
+		}
+	}
+	{
+		// var _dependency = JobHandle.CombineDependencies(_jobsCutHandles);
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_112 = __this->get__jobsCutHandles_15();
+		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_113 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_112, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
+		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_114 = JobHandle_CombineDependencies_m8E9EC3033A407EAF869406030058BBF467BE4E80(L_113, /*hidden argument*/NULL);
+		V_3 = L_114;
+		// for (int x = _fromBatch.x; x < _toBatch.x; x++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_115 = V_0;
+		int32_t L_116 = L_115.get_x_0();
+		V_12 = L_116;
+		goto IL_02f1;
+	}
+
+IL_025c:
+	{
+		// for (int y = _fromBatch.y; y < _toBatch.y; y++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_117 = V_0;
+		int32_t L_118 = L_117.get_y_1();
+		V_13 = L_118;
+		goto IL_02de;
+	}
+
+IL_0266:
+	{
+		// for (int z = _fromBatch.z; z < _toBatch.z; z++)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_119 = V_0;
+		int32_t L_120 = L_119.get_z_2();
+		V_14 = L_120;
+		goto IL_02ce;
+	}
+
+IL_0270:
+	{
+		// _triangulateJob.cellsMap = _meshBatches[x, y, z].batchCellsMap;
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_121 = __this->get__meshBatches_10();
+		int32_t L_122 = V_12;
+		int32_t L_123 = V_13;
+		int32_t L_124 = V_14;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_121);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_125 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_121)->GetAddressAt(L_122, L_123, L_124);
+		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  L_126 = L_125->get_batchCellsMap_4();
+		(&V_2)->set_cellsMap_4(L_126);
+		// _triangulateJob.batchOffset = (new int3(x, y, z) * _maxBatchCellSize);
+		int32_t L_127 = V_12;
+		int32_t L_128 = V_13;
+		int32_t L_129 = V_14;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_130;
+		memset((&L_130), 0, sizeof(L_130));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_130), L_127, L_128, L_129, /*hidden argument*/NULL);
+		int32_t L_131 = __this->get__maxBatchCellSize_9();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_132 = int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline(L_130, L_131, /*hidden argument*/NULL);
+		(&V_2)->set_batchOffset_3(L_132);
+		// var _handle = _triangulateJob.ScheduleBatch(_batchIndexesCount, 36, _dependency);
+		TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD  L_133 = V_2;
+		int32_t L_134 = __this->get__batchIndexesCount_12();
+		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_135 = V_3;
+		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_136 = IJobParallelForBatchExtensions_ScheduleBatch_TisTriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_m0A65754CE1431238275976F893A4CE3D595FC980(L_133, L_134, ((int32_t)36), L_135, /*hidden argument*/IJobParallelForBatchExtensions_ScheduleBatch_TisTriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD_m0A65754CE1431238275976F893A4CE3D595FC980_RuntimeMethod_var);
+		V_15 = L_136;
+		// _jobsTriangulateHandles.Add(_handle);
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_137 = __this->get_address_of__jobsTriangulateHandles_17();
+		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_138 = V_15;
+		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_137, L_138, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
+		// for (int z = _fromBatch.z; z < _toBatch.z; z++)
+		int32_t L_139 = V_14;
+		V_14 = ((int32_t)il2cpp_codegen_add((int32_t)L_139, (int32_t)1));
+	}
+
+IL_02ce:
+	{
+		// for (int z = _fromBatch.z; z < _toBatch.z; z++)
+		int32_t L_140 = V_14;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_141 = V_1;
+		int32_t L_142 = L_141.get_z_2();
+		if ((((int32_t)L_140) < ((int32_t)L_142)))
+		{
+			goto IL_0270;
+		}
+	}
+	{
+		// for (int y = _fromBatch.y; y < _toBatch.y; y++)
+		int32_t L_143 = V_13;
+		V_13 = ((int32_t)il2cpp_codegen_add((int32_t)L_143, (int32_t)1));
+	}
+
+IL_02de:
+	{
+		// for (int y = _fromBatch.y; y < _toBatch.y; y++)
+		int32_t L_144 = V_13;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_145 = V_1;
+		int32_t L_146 = L_145.get_y_1();
+		if ((((int32_t)L_144) < ((int32_t)L_146)))
+		{
+			goto IL_0266;
+		}
+	}
+	{
+		// for (int x = _fromBatch.x; x < _toBatch.x; x++)
+		int32_t L_147 = V_12;
+		V_12 = ((int32_t)il2cpp_codegen_add((int32_t)L_147, (int32_t)1));
+	}
+
+IL_02f1:
+	{
+		// for (int x = _fromBatch.x; x < _toBatch.x; x++)
+		int32_t L_148 = V_12;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_149 = V_1;
+		int32_t L_150 = L_149.get_x_0();
+		if ((((int32_t)L_148) < ((int32_t)L_150)))
+		{
+			goto IL_025c;
+		}
+	}
+	{
+		// _jobsHandles.AddRange(_jobsTriangulateHandles);
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_151 = __this->get_address_of__jobsHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_152 = __this->get__jobsTriangulateHandles_17();
+		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_153 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_152, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
+		NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_151, L_153, /*hidden argument*/NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var);
 		// UpdateBatches(_fromBatch, _toBatch);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_85 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_86 = V_4;
-		DeformableMesh_UpdateBatches_mEE1907C71F30349E845EB68099A2CB631AE0ADB6(__this, L_85, L_86, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_154 = V_0;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_155 = V_1;
+		DeformableMesh_UpdateBatches_mEE1907C71F30349E845EB68099A2CB631AE0ADB6(__this, L_154, L_155, /*hidden argument*/NULL);
 		// }
 		return;
 	}
@@ -5230,17 +5420,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 	memset((&V_12), 0, sizeof(V_12));
 	{
 		// _jobsHandles.Clear();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsHandles_13();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsHandles_14();
 		NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_0, /*hidden argument*/NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_RuntimeMethod_var);
 		// _jobsCutHandles.Clear();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_1 = __this->get_address_of__jobsCutHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_1 = __this->get_address_of__jobsCutHandles_15();
 		NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_1, /*hidden argument*/NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_RuntimeMethod_var);
 		// _jobsPullHandles.Clear();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_2 = __this->get_address_of__jobsPullHandles_15();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_2 = __this->get_address_of__jobsPullHandles_16();
 		NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_2, /*hidden argument*/NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_RuntimeMethod_var);
-		// NativeArray<int3> _pointsMap = new NativeArray<int3>(_cubesGrid._pointsGrid.points.Length, Allocator.TempJob);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_3 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_4 = L_3->get_address_of__pointsGrid_4();
+		// NativeArray<int3> _pointsMap = new NativeArray<int3>(_cubesGrid.pointsGrid.points.Length, Allocator.TempJob);
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_3 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_4 = L_3->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_5 = L_4->get_address_of_points_0();
 		int32_t L_6 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_5)->___m_Length_1);
 		NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)(&V_0), L_6, 3, 1, /*hidden argument*/NativeArray_1__ctor_m1ACE48CBCCE43FABA98F9E7010D07F5B1B5AC7B3_RuntimeMethod_var);
@@ -5253,7 +5443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 		float L_10 = __this->get__cellSize_5();
 		float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  L_11 = float3_op_Division_mEA9DF1BD901A127A69DB2146EE9618646F6D1EE8_inline(L_9, L_10, /*hidden argument*/NULL);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_12 = int3_op_Explicit_mB6B4795E829257ADA7BB9FAE8B6CFCC73FCD5FA6_inline(L_11, /*hidden argument*/NULL);
-		// _from = math.clamp((_cellId - new int3(_cellsCount, _cellsCount, _cellsCount)), new int3(0, 0, 0), _gridSize);
+		// _from = math.clamp((_cellId - new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_13 = L_12;
 		int32_t L_14 = V_1;
 		int32_t L_15 = V_1;
@@ -5262,13 +5452,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 		memset((&L_17), 0, sizeof(L_17));
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_17), L_14, L_15, L_16, /*hidden argument*/NULL);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_18 = int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline(L_13, L_17, /*hidden argument*/NULL);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19;
-		memset((&L_19), 0, sizeof(L_19));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_19), 0, 0, 0, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19 = ((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_StaticFields*)il2cpp_codegen_static_fields_for(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_il2cpp_TypeInfo_var))->get_zero_3();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_20 = __this->get__gridSize_6();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_21 = math_clamp_mEE22F45E95FBE7751113DDE64D76ACA1A39B620F_inline(L_18, L_19, L_20, /*hidden argument*/NULL);
 		V_2 = L_21;
-		// _to = math.clamp((_cellId + new int3(_cellsCount, _cellsCount, _cellsCount)), new int3(0, 0, 0), _gridSize);
+		// _to = math.clamp((_cellId + new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
 		int32_t L_22 = V_1;
 		int32_t L_23 = V_1;
 		int32_t L_24 = V_1;
@@ -5276,23 +5464,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 		memset((&L_25), 0, sizeof(L_25));
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_25), L_22, L_23, L_24, /*hidden argument*/NULL);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_26 = int3_op_Addition_m29CD8694800EF2B90AE64932FA83BD7ADA274570_inline(L_13, L_25, /*hidden argument*/NULL);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_27;
-		memset((&L_27), 0, sizeof(L_27));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_27), 0, 0, 0, /*hidden argument*/NULL);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_27 = ((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_StaticFields*)il2cpp_codegen_static_fields_for(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_il2cpp_TypeInfo_var))->get_zero_3();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_28 = __this->get__gridSize_6();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_29 = math_clamp_mEE22F45E95FBE7751113DDE64D76ACA1A39B620F_inline(L_26, L_27, L_28, /*hidden argument*/NULL);
 		V_3 = L_29;
 		// CutSphereJob _cutJob = new CutSphereJob
 		// {
-		//     points = _cubesGrid._pointsGrid.points,
+		//     points = _cubesGrid.pointsGrid.points,
 		//     sphereCenter = sphereCenter,
 		//     sphereRadius = sphereRadius,
 		//     cellSize = _cellSize,
 		//     pointsMap = _pointsMap
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(CutSphereJob_tB1BE08744350AC8A8C5A9BBEAD0E132191525899 ));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_30 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_31 = L_30->get_address_of__pointsGrid_4();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_30 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_31 = L_30->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  L_32 = L_31->get_points_0();
 		(&V_6)->set_points_0(L_32);
 		float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  L_33 = ___sphereCenter0;
@@ -5309,28 +5495,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_CutSphere_m7B9A9FF218ED62
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_38 = V_2;
 		int32_t L_39 = L_38.get_x_0();
 		V_7 = L_39;
-		goto IL_017e;
+		goto IL_0178;
 	}
 
-IL_00f8:
+IL_00f2:
 	{
 		// for (int y = _from.y; y < (_to.y + 1); y++)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_40 = V_2;
 		int32_t L_41 = L_40.get_y_1();
 		V_8 = L_41;
-		goto IL_016c;
+		goto IL_0166;
 	}
 
-IL_0102:
+IL_00fc:
 	{
 		// for (int z = _from.z; z < (_to.z + 1); z++)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_42 = V_2;
 		int32_t L_43 = L_42.get_z_2();
 		V_9 = L_43;
-		goto IL_015a;
+		goto IL_0154;
 	}
 
-IL_010c:
+IL_0106:
 	{
 		// int _index = (x * (_gridSize.y + 1) * (_gridSize.z + 1)) + (y * (_gridSize.z + 1)) + z;
 		int32_t L_44 = V_7;
@@ -5357,7 +5543,7 @@ IL_010c:
 		V_9 = ((int32_t)il2cpp_codegen_add((int32_t)L_58, (int32_t)1));
 	}
 
-IL_015a:
+IL_0154:
 	{
 		// for (int z = _from.z; z < (_to.z + 1); z++)
 		int32_t L_59 = V_9;
@@ -5365,7 +5551,7 @@ IL_015a:
 		int32_t L_61 = L_60.get_z_2();
 		if ((((int32_t)L_59) < ((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_61, (int32_t)1)))))
 		{
-			goto IL_010c;
+			goto IL_0106;
 		}
 	}
 	{
@@ -5374,7 +5560,7 @@ IL_015a:
 		V_8 = ((int32_t)il2cpp_codegen_add((int32_t)L_62, (int32_t)1));
 	}
 
-IL_016c:
+IL_0166:
 	{
 		// for (int y = _from.y; y < (_to.y + 1); y++)
 		int32_t L_63 = V_8;
@@ -5382,7 +5568,7 @@ IL_016c:
 		int32_t L_65 = L_64.get_y_1();
 		if ((((int32_t)L_63) < ((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_65, (int32_t)1)))))
 		{
-			goto IL_0102;
+			goto IL_00fc;
 		}
 	}
 	{
@@ -5391,7 +5577,7 @@ IL_016c:
 		V_7 = ((int32_t)il2cpp_codegen_add((int32_t)L_66, (int32_t)1));
 	}
 
-IL_017e:
+IL_0178:
 	{
 		// for (int x = _from.x; x < (_to.x + 1); x++)
 		int32_t L_67 = V_7;
@@ -5399,18 +5585,18 @@ IL_017e:
 		int32_t L_69 = L_68.get_x_0();
 		if ((((int32_t)L_67) < ((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_69, (int32_t)1)))))
 		{
-			goto IL_00f8;
+			goto IL_00f2;
 		}
 	}
 	{
-		// var _handle = _cutJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10));
+		// var _handle = _cutJob.Schedule(_cubesGrid.pointsGrid.points.Length, (_cubesGrid.pointsGrid.points.Length / 10));
 		CutSphereJob_tB1BE08744350AC8A8C5A9BBEAD0E132191525899  L_70 = V_4;
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_71 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_72 = L_71->get_address_of__pointsGrid_4();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_71 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_72 = L_71->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_73 = L_72->get_address_of_points_0();
 		int32_t L_74 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_73)->___m_Length_1);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_75 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_76 = L_75->get_address_of__pointsGrid_4();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_75 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_76 = L_75->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_77 = L_76->get_address_of_points_0();
 		int32_t L_78 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_77)->___m_Length_1);
 		il2cpp_codegen_initobj((&V_11), sizeof(JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1 ));
@@ -5418,25 +5604,25 @@ IL_017e:
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_80 = IJobParallelForExtensions_Schedule_TisCutSphereJob_tB1BE08744350AC8A8C5A9BBEAD0E132191525899_m923837EF9BF28D513DDEA1AAC5870E3BB9629DA4(L_70, L_74, ((int32_t)((int32_t)L_78/(int32_t)((int32_t)10))), L_79, /*hidden argument*/IJobParallelForExtensions_Schedule_TisCutSphereJob_tB1BE08744350AC8A8C5A9BBEAD0E132191525899_m923837EF9BF28D513DDEA1AAC5870E3BB9629DA4_RuntimeMethod_var);
 		V_5 = L_80;
 		// _jobsCutHandles.Add(_handle);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_81 = __this->get_address_of__jobsCutHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_81 = __this->get_address_of__jobsCutHandles_15();
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_82 = V_5;
 		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_81, L_82, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
 		// _jobsHandles.AddRange(_jobsCutHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_83 = __this->get_address_of__jobsHandles_13();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_84 = __this->get__jobsCutHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_83 = __this->get_address_of__jobsHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_84 = __this->get__jobsCutHandles_15();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_85 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_84, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_83, L_85, /*hidden argument*/NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var);
 		// PullVerticesJob _pullVerticesJob = new PullVerticesJob
 		// {
-		//     points = _cubesGrid._pointsGrid.points,
+		//     points = _cubesGrid.pointsGrid.points,
 		//     pointsMap = _pointsMap,
 		//     cellSize = _cellSize,
 		//     gridSize = _gridSize,
-		//     vertices = _cubesGrid._verticesArray
+		//     vertices = _cubesGrid.verticesArray
 		// };
 		il2cpp_codegen_initobj((&V_12), sizeof(PullVerticesJob_tF044E59C529936B1EA550A87FB3F2A2A28FAF308 ));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_86 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_87 = L_86->get_address_of__pointsGrid_4();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_86 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_87 = L_86->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405  L_88 = L_87->get_points_0();
 		(&V_12)->set_points_0(L_88);
 		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  L_89 = V_0;
@@ -5445,31 +5631,31 @@ IL_017e:
 		(&V_12)->set_cellSize_2(L_90);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_91 = __this->get__gridSize_6();
 		(&V_12)->set_gridSize_3(L_91);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_92 = __this->get_address_of__cubesGrid_7();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_93 = L_92->get__verticesArray_6();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_92 = __this->get_address_of__cubesGrid_8();
+		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_93 = L_92->get_verticesArray_4();
 		(&V_12)->set_vertices_4(L_93);
 		PullVerticesJob_tF044E59C529936B1EA550A87FB3F2A2A28FAF308  L_94 = V_12;
-		// _handle = _pullVerticesJob.Schedule(_cubesGrid._pointsGrid.points.Length, (_cubesGrid._pointsGrid.points.Length / 10), JobHandle.CombineDependencies(_jobsCutHandles));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_95 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_96 = L_95->get_address_of__pointsGrid_4();
+		// _handle = _pullVerticesJob.Schedule(_cubesGrid.pointsGrid.points.Length, (_cubesGrid.pointsGrid.points.Length / 10), JobHandle.CombineDependencies(_jobsCutHandles));
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_95 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_96 = L_95->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_97 = L_96->get_address_of_points_0();
 		int32_t L_98 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_97)->___m_Length_1);
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_99 = __this->get_address_of__cubesGrid_7();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_100 = L_99->get_address_of__pointsGrid_4();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_99 = __this->get_address_of__cubesGrid_8();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_100 = L_99->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_101 = L_100->get_address_of_points_0();
 		int32_t L_102 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_101)->___m_Length_1);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_103 = __this->get__jobsCutHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_103 = __this->get__jobsCutHandles_15();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_104 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_103, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_105 = JobHandle_CombineDependencies_m8E9EC3033A407EAF869406030058BBF467BE4E80(L_104, /*hidden argument*/NULL);
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_106 = IJobParallelForExtensions_Schedule_TisPullVerticesJob_tF044E59C529936B1EA550A87FB3F2A2A28FAF308_m5B75B9487F1A9D3CE51B086F4E08F5556C170C02(L_94, L_98, ((int32_t)((int32_t)L_102/(int32_t)((int32_t)10))), L_105, /*hidden argument*/IJobParallelForExtensions_Schedule_TisPullVerticesJob_tF044E59C529936B1EA550A87FB3F2A2A28FAF308_m5B75B9487F1A9D3CE51B086F4E08F5556C170C02_RuntimeMethod_var);
 		V_5 = L_106;
 		// _jobsPullHandles.Add(_handle);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_107 = __this->get_address_of__jobsPullHandles_15();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_107 = __this->get_address_of__jobsPullHandles_16();
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_108 = V_5;
 		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_107, L_108, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
 		// _jobsHandles.AddRange(_jobsPullHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_109 = __this->get_address_of__jobsHandles_13();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_110 = __this->get__jobsPullHandles_15();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_109 = __this->get_address_of__jobsHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_110 = __this->get__jobsPullHandles_16();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_111 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_110, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_109, L_111, /*hidden argument*/NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var);
 		// UpdateMesh(_from, _to);
@@ -5499,15 +5685,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_InitializeBatchGrid_mC481
 	memset((&V_5), 0, sizeof(V_5));
 	{
 		// _batchesGridSize.x = _gridSize.x / _maxBatchCellSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_0 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_0 = __this->get_address_of__batchesGridSize_11();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_1 = __this->get_address_of__gridSize_6();
 		int32_t L_2 = L_1->get_x_0();
-		int32_t L_3 = __this->get__maxBatchCellSize_8();
+		int32_t L_3 = __this->get__maxBatchCellSize_9();
 		L_0->set_x_0(((int32_t)((int32_t)L_2/(int32_t)L_3)));
 		// if (_gridSize.x % _maxBatchCellSize != 0)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_4 = __this->get_address_of__gridSize_6();
 		int32_t L_5 = L_4->get_x_0();
-		int32_t L_6 = __this->get__maxBatchCellSize_8();
+		int32_t L_6 = __this->get__maxBatchCellSize_9();
 		if (!((int32_t)((int32_t)L_5%(int32_t)L_6)))
 		{
 			goto IL_0041;
@@ -5515,7 +5701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_InitializeBatchGrid_mC481
 	}
 	{
 		// _batchesGridSize.x++;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_7 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_7 = __this->get_address_of__batchesGridSize_11();
 		int32_t* L_8 = L_7->get_address_of_x_0();
 		int32_t* L_9 = L_8;
 		int32_t L_10 = *((int32_t*)L_9);
@@ -5525,15 +5711,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_InitializeBatchGrid_mC481
 IL_0041:
 	{
 		// _batchesGridSize.y = _gridSize.y / _maxBatchCellSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_11 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_11 = __this->get_address_of__batchesGridSize_11();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_12 = __this->get_address_of__gridSize_6();
 		int32_t L_13 = L_12->get_y_1();
-		int32_t L_14 = __this->get__maxBatchCellSize_8();
+		int32_t L_14 = __this->get__maxBatchCellSize_9();
 		L_11->set_y_1(((int32_t)((int32_t)L_13/(int32_t)L_14)));
 		// if (_gridSize.y % _maxBatchCellSize != 0)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_15 = __this->get_address_of__gridSize_6();
 		int32_t L_16 = L_15->get_y_1();
-		int32_t L_17 = __this->get__maxBatchCellSize_8();
+		int32_t L_17 = __this->get__maxBatchCellSize_9();
 		if (!((int32_t)((int32_t)L_16%(int32_t)L_17)))
 		{
 			goto IL_0082;
@@ -5541,7 +5727,7 @@ IL_0041:
 	}
 	{
 		// _batchesGridSize.y++;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_18 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_18 = __this->get_address_of__batchesGridSize_11();
 		int32_t* L_19 = L_18->get_address_of_y_1();
 		int32_t* L_20 = L_19;
 		int32_t L_21 = *((int32_t*)L_20);
@@ -5551,15 +5737,15 @@ IL_0041:
 IL_0082:
 	{
 		// _batchesGridSize.z = _gridSize.z / _maxBatchCellSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_22 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_22 = __this->get_address_of__batchesGridSize_11();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_23 = __this->get_address_of__gridSize_6();
 		int32_t L_24 = L_23->get_z_2();
-		int32_t L_25 = __this->get__maxBatchCellSize_8();
+		int32_t L_25 = __this->get__maxBatchCellSize_9();
 		L_22->set_z_2(((int32_t)((int32_t)L_24/(int32_t)L_25)));
 		// if (_gridSize.z % _maxBatchCellSize != 0)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_26 = __this->get_address_of__gridSize_6();
 		int32_t L_27 = L_26->get_z_2();
-		int32_t L_28 = __this->get__maxBatchCellSize_8();
+		int32_t L_28 = __this->get__maxBatchCellSize_9();
 		if (!((int32_t)((int32_t)L_27%(int32_t)L_28)))
 		{
 			goto IL_00c3;
@@ -5567,7 +5753,7 @@ IL_0082:
 	}
 	{
 		// _batchesGridSize.z++;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_29 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_29 = __this->get_address_of__batchesGridSize_11();
 		int32_t* L_30 = L_29->get_address_of_z_2();
 		int32_t* L_31 = L_30;
 		int32_t L_32 = *((int32_t*)L_31);
@@ -5577,25 +5763,25 @@ IL_0082:
 IL_00c3:
 	{
 		// _batchIndexesCount = _maxBatchCellSize * _maxBatchCellSize * _maxBatchCellSize * 36;
-		int32_t L_33 = __this->get__maxBatchCellSize_8();
-		int32_t L_34 = __this->get__maxBatchCellSize_8();
-		int32_t L_35 = __this->get__maxBatchCellSize_8();
-		__this->set__batchIndexesCount_11(((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_33, (int32_t)L_34)), (int32_t)L_35)), (int32_t)((int32_t)36))));
+		int32_t L_33 = __this->get__maxBatchCellSize_9();
+		int32_t L_34 = __this->get__maxBatchCellSize_9();
+		int32_t L_35 = __this->get__maxBatchCellSize_9();
+		__this->set__batchIndexesCount_12(((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)L_33, (int32_t)L_34)), (int32_t)L_35)), (int32_t)((int32_t)36))));
 		// _batchVerticesCount = (_maxBatchCellSize + 1) * (_maxBatchCellSize + 1) * (_maxBatchCellSize + 1);
-		int32_t L_36 = __this->get__maxBatchCellSize_8();
-		int32_t L_37 = __this->get__maxBatchCellSize_8();
-		int32_t L_38 = __this->get__maxBatchCellSize_8();
-		__this->set__batchVerticesCount_12(((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_36, (int32_t)1)), (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_37, (int32_t)1)))), (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_38, (int32_t)1)))));
+		int32_t L_36 = __this->get__maxBatchCellSize_9();
+		int32_t L_37 = __this->get__maxBatchCellSize_9();
+		int32_t L_38 = __this->get__maxBatchCellSize_9();
+		__this->set__batchVerticesCount_13(((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_multiply((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_36, (int32_t)1)), (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_37, (int32_t)1)))), (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_38, (int32_t)1)))));
 		// _meshBatches = new MeshBatch[_batchesGridSize.x, _batchesGridSize.y, _batchesGridSize.z];
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_39 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_39 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_40 = L_39->get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_41 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_41 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_42 = L_41->get_y_1();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_43 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_43 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_44 = L_43->get_z_2();
 		il2cpp_array_size_t L_46[] = { (il2cpp_array_size_t)L_40, (il2cpp_array_size_t)L_42, (il2cpp_array_size_t)L_44 };
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_45 = (MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)GenArrayNew(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9_il2cpp_TypeInfo_var, L_46);
-		__this->set__meshBatches_9((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_45);
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_45 = (MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)GenArrayNew(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1_il2cpp_TypeInfo_var, L_46);
+		__this->set__meshBatches_10((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_45);
 		// for (int x = 0; x < _batchesGridSize.x; x++)
 		V_0 = 0;
 		goto IL_025a;
@@ -5618,12 +5804,12 @@ IL_013a:
 IL_0141:
 	{
 		// _meshBatches[x, y, z].instance = new GameObject("Batch: " + new int3(x, y, z).ToString());
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_47 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_47 = __this->get__meshBatches_10();
 		int32_t L_48 = V_0;
 		int32_t L_49 = V_1;
 		int32_t L_50 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_47);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_51 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_47)->GetAddressAt(L_48, L_49, L_50);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_47);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_51 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_47)->GetAddressAt(L_48, L_49, L_50);
 		int32_t L_52 = V_0;
 		int32_t L_53 = V_1;
 		int32_t L_54 = V_2;
@@ -5637,12 +5823,12 @@ IL_0141:
 		GameObject__ctor_mBB454E679AD9CF0B84D3609A01E6A9753ACF4686(L_58, L_57, /*hidden argument*/NULL);
 		L_51->set_instance_0(L_58);
 		// _meshBatches[x, y, z].instance.transform.parent = transform;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_59 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_59 = __this->get__meshBatches_10();
 		int32_t L_60 = V_0;
 		int32_t L_61 = V_1;
 		int32_t L_62 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_59);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_63 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_59)->GetAddressAt(L_60, L_61, L_62);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_59);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_63 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_59)->GetAddressAt(L_60, L_61, L_62);
 		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_64 = L_63->get_instance_0();
 		NullCheck(L_64);
 		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_65 = GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C(L_64, /*hidden argument*/NULL);
@@ -5650,7 +5836,7 @@ IL_0141:
 		NullCheck(L_65);
 		Transform_set_parent_m65B8E4660B2C554069C57A957D9E55FECA7AA73E(L_65, L_66, /*hidden argument*/NULL);
 		// float _batchSideSize = _maxBatchCellSize * _cellSize;
-		int32_t L_67 = __this->get__maxBatchCellSize_8();
+		int32_t L_67 = __this->get__maxBatchCellSize_9();
 		float L_68 = __this->get__cellSize_5();
 		V_3 = ((float)il2cpp_codegen_multiply((float)(((float)((float)L_67))), (float)L_68));
 		// Vector3 _pos = new Vector3((x * _batchSideSize), (y * _batchSideSize), (z * _batchSideSize));
@@ -5662,12 +5848,12 @@ IL_0141:
 		float L_74 = V_3;
 		Vector3__ctor_m08F61F548AA5836D8789843ACB4A81E4963D2EE1((Vector3_tDCF05E21F632FE2BA260C06E0D10CA81513E6720 *)(&V_4), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_69))), (float)L_70)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_71))), (float)L_72)), ((float)il2cpp_codegen_multiply((float)(((float)((float)L_73))), (float)L_74)), /*hidden argument*/NULL);
 		// _meshBatches[x, y, z].instance.transform.localPosition = _pos;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_75 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_75 = __this->get__meshBatches_10();
 		int32_t L_76 = V_0;
 		int32_t L_77 = V_1;
 		int32_t L_78 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_75);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_79 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_75)->GetAddressAt(L_76, L_77, L_78);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_75);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_79 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_75)->GetAddressAt(L_76, L_77, L_78);
 		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_80 = L_79->get_instance_0();
 		NullCheck(L_80);
 		Transform_tBB9E78A2766C3C83599A8F66EDE7D1FCAFC66EDA * L_81 = GameObject_get_transform_mA5C38857137F137CB96C69FAA624199EB1C2FB2C(L_80, /*hidden argument*/NULL);
@@ -5675,29 +5861,29 @@ IL_0141:
 		NullCheck(L_81);
 		Transform_set_localPosition_m275F5550DD939F83AFEB5E8D681131172E2E1728(L_81, L_82, /*hidden argument*/NULL);
 		// _meshBatches[x, y, z].meshFilter = _meshBatches[x, y, z].instance.AddComponent<MeshFilter>();
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_83 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_83 = __this->get__meshBatches_10();
 		int32_t L_84 = V_0;
 		int32_t L_85 = V_1;
 		int32_t L_86 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_83);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_87 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_83)->GetAddressAt(L_84, L_85, L_86);
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_88 = __this->get__meshBatches_9();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_83);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_87 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_83)->GetAddressAt(L_84, L_85, L_86);
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_88 = __this->get__meshBatches_10();
 		int32_t L_89 = V_0;
 		int32_t L_90 = V_1;
 		int32_t L_91 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_88);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_92 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_88)->GetAddressAt(L_89, L_90, L_91);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_88);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_92 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_88)->GetAddressAt(L_89, L_90, L_91);
 		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_93 = L_92->get_instance_0();
 		NullCheck(L_93);
 		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_94 = GameObject_AddComponent_TisMeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0_m98AEA1EDDC59492203D06FA2912152C37C4164E4(L_93, /*hidden argument*/GameObject_AddComponent_TisMeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0_m98AEA1EDDC59492203D06FA2912152C37C4164E4_RuntimeMethod_var);
 		L_87->set_meshFilter_1(L_94);
 		// _meshBatches[x, y, z].instance.AddComponent<MeshRenderer>().sharedMaterial = _meshMaterial;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_95 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_95 = __this->get__meshBatches_10();
 		int32_t L_96 = V_0;
 		int32_t L_97 = V_1;
 		int32_t L_98 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_95);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_99 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_95)->GetAddressAt(L_96, L_97, L_98);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_95);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_99 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_95)->GetAddressAt(L_96, L_97, L_98);
 		GameObject_tBD1244AD56B4E59AAD76E5E7C9282EC5CE434F0F * L_100 = L_99->get_instance_0();
 		NullCheck(L_100);
 		MeshRenderer_t9D67CA54E83315F743623BDE8EADCD5074659EED * L_101 = GameObject_AddComponent_TisMeshRenderer_t9D67CA54E83315F743623BDE8EADCD5074659EED_m16409C054F66125E0380BDDDB1454118A3BAD60E(L_100, /*hidden argument*/GameObject_AddComponent_TisMeshRenderer_t9D67CA54E83315F743623BDE8EADCD5074659EED_m16409C054F66125E0380BDDDB1454118A3BAD60E_RuntimeMethod_var);
@@ -5713,7 +5899,7 @@ IL_0230:
 	{
 		// for (int z = 0; z < _batchesGridSize.z; z++)
 		int32_t L_104 = V_2;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_105 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_105 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_106 = L_105->get_z_2();
 		if ((((int32_t)L_104) < ((int32_t)L_106)))
 		{
@@ -5730,7 +5916,7 @@ IL_0245:
 	{
 		// for (int y = 0; y < _batchesGridSize.y; y++)
 		int32_t L_108 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_109 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_109 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_110 = L_109->get_y_1();
 		if ((((int32_t)L_108) < ((int32_t)L_110)))
 		{
@@ -5747,7 +5933,7 @@ IL_025a:
 	{
 		// for (int x = 0; x < _batchesGridSize.x; x++)
 		int32_t L_112 = V_0;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_113 = __this->get_address_of__batchesGridSize_10();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F * L_113 = __this->get_address_of__batchesGridSize_11();
 		int32_t L_114 = L_113->get_x_0();
 		if ((((int32_t)L_112) < ((int32_t)L_114)))
 		{
@@ -5789,51 +5975,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_UpdateBatches_mEE1907C71F
 	memset((&V_10), 0, sizeof(V_10));
 	{
 		// _jobsUpdateBatchesHandles.Clear();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsUpdateBatchesHandles_17();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_0 = __this->get_address_of__jobsUpdateBatchesHandles_18();
 		NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_0, /*hidden argument*/NativeList_1_Clear_m1DEA9C5FF2135A9EC80FC54BC62676EC8CD0BC90_RuntimeMethod_var);
 		// CopyBatchIndexesJob _copyBatchIndexesJob = new CopyBatchIndexesJob
 		// {
-		//     indexes = _cubesGrid._cellsGrid.indexes,
+		//     indexes = _cubesGrid.cellsGrid.indexes,
 		//     gridSize = _gridSize,
 		//     batchSize = _maxBatchCellSize
 		// };
 		il2cpp_codegen_initobj((&V_4), sizeof(CopyBatchIndexesJob_tC828FCA4EDEEAB9D096D787D87B0A37CD064485F ));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_1 = __this->get_address_of__cubesGrid_7();
-		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_2 = L_1->get_address_of__cellsGrid_5();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_1 = __this->get_address_of__cubesGrid_8();
+		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_2 = L_1->get_address_of_cellsGrid_3();
 		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  L_3 = L_2->get_indexes_0();
 		(&V_4)->set_indexes_0(L_3);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = __this->get__gridSize_6();
 		(&V_4)->set_gridSize_1(L_4);
-		int32_t L_5 = __this->get__maxBatchCellSize_8();
+		int32_t L_5 = __this->get__maxBatchCellSize_9();
 		(&V_4)->set_batchSize_3(L_5);
 		CopyBatchIndexesJob_tC828FCA4EDEEAB9D096D787D87B0A37CD064485F  L_6 = V_4;
 		V_0 = L_6;
 		// CopyBatchVerticesJob _copyBatchVerticesJob = new CopyBatchVerticesJob
 		// {
-		//     vertices = _cubesGrid._verticesArray,
+		//     vertices = _cubesGrid.verticesArray,
 		//     gridSize = _gridSize,
 		//     cellSize = _cellSize,
 		//     batchSize = _maxBatchCellSize
 		// };
 		il2cpp_codegen_initobj((&V_5), sizeof(CopyBatchVerticesJob_tA42B23A6588C63DC31A9BE1E32B04E5D7DA0CF17 ));
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_7 = __this->get_address_of__cubesGrid_7();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_8 = L_7->get__verticesArray_6();
+		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_7 = __this->get_address_of__cubesGrid_8();
+		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_8 = L_7->get_verticesArray_4();
 		(&V_5)->set_vertices_0(L_8);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9 = __this->get__gridSize_6();
 		(&V_5)->set_gridSize_1(L_9);
 		float L_10 = __this->get__cellSize_5();
 		(&V_5)->set_cellSize_4(L_10);
-		int32_t L_11 = __this->get__maxBatchCellSize_8();
+		int32_t L_11 = __this->get__maxBatchCellSize_9();
 		(&V_5)->set_batchSize_3(L_11);
 		CopyBatchVerticesJob_tA42B23A6588C63DC31A9BE1E32B04E5D7DA0CF17  L_12 = V_5;
 		V_1 = L_12;
 		// var _dependencyIndexes = JobHandle.CombineDependencies(_jobsTriangulateHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_13 = __this->get__jobsTriangulateHandles_16();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_13 = __this->get__jobsTriangulateHandles_17();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_14 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_13, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_15 = JobHandle_CombineDependencies_m8E9EC3033A407EAF869406030058BBF467BE4E80(L_14, /*hidden argument*/NULL);
 		V_2 = L_15;
 		// var _dependencyVertices = JobHandle.CombineDependencies(_jobsPullHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_16 = __this->get__jobsPullHandles_15();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_16 = __this->get__jobsPullHandles_16();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_17 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_16, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_18 = JobHandle_CombineDependencies_m8E9EC3033A407EAF869406030058BBF467BE4E80(L_17, /*hidden argument*/NULL);
 		V_3 = L_18;
@@ -5870,25 +6056,25 @@ IL_00d4:
 		int32_t L_27 = V_8;
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_9), L_25, L_26, L_27, /*hidden argument*/NULL);
 		// _meshBatches[x, y, z].batchIndexes = new NativeList<int>(_batchIndexesCount, Allocator.TempJob);
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_28 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_28 = __this->get__meshBatches_10();
 		int32_t L_29 = V_6;
 		int32_t L_30 = V_7;
 		int32_t L_31 = V_8;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_28);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_32 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_28)->GetAddressAt(L_29, L_30, L_31);
-		int32_t L_33 = __this->get__batchIndexesCount_11();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_28);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_32 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_28)->GetAddressAt(L_29, L_30, L_31);
+		int32_t L_33 = __this->get__batchIndexesCount_12();
 		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  L_34;
 		memset((&L_34), 0, sizeof(L_34));
 		NativeList_1__ctor_m77115B3EE5FC8F320A7DB47F46F720A42C8AA438((&L_34), L_33, 3, /*hidden argument*/NativeList_1__ctor_m77115B3EE5FC8F320A7DB47F46F720A42C8AA438_RuntimeMethod_var);
 		L_32->set_batchIndexes_2(L_34);
 		// _meshBatches[x, y, z].batchVertices = new NativeList<float3>(_batchVerticesCount, Allocator.TempJob);
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_35 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_35 = __this->get__meshBatches_10();
 		int32_t L_36 = V_6;
 		int32_t L_37 = V_7;
 		int32_t L_38 = V_8;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_35);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_39 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_35)->GetAddressAt(L_36, L_37, L_38);
-		int32_t L_40 = __this->get__batchVerticesCount_12();
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_35);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_39 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_35)->GetAddressAt(L_36, L_37, L_38);
+		int32_t L_40 = __this->get__batchVerticesCount_13();
 		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  L_41;
 		memset((&L_41), 0, sizeof(L_41));
 		NativeList_1__ctor_m6BD3EEFDB5BC64093849A6774DD610B4DA6DE252((&L_41), L_40, 3, /*hidden argument*/NativeList_1__ctor_m6BD3EEFDB5BC64093849A6774DD610B4DA6DE252_RuntimeMethod_var);
@@ -5897,12 +6083,12 @@ IL_00d4:
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_42 = V_9;
 		(&V_0)->set_batchId_2(L_42);
 		// _copyBatchIndexesJob.batchIndexes = _meshBatches[x, y, z].batchIndexes;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_43 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_43 = __this->get__meshBatches_10();
 		int32_t L_44 = V_6;
 		int32_t L_45 = V_7;
 		int32_t L_46 = V_8;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_43);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_47 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_43)->GetAddressAt(L_44, L_45, L_46);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_43);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_47 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_43)->GetAddressAt(L_44, L_45, L_46);
 		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  L_48 = L_47->get_batchIndexes_2();
 		(&V_0)->set_batchIndexes_4(L_48);
 		// var _handle = _copyBatchIndexesJob.Schedule(_dependencyIndexes);
@@ -5911,19 +6097,19 @@ IL_00d4:
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_51 = IJobExtensions_Schedule_TisCopyBatchIndexesJob_tC828FCA4EDEEAB9D096D787D87B0A37CD064485F_mA071049EB818F2B844E520CB8F4DCEA19939A9E8(L_49, L_50, /*hidden argument*/IJobExtensions_Schedule_TisCopyBatchIndexesJob_tC828FCA4EDEEAB9D096D787D87B0A37CD064485F_mA071049EB818F2B844E520CB8F4DCEA19939A9E8_RuntimeMethod_var);
 		V_10 = L_51;
 		// _jobsUpdateBatchesHandles.Add(_handle);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_52 = __this->get_address_of__jobsUpdateBatchesHandles_17();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_52 = __this->get_address_of__jobsUpdateBatchesHandles_18();
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_53 = V_10;
 		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_52, L_53, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
 		// _copyBatchVerticesJob.batchId = _batchId;
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_54 = V_9;
 		(&V_1)->set_batchId_2(L_54);
 		// _copyBatchVerticesJob.batchVertices = _meshBatches[x, y, z].batchVertices;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_55 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_55 = __this->get__meshBatches_10();
 		int32_t L_56 = V_6;
 		int32_t L_57 = V_7;
 		int32_t L_58 = V_8;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_55);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_59 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_55)->GetAddressAt(L_56, L_57, L_58);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_55);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_59 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_55)->GetAddressAt(L_56, L_57, L_58);
 		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  L_60 = L_59->get_batchVertices_3();
 		(&V_1)->set_batchVertices_5(L_60);
 		// _handle = _copyBatchVerticesJob.Schedule(_dependencyVertices);
@@ -5932,7 +6118,7 @@ IL_00d4:
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_63 = IJobExtensions_Schedule_TisCopyBatchVerticesJob_tA42B23A6588C63DC31A9BE1E32B04E5D7DA0CF17_mEEA976A9D8DFCBC218386672DCEE379FD48509EE(L_61, L_62, /*hidden argument*/IJobExtensions_Schedule_TisCopyBatchVerticesJob_tA42B23A6588C63DC31A9BE1E32B04E5D7DA0CF17_mEEA976A9D8DFCBC218386672DCEE379FD48509EE_RuntimeMethod_var);
 		V_10 = L_63;
 		// _jobsUpdateBatchesHandles.Add(_handle);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_64 = __this->get_address_of__jobsUpdateBatchesHandles_17();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_64 = __this->get_address_of__jobsUpdateBatchesHandles_18();
 		JobHandle_tDA498A2E49AEDE014468F416A8A98A6B258D73D1  L_65 = V_10;
 		NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_64, L_65, /*hidden argument*/NativeList_1_Add_mC2E4437AD0341E0860F33A177CDAC1D977D80C62_RuntimeMethod_var);
 		// for (int z = fromIds.z; z < toIds.z; z++)
@@ -5987,8 +6173,8 @@ IL_01c9:
 	}
 	{
 		// _jobsHandles.AddRange(_jobsUpdateBatchesHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_78 = __this->get_address_of__jobsHandles_13();
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_79 = __this->get__jobsUpdateBatchesHandles_17();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 * L_78 = __this->get_address_of__jobsHandles_14();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_79 = __this->get__jobsUpdateBatchesHandles_18();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_80 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_79, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA((NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9 *)L_78, L_80, /*hidden argument*/NativeList_1_AddRange_mF491021F25FD1AD859F7066EBA84F432B19612CA_RuntimeMethod_var);
 		// UpdateBatchesMeshes(fromIds, toIds);
@@ -6017,14 +6203,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeformableMesh_UpdateBatchesMeshes_m5C7D
 	memset((&V_5), 0, sizeof(V_5));
 	{
 		// JobHandle.CompleteAll(_jobsHandles);
-		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_0 = __this->get__jobsHandles_13();
+		NativeList_1_tB393331F9B8AEDBB5979193F08DF643960FB00F9  L_0 = __this->get__jobsHandles_14();
 		NativeArray_1_t2D95E00E7B414389BF1F7428AEF47352583C4EA3  L_1 = NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31(L_0, /*hidden argument*/NativeList_1_op_Implicit_mF0FAEA7E1A1EC28BCFB821DCAF0923E82D2F8A31_RuntimeMethod_var);
 		JobHandle_CompleteAll_m90DD598334514FA55C1F905E2BF03D737F05F8C7(L_1, /*hidden argument*/NULL);
 		// for (int x = fromIds.x; x < toIds.x; x++)
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = ___fromIds0;
 		int32_t L_3 = L_2.get_x_0();
 		V_0 = L_3;
-		goto IL_01bb;
+		goto IL_0206;
 	}
 
 IL_001c:
@@ -6033,7 +6219,7 @@ IL_001c:
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = ___fromIds0;
 		int32_t L_5 = L_4.get_y_1();
 		V_1 = L_5;
-		goto IL_01ab;
+		goto IL_01f6;
 	}
 
 IL_0028:
@@ -6042,33 +6228,33 @@ IL_0028:
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = ___fromIds0;
 		int32_t L_7 = L_6.get_z_2();
 		V_2 = L_7;
-		goto IL_019b;
+		goto IL_01e6;
 	}
 
 IL_0034:
 	{
 		// if (_meshBatches[x, y, z].batchIndexes.Length > 0) //check if any indexes were added
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_8 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_8 = __this->get__meshBatches_10();
 		int32_t L_9 = V_0;
 		int32_t L_10 = V_1;
 		int32_t L_11 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_8);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_12 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_8)->GetAddressAt(L_9, L_10, L_11);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_8);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_12 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_8)->GetAddressAt(L_9, L_10, L_11);
 		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_13 = L_12->get_address_of_batchIndexes_2();
 		int32_t L_14 = NativeList_1_get_Length_m65520C5C90BC3827A3F7C904118ADCB227E97F75((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_13, /*hidden argument*/NativeList_1_get_Length_m65520C5C90BC3827A3F7C904118ADCB227E97F75_RuntimeMethod_var);
 		if ((((int32_t)L_14) <= ((int32_t)0)))
 		{
-			goto IL_0167;
+			goto IL_0164;
 		}
 	}
 	{
 		// if (_meshBatches[x, y, z].meshFilter.sharedMesh == null)
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_15 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_15 = __this->get__meshBatches_10();
 		int32_t L_16 = V_0;
 		int32_t L_17 = V_1;
 		int32_t L_18 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_15);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_19 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_15)->GetAddressAt(L_16, L_17, L_18);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_15);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_19 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_15)->GetAddressAt(L_16, L_17, L_18);
 		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_20 = L_19->get_meshFilter_1();
 		NullCheck(L_20);
 		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_21 = MeshFilter_get_sharedMesh_mC076FD5461BFBBAD3BE49D25263CF140700D9902(L_20, /*hidden argument*/NULL);
@@ -6081,12 +6267,12 @@ IL_0034:
 	}
 	{
 		// _meshBatches[x, y, z].meshFilter.sharedMesh = new Mesh();
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_23 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_23 = __this->get__meshBatches_10();
 		int32_t L_24 = V_0;
 		int32_t L_25 = V_1;
 		int32_t L_26 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_23);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_27 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_23)->GetAddressAt(L_24, L_25, L_26);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_23);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_27 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_23)->GetAddressAt(L_24, L_25, L_26);
 		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_28 = L_27->get_meshFilter_1();
 		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_29 = (Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C *)il2cpp_codegen_object_new(Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C_il2cpp_TypeInfo_var);
 		Mesh__ctor_m3AEBC82AB71D4F9498F6E254174BEBA8372834B4(L_29, /*hidden argument*/NULL);
@@ -6097,164 +6283,200 @@ IL_0034:
 IL_008f:
 	{
 		// var _mesh = _meshBatches[x, y, z].meshFilter.sharedMesh;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_30 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_30 = __this->get__meshBatches_10();
 		int32_t L_31 = V_0;
 		int32_t L_32 = V_1;
 		int32_t L_33 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_30);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_34 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_30)->GetAddressAt(L_31, L_32, L_33);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_30);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_34 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_30)->GetAddressAt(L_31, L_32, L_33);
 		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_35 = L_34->get_meshFilter_1();
 		NullCheck(L_35);
 		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_36 = MeshFilter_get_sharedMesh_mC076FD5461BFBBAD3BE49D25263CF140700D9902(L_35, /*hidden argument*/NULL);
 		// int _indexesCount = _meshBatches[x, y, z].batchIndexes.Length;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_37 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_37 = __this->get__meshBatches_10();
 		int32_t L_38 = V_0;
 		int32_t L_39 = V_1;
 		int32_t L_40 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_37);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_41 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_37)->GetAddressAt(L_38, L_39, L_40);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_37);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_41 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_37)->GetAddressAt(L_38, L_39, L_40);
 		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_42 = L_41->get_address_of_batchIndexes_2();
 		int32_t L_43 = NativeList_1_get_Length_m65520C5C90BC3827A3F7C904118ADCB227E97F75((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_42, /*hidden argument*/NativeList_1_get_Length_m65520C5C90BC3827A3F7C904118ADCB227E97F75_RuntimeMethod_var);
 		V_3 = L_43;
 		// int _vertexCount = _meshBatches[x, y, z].batchVertices.Length;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_44 = __this->get__meshBatches_9();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_44 = __this->get__meshBatches_10();
 		int32_t L_45 = V_0;
 		int32_t L_46 = V_1;
 		int32_t L_47 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_44);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_48 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_44)->GetAddressAt(L_45, L_46, L_47);
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_44);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_48 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_44)->GetAddressAt(L_45, L_46, L_47);
 		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * L_49 = L_48->get_address_of_batchVertices_3();
 		int32_t L_50 = NativeList_1_get_Length_mFEFA5BD06BA7B238895CDB0246EB004F79002D04((NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *)L_49, /*hidden argument*/NativeList_1_get_Length_mFEFA5BD06BA7B238895CDB0246EB004F79002D04_RuntimeMethod_var);
 		V_4 = L_50;
-		// _mesh.SetVertexBufferParams(_vertexCount, _cubesGrid._layout);
+		// _mesh.SetVertexBufferParams(_vertexCount, _vertexLayout);
 		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_51 = L_36;
 		int32_t L_52 = V_4;
-		MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * L_53 = __this->get_address_of__cubesGrid_7();
-		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_54 = L_53->get__layout_3();
+		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_53 = __this->get__vertexLayout_7();
 		NullCheck(L_51);
-		Mesh_SetVertexBufferParams_mF2405594B3E219A52DB78290C09EC4E70E240013(L_51, L_52, L_54, /*hidden argument*/NULL);
+		Mesh_SetVertexBufferParams_mF2405594B3E219A52DB78290C09EC4E70E240013(L_51, L_52, L_53, /*hidden argument*/NULL);
 		// _mesh.SetVertexBufferData(_meshBatches[x, y, z].batchVertices.AsArray(), 0, 0, _vertexCount);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_55 = L_51;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_56 = __this->get__meshBatches_9();
-		int32_t L_57 = V_0;
-		int32_t L_58 = V_1;
-		int32_t L_59 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_56);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_60 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_56)->GetAddressAt(L_57, L_58, L_59);
-		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * L_61 = L_60->get_address_of_batchVertices_3();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_62 = NativeList_1_AsArray_m52422583821D51891CF5C84FCE99CB27EFA6033F((NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *)L_61, /*hidden argument*/NativeList_1_AsArray_m52422583821D51891CF5C84FCE99CB27EFA6033F_RuntimeMethod_var);
-		int32_t L_63 = V_4;
-		NullCheck(L_55);
-		Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66(L_55, L_62, 0, 0, L_63, 0, 0, /*hidden argument*/Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66_RuntimeMethod_var);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_54 = L_51;
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_55 = __this->get__meshBatches_10();
+		int32_t L_56 = V_0;
+		int32_t L_57 = V_1;
+		int32_t L_58 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_55);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_59 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_55)->GetAddressAt(L_56, L_57, L_58);
+		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * L_60 = L_59->get_address_of_batchVertices_3();
+		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_61 = NativeList_1_AsArray_m52422583821D51891CF5C84FCE99CB27EFA6033F((NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *)L_60, /*hidden argument*/NativeList_1_AsArray_m52422583821D51891CF5C84FCE99CB27EFA6033F_RuntimeMethod_var);
+		int32_t L_62 = V_4;
+		NullCheck(L_54);
+		Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66(L_54, L_61, 0, 0, L_62, 0, 0, /*hidden argument*/Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66_RuntimeMethod_var);
 		// _mesh.SetIndexBufferParams(_indexesCount, IndexFormat.UInt32);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_64 = L_55;
-		int32_t L_65 = V_3;
-		NullCheck(L_64);
-		Mesh_SetIndexBufferParams_m2CB237C9F6E17382F63204608535756065670FAF(L_64, L_65, 1, /*hidden argument*/NULL);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_63 = L_54;
+		int32_t L_64 = V_3;
+		NullCheck(L_63);
+		Mesh_SetIndexBufferParams_m2CB237C9F6E17382F63204608535756065670FAF(L_63, L_64, 1, /*hidden argument*/NULL);
 		// _mesh.SetIndexBufferData(_meshBatches[x, y, z].batchIndexes.AsArray(), 0, 0, _indexesCount);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_66 = L_64;
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_67 = __this->get__meshBatches_9();
-		int32_t L_68 = V_0;
-		int32_t L_69 = V_1;
-		int32_t L_70 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_67);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_71 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_67)->GetAddressAt(L_68, L_69, L_70);
-		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_72 = L_71->get_address_of_batchIndexes_2();
-		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  L_73 = NativeList_1_AsArray_mF7881928492E90494CA30D07127DBE3179973F25((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_72, /*hidden argument*/NativeList_1_AsArray_mF7881928492E90494CA30D07127DBE3179973F25_RuntimeMethod_var);
-		int32_t L_74 = V_3;
-		NullCheck(L_66);
-		Mesh_SetIndexBufferData_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m3467A767D52405E6D1DFA684C8E03A5B4DB55DF9(L_66, L_73, 0, 0, L_74, 0, /*hidden argument*/Mesh_SetIndexBufferData_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m3467A767D52405E6D1DFA684C8E03A5B4DB55DF9_RuntimeMethod_var);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_65 = L_63;
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_66 = __this->get__meshBatches_10();
+		int32_t L_67 = V_0;
+		int32_t L_68 = V_1;
+		int32_t L_69 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_66);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_70 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_66)->GetAddressAt(L_67, L_68, L_69);
+		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_71 = L_70->get_address_of_batchIndexes_2();
+		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF  L_72 = NativeList_1_AsArray_mF7881928492E90494CA30D07127DBE3179973F25((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_71, /*hidden argument*/NativeList_1_AsArray_mF7881928492E90494CA30D07127DBE3179973F25_RuntimeMethod_var);
+		int32_t L_73 = V_3;
+		NullCheck(L_65);
+		Mesh_SetIndexBufferData_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m3467A767D52405E6D1DFA684C8E03A5B4DB55DF9(L_65, L_72, 0, 0, L_73, 0, /*hidden argument*/Mesh_SetIndexBufferData_TisInt32_t585191389E07734F19F3156FF88FB3EF4800D102_m3467A767D52405E6D1DFA684C8E03A5B4DB55DF9_RuntimeMethod_var);
 		// SubMeshDescriptor _smd = new SubMeshDescriptor(0, _indexesCount);
-		int32_t L_75 = V_3;
-		SubMeshDescriptor__ctor_m0378F084B706E131517D86912419F329FBFA6A68((SubMeshDescriptor_t795A91430C58B6A4C6C1B4660F3A45788FA7C13B *)(&V_5), 0, L_75, 0, /*hidden argument*/NULL);
+		int32_t L_74 = V_3;
+		SubMeshDescriptor__ctor_m0378F084B706E131517D86912419F329FBFA6A68((SubMeshDescriptor_t795A91430C58B6A4C6C1B4660F3A45788FA7C13B *)(&V_5), 0, L_74, 0, /*hidden argument*/NULL);
 		// _mesh.subMeshCount = 1;
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_76 = L_66;
-		NullCheck(L_76);
-		Mesh_set_subMeshCount_mAD794C2BB87790EAE979561B799ADD2EE1C65593(L_76, 1, /*hidden argument*/NULL);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_75 = L_65;
+		NullCheck(L_75);
+		Mesh_set_subMeshCount_mAD794C2BB87790EAE979561B799ADD2EE1C65593(L_75, 1, /*hidden argument*/NULL);
 		// _mesh.SetSubMesh(0, _smd);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_77 = L_76;
-		SubMeshDescriptor_t795A91430C58B6A4C6C1B4660F3A45788FA7C13B  L_78 = V_5;
-		NullCheck(L_77);
-		Mesh_SetSubMesh_m29EADFF773E464A1CE07ED14F5F2B65257B73BE8(L_77, 0, L_78, 0, /*hidden argument*/NULL);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_76 = L_75;
+		SubMeshDescriptor_t795A91430C58B6A4C6C1B4660F3A45788FA7C13B  L_77 = V_5;
+		NullCheck(L_76);
+		Mesh_SetSubMesh_m29EADFF773E464A1CE07ED14F5F2B65257B73BE8(L_76, 0, L_77, 0, /*hidden argument*/NULL);
 		// _mesh.RecalculateBounds();
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_79 = L_77;
-		NullCheck(L_79);
-		Mesh_RecalculateBounds_m1BF701FE2CEA4E8E1183FF878B812808ED1EBA49(L_79, /*hidden argument*/NULL);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_78 = L_76;
+		NullCheck(L_78);
+		Mesh_RecalculateBounds_m1BF701FE2CEA4E8E1183FF878B812808ED1EBA49(L_78, /*hidden argument*/NULL);
 		// _mesh.RecalculateNormals();
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_80 = L_79;
-		NullCheck(L_80);
-		Mesh_RecalculateNormals_m9F5DF412F81F250419D9887C76F549B692B7D027(L_80, /*hidden argument*/NULL);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_79 = L_78;
+		NullCheck(L_79);
+		Mesh_RecalculateNormals_m9F5DF412F81F250419D9887C76F549B692B7D027(L_79, /*hidden argument*/NULL);
 		// _mesh.RecalculateTangents();
-		NullCheck(L_80);
-		Mesh_RecalculateTangents_mAF768120847C2BCEB8DF6F49F550C8918AE46726(L_80, /*hidden argument*/NULL);
+		NullCheck(L_79);
+		Mesh_RecalculateTangents_mAF768120847C2BCEB8DF6F49F550C8918AE46726(L_79, /*hidden argument*/NULL);
+		// }
+		goto IL_019a;
 	}
 
-IL_0167:
+IL_0164:
 	{
-		// _meshBatches[x, y, z].batchIndexes.Dispose();
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_81 = __this->get__meshBatches_9();
-		int32_t L_82 = V_0;
-		int32_t L_83 = V_1;
-		int32_t L_84 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_81);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_85 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_81)->GetAddressAt(L_82, L_83, L_84);
-		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_86 = L_85->get_address_of_batchIndexes_2();
-		NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_86, /*hidden argument*/NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975_RuntimeMethod_var);
-		// _meshBatches[x, y, z].batchVertices.Dispose();
-		MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9* L_87 = __this->get__meshBatches_9();
+		// Destroy(_meshBatches[x, y, z].meshFilter.sharedMesh);
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_80 = __this->get__meshBatches_10();
+		int32_t L_81 = V_0;
+		int32_t L_82 = V_1;
+		int32_t L_83 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_80);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_84 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_80)->GetAddressAt(L_81, L_82, L_83);
+		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_85 = L_84->get_meshFilter_1();
+		NullCheck(L_85);
+		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_86 = MeshFilter_get_sharedMesh_mC076FD5461BFBBAD3BE49D25263CF140700D9902(L_85, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_tAE11E5E46CD5C37C9F3E8950C00CD8B45666A2D0_il2cpp_TypeInfo_var);
+		Object_Destroy_m23B4562495BA35A74266D4372D45368F8C05109A(L_86, /*hidden argument*/NULL);
+		// _meshBatches[x, y, z].meshFilter.sharedMesh = null;
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_87 = __this->get__meshBatches_10();
 		int32_t L_88 = V_0;
 		int32_t L_89 = V_1;
 		int32_t L_90 = V_2;
-		NullCheck((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_87);
-		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_91 = ((MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)(MeshBatchU5B0___U2C0___U2C0___U5D_tB6A4908F159C028F5E06AB54939FCCD77C91A0D9*)L_87)->GetAddressAt(L_88, L_89, L_90);
-		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * L_92 = L_91->get_address_of_batchVertices_3();
-		NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4((NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *)L_92, /*hidden argument*/NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4_RuntimeMethod_var);
-		// for (int z = fromIds.z; z < toIds.z; z++)
-		int32_t L_93 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_93, (int32_t)1));
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_87);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_91 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_87)->GetAddressAt(L_88, L_89, L_90);
+		MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * L_92 = L_91->get_meshFilter_1();
+		NullCheck(L_92);
+		MeshFilter_set_sharedMesh_mFE8D12C35148063EB287951C7BFFB0328AAA7C5D(L_92, (Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C *)NULL, /*hidden argument*/NULL);
 	}
 
-IL_019b:
+IL_019a:
+	{
+		// _meshBatches[x, y, z].batchIndexes.Dispose();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_93 = __this->get__meshBatches_10();
+		int32_t L_94 = V_0;
+		int32_t L_95 = V_1;
+		int32_t L_96 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_93);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_97 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_93)->GetAddressAt(L_94, L_95, L_96);
+		NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 * L_98 = L_97->get_address_of_batchIndexes_2();
+		NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975((NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 *)L_98, /*hidden argument*/NativeList_1_Dispose_mA35139901AC455AD32664D531BCF50C4E149E975_RuntimeMethod_var);
+		// _meshBatches[x, y, z].batchVertices.Dispose();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_99 = __this->get__meshBatches_10();
+		int32_t L_100 = V_0;
+		int32_t L_101 = V_1;
+		int32_t L_102 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_99);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_103 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_99)->GetAddressAt(L_100, L_101, L_102);
+		NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 * L_104 = L_103->get_address_of_batchVertices_3();
+		NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4((NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25 *)L_104, /*hidden argument*/NativeList_1_Dispose_m63F07DF96B043A1EDAAA9D5D1700DE77ACBB9DF4_RuntimeMethod_var);
+		// _meshBatches[x, y, z].batchCellsMap.Dispose();
+		MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1* L_105 = __this->get__meshBatches_10();
+		int32_t L_106 = V_0;
+		int32_t L_107 = V_1;
+		int32_t L_108 = V_2;
+		NullCheck((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_105);
+		MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A * L_109 = ((MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)(MeshBatchU5BU2CU2CU5D_t58F4EDAD5B5297218665CEA257CA8C747F0669B1*)L_105)->GetAddressAt(L_106, L_107, L_108);
+		NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * L_110 = L_109->get_address_of_batchCellsMap_4();
+		NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)L_110, /*hidden argument*/NativeArray_1_Dispose_m69E61D1484110CD1294E87C271A7A5BFC5E6B51C_RuntimeMethod_var);
+		// for (int z = fromIds.z; z < toIds.z; z++)
+		int32_t L_111 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_111, (int32_t)1));
+	}
+
+IL_01e6:
 	{
 		// for (int z = fromIds.z; z < toIds.z; z++)
-		int32_t L_94 = V_2;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_95 = ___toIds1;
-		int32_t L_96 = L_95.get_z_2();
-		if ((((int32_t)L_94) < ((int32_t)L_96)))
+		int32_t L_112 = V_2;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_113 = ___toIds1;
+		int32_t L_114 = L_113.get_z_2();
+		if ((((int32_t)L_112) < ((int32_t)L_114)))
 		{
 			goto IL_0034;
 		}
 	}
 	{
 		// for (int y = fromIds.y; y < toIds.y; y++)
-		int32_t L_97 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_97, (int32_t)1));
+		int32_t L_115 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_115, (int32_t)1));
 	}
 
-IL_01ab:
+IL_01f6:
 	{
 		// for (int y = fromIds.y; y < toIds.y; y++)
-		int32_t L_98 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_99 = ___toIds1;
-		int32_t L_100 = L_99.get_y_1();
-		if ((((int32_t)L_98) < ((int32_t)L_100)))
+		int32_t L_116 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_117 = ___toIds1;
+		int32_t L_118 = L_117.get_y_1();
+		if ((((int32_t)L_116) < ((int32_t)L_118)))
 		{
 			goto IL_0028;
 		}
 	}
 	{
 		// for (int x = fromIds.x; x < toIds.x; x++)
-		int32_t L_101 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_101, (int32_t)1));
+		int32_t L_119 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_119, (int32_t)1));
 	}
 
-IL_01bb:
+IL_0206:
 	{
 		// for (int x = fromIds.x; x < toIds.x; x++)
-		int32_t L_102 = V_0;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_103 = ___toIds1;
-		int32_t L_104 = L_103.get_x_0();
-		if ((((int32_t)L_102) < ((int32_t)L_104)))
+		int32_t L_120 = V_0;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_121 = ___toIds1;
+		int32_t L_122 = L_121.get_x_0();
+		if ((((int32_t)L_120) < ((int32_t)L_122)))
 		{
 			goto IL_001c;
 		}
@@ -7269,13 +7491,13 @@ IL2CPP_EXTERN_C void MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshal
 // Conversion methods for marshalling of: DeformableMesh/MeshGridData
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_pinvoke(const MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68& unmarshaled, MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_pinvoke& marshaled)
 {
-	Exception_t* ____mesh_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_mesh' of type 'MeshGridData': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(____mesh_2Exception, NULL);
+	Exception_t* ___pointsGrid_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'pointsGrid' of type 'MeshGridData'.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___pointsGrid_2Exception, NULL);
 }
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_pinvoke_back(const MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_pinvoke& marshaled, MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68& unmarshaled)
 {
-	Exception_t* ____mesh_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_mesh' of type 'MeshGridData': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(____mesh_2Exception, NULL);
+	Exception_t* ___pointsGrid_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'pointsGrid' of type 'MeshGridData'.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___pointsGrid_2Exception, NULL);
 }
 // Conversion method for clean up from marshalling of: DeformableMesh/MeshGridData
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_pinvoke_cleanup(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_pinvoke& marshaled)
@@ -7288,13 +7510,13 @@ IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_mars
 // Conversion methods for marshalling of: DeformableMesh/MeshGridData
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_com(const MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68& unmarshaled, MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_com& marshaled)
 {
-	Exception_t* ____mesh_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_mesh' of type 'MeshGridData': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(____mesh_2Exception, NULL);
+	Exception_t* ___pointsGrid_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'pointsGrid' of type 'MeshGridData'.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___pointsGrid_2Exception, NULL);
 }
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_com_back(const MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_com& marshaled, MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68& unmarshaled)
 {
-	Exception_t* ____mesh_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field '_mesh' of type 'MeshGridData': Reference type field marshaling is not supported.");
-	IL2CPP_RAISE_MANAGED_EXCEPTION(____mesh_2Exception, NULL);
+	Exception_t* ___pointsGrid_2Exception = il2cpp_codegen_get_marshal_directive_exception("Cannot marshal field 'pointsGrid' of type 'MeshGridData'.");
+	IL2CPP_RAISE_MANAGED_EXCEPTION(___pointsGrid_2Exception, NULL);
 }
 // Conversion method for clean up from marshalling of: DeformableMesh/MeshGridData
 IL2CPP_EXTERN_C void MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshal_com_cleanup(MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68_marshaled_com& marshaled)
@@ -7316,7 +7538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshGridData_Create_mC05A452D098073DE0A2
 		// this.gridSize = gridSize;
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_1 = ___gridSize1;
 		__this->set_gridSize_1(L_1);
-		// _pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
+		// pointsGrid = new NativeCubeGrid(gridSize.x + 1, gridSize.y + 1, gridSize.z + 1, Allocator.Persistent);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = ___gridSize1;
 		int32_t L_3 = L_2.get_x_0();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = ___gridSize1;
@@ -7326,21 +7548,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshGridData_Create_mC05A452D098073DE0A2
 		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898  L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		NativeCubeGrid__ctor_m0ECAF9660F2E1B6C2615C2C10373D81D740AB617((&L_8), ((int32_t)il2cpp_codegen_add((int32_t)L_3, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_7, (int32_t)1)), 4, /*hidden argument*/NULL);
-		__this->set__pointsGrid_4(L_8);
-		// _cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
+		__this->set_pointsGrid_2(L_8);
+		// cellsGrid = new NativeCellGrid(gridSize, Allocator.Persistent);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9 = ___gridSize1;
 		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B  L_10;
 		memset((&L_10), 0, sizeof(L_10));
 		NativeCellGrid__ctor_mEAC748BECFB2B7CEC16139C91FF8357AD769C879((&L_10), L_9, 4, /*hidden argument*/NULL);
-		__this->set__cellsGrid_5(L_10);
-		// _verticesArray = new NativeArray<float3>(_pointsGrid.points.Length, Allocator.Persistent);
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_11 = __this->get_address_of__pointsGrid_4();
+		__this->set_cellsGrid_3(L_10);
+		// verticesArray = new NativeArray<float3>(pointsGrid.points.Length, Allocator.Persistent);
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_11 = __this->get_address_of_pointsGrid_2();
 		NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 * L_12 = L_11->get_address_of_points_0();
 		int32_t L_13 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_tB942A78CFAC276F95E8B08EBB94DF670FFAA0405 *)L_12)->___m_Length_1);
 		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_14;
 		memset((&L_14), 0, sizeof(L_14));
 		NativeArray_1__ctor_m04FF841AD87EFB01E8FB5EBE65DA2E967D968DAD((&L_14), L_13, 4, 1, /*hidden argument*/NativeArray_1__ctor_m04FF841AD87EFB01E8FB5EBE65DA2E967D968DAD_RuntimeMethod_var);
-		__this->set__verticesArray_6(L_14);
+		__this->set_verticesArray_4(L_14);
 		// StorePointsAndVertices();
 		MeshGridData_StorePointsAndVertices_m47B7330230C76F72568CECA06E69695B1835FA00((MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 *)__this, /*hidden argument*/NULL);
 		// }
@@ -7363,14 +7585,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshGridData_Dispose_m3C640F28A0FF5DA44A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// _pointsGrid.Dispose();
-		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_0 = __this->get_address_of__pointsGrid_4();
+		// pointsGrid.Dispose();
+		NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 * L_0 = __this->get_address_of_pointsGrid_2();
 		NativeCubeGrid_Dispose_m43D6CB11FDCDB229827C3CC0123BFAE0E3E9B706((NativeCubeGrid_t1008E7884E8FCB846519A740288995255A0F0898 *)L_0, /*hidden argument*/NULL);
-		// _cellsGrid.Dispose();
-		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_1 = __this->get_address_of__cellsGrid_5();
+		// cellsGrid.Dispose();
+		NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B * L_1 = __this->get_address_of_cellsGrid_3();
 		NativeCellGrid_Dispose_m1E1456569549D46D63E50ACF3FEE6975F15DB657((NativeCellGrid_t29EECFAB8C10840B6D6FD98E8346B076A105703B *)L_1, /*hidden argument*/NULL);
-		// _verticesArray.Dispose();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_2 = __this->get_address_of__verticesArray_6();
+		// verticesArray.Dispose();
+		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_2 = __this->get_address_of_verticesArray_4();
 		NativeArray_1_Dispose_m265E0AD1B3EF228EBBCC6E67212F96B863C7FC52((NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 *)L_2, /*hidden argument*/NativeArray_1_Dispose_m265E0AD1B3EF228EBBCC6E67212F96B863C7FC52_RuntimeMethod_var);
 		// }
 		return;
@@ -7385,12 +7607,6 @@ IL2CPP_EXTERN_C  void MeshGridData_Dispose_m3C640F28A0FF5DA44A0EECBC616D0EBEFF8E
 // System.Void DeformableMesh_MeshGridData::StorePointsAndVertices()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshGridData_StorePointsAndVertices_m47B7330230C76F72568CECA06E69695B1835FA00 (MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 * __this, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (MeshGridData_StorePointsAndVertices_m47B7330230C76F72568CECA06E69695B1835FA00_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
@@ -7432,8 +7648,8 @@ IL_000e:
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = V_4;
 		float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  L_4 = MeshGridData_GetPointPosition_mB4F372816224FB251C86BC9FD10971F243311760((MeshGridData_t2C10079EA25C90B5F0957F81094E08F4CA5E1D68 *)__this, L_3, /*hidden argument*/NULL);
 		V_5 = L_4;
-		// _verticesArray[_index] = _pointPosition;
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_5 = __this->get_address_of__verticesArray_6();
+		// verticesArray[_index] = _pointPosition;
+		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_5 = __this->get_address_of_verticesArray_4();
 		int32_t L_6 = V_0;
 		float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  L_7 = V_5;
 		IL2CPP_NATIVEARRAY_SET_ITEM(float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7 , ((NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 *)L_5)->___m_Buffer_0, L_6, L_7);
@@ -7491,36 +7707,6 @@ IL_0060:
 		}
 	}
 	{
-		// _mesh = new Mesh();
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_21 = (Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C *)il2cpp_codegen_object_new(Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C_il2cpp_TypeInfo_var);
-		Mesh__ctor_m3AEBC82AB71D4F9498F6E254174BEBA8372834B4(L_21, /*hidden argument*/NULL);
-		__this->set__mesh_2(L_21);
-		// _layout = new VertexAttributeDescriptor[]
-		// {
-		//     new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3)
-		// };
-		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_22 = (VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9*)(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9*)SZArrayNew(VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9_il2cpp_TypeInfo_var, (uint32_t)1);
-		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_23 = L_22;
-		VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59  L_24;
-		memset((&L_24), 0, sizeof(L_24));
-		VertexAttributeDescriptor__ctor_m27E0321BB3652EC579323E31D752B6E753826703((&L_24), 0, 0, 3, 0, /*hidden argument*/NULL);
-		NullCheck(L_23);
-		(L_23)->SetAt(static_cast<il2cpp_array_size_t>(0), (VertexAttributeDescriptor_t1E87473A5C1E3A379EE43EF2F64E0F03FCC71D59 )L_24);
-		__this->set__layout_3(L_23);
-		// _mesh.SetVertexBufferParams(_verticesArray.Length, _layout);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_25 = __this->get__mesh_2();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_26 = __this->get_address_of__verticesArray_6();
-		int32_t L_27 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 *)L_26)->___m_Length_1);
-		VertexAttributeDescriptorU5BU5D_tBE8DF5947569FD4C3DE66A992156741202DC82B9* L_28 = __this->get__layout_3();
-		NullCheck(L_25);
-		Mesh_SetVertexBufferParams_mF2405594B3E219A52DB78290C09EC4E70E240013(L_25, L_27, L_28, /*hidden argument*/NULL);
-		// _mesh.SetVertexBufferData(_verticesArray, 0, 0, _verticesArray.Length);
-		Mesh_t6106B8D8E4C691321581AB0445552EC78B947B8C * L_29 = __this->get__mesh_2();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4  L_30 = __this->get__verticesArray_6();
-		NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 * L_31 = __this->get_address_of__verticesArray_6();
-		int32_t L_32 = IL2CPP_NATIVEARRAY_GET_LENGTH(((NativeArray_1_t2641043A6CB21D7A02FEF3324709B229704480E4 *)L_31)->___m_Length_1);
-		NullCheck(L_29);
-		Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66(L_29, L_30, 0, 0, L_32, 0, 0, /*hidden argument*/Mesh_SetVertexBufferData_Tisfloat3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7_m2BAF72985CDC5F63AFBF5BF0D055A36486044F66_RuntimeMethod_var);
 		// }
 		return;
 	}
@@ -8431,19 +8617,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_Execute_mF7DEB7331535
 		int32_t L_1 = ___startIndex0;
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = IL2CPP_NATIVEARRAY_GET_ITEM(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F , ((NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 *)L_0)->___m_Buffer_0, ((int32_t)((int32_t)L_1/(int32_t)((int32_t)36))));
 		V_0 = L_2;
+		// startIndex = GetCellBufferIndex(_currentCellId);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = V_0;
+		int32_t L_4 = TriangulateCubeJob_GetCellBufferIndex_m42FFB9EA2FCDFC6DEE56D23DE83C5C1992D1740D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_3, /*hidden argument*/NULL);
+		___startIndex0 = L_4;
 		// if (_currentCellId.Equals(int3.zero) && startIndex != 0)
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = ((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_StaticFields*)il2cpp_codegen_static_fields_for(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_il2cpp_TypeInfo_var))->get_zero_3();
-		bool L_4 = int3_Equals_mAFF05DFBF864C060B34AE8B80B73C03A37345C38_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_0), L_3, /*hidden argument*/NULL);
-		if (!L_4)
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_5 = ((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_StaticFields*)il2cpp_codegen_static_fields_for(int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F_il2cpp_TypeInfo_var))->get_zero_3();
+		bool L_6 = int3_Equals_mAFF05DFBF864C060B34AE8B80B73C03A37345C38_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_0), L_5, /*hidden argument*/NULL);
+		if (!L_6)
 		{
-			goto IL_0022;
+			goto IL_002b;
 		}
 	}
 	{
-		int32_t L_5 = ___startIndex0;
-		if (!L_5)
+		int32_t L_7 = ___startIndex0;
+		if (!L_7)
 		{
-			goto IL_0022;
+			goto IL_002b;
 		}
 	}
 	{
@@ -8451,18 +8641,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_Execute_mF7DEB7331535
 		return;
 	}
 
-IL_0022:
+IL_002b:
 	{
-		// _batchOffset = _currentCellId / batchSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = V_0;
-		int32_t L_7 = __this->get_batchSize_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_8 = int3_op_Division_m9F988C81910B961EE45D7B34BD20CC756C0FAFB5_inline(L_6, L_7, /*hidden argument*/NULL);
-		__this->set__batchOffset_3(L_8);
-		// _batchOffset *= batchSize;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9 = __this->get__batchOffset_3();
-		int32_t L_10 = __this->get_batchSize_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_11 = int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline(L_9, L_10, /*hidden argument*/NULL);
-		__this->set__batchOffset_3(L_11);
+		// ClearIndexes(startIndex);
+		int32_t L_8 = ___startIndex0;
+		TriangulateCubeJob_ClearIndexes_m4C4D1D99519B3BE12B8064FA433CB90A574315AC((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_8, /*hidden argument*/NULL);
 		// Cube _cube = new Cube
 		// {
 		//     zero = _currentCellId,
@@ -8475,120 +8658,120 @@ IL_0022:
 		//     seven = new int3(_currentCellId.x + 1, _currentCellId.y, _currentCellId.z + 1)
 		// };
 		il2cpp_codegen_initobj((&V_5), sizeof(Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8 ));
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9 = V_0;
+		(&V_5)->set_zero_0(L_9);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_10 = V_0;
+		int32_t L_11 = L_10.get_x_0();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_12 = V_0;
-		(&V_5)->set_zero_0(L_12);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_13 = V_0;
-		int32_t L_14 = L_13.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_15 = V_0;
-		int32_t L_16 = L_15.get_y_1();
+		int32_t L_13 = L_12.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_14 = V_0;
+		int32_t L_15 = L_14.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_16;
+		memset((&L_16), 0, sizeof(L_16));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_16), L_11, ((int32_t)il2cpp_codegen_add((int32_t)L_13, (int32_t)1)), L_15, /*hidden argument*/NULL);
+		(&V_5)->set_one_1(L_16);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_17 = V_0;
-		int32_t L_18 = L_17.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19;
-		memset((&L_19), 0, sizeof(L_19));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_19), L_14, ((int32_t)il2cpp_codegen_add((int32_t)L_16, (int32_t)1)), L_18, /*hidden argument*/NULL);
-		(&V_5)->set_one_1(L_19);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_20 = V_0;
-		int32_t L_21 = L_20.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_22 = V_0;
-		int32_t L_23 = L_22.get_y_1();
+		int32_t L_18 = L_17.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_19 = V_0;
+		int32_t L_20 = L_19.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_21 = V_0;
+		int32_t L_22 = L_21.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_23;
+		memset((&L_23), 0, sizeof(L_23));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_23), ((int32_t)il2cpp_codegen_add((int32_t)L_18, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_20, (int32_t)1)), L_22, /*hidden argument*/NULL);
+		(&V_5)->set_two_2(L_23);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_24 = V_0;
-		int32_t L_25 = L_24.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_26;
-		memset((&L_26), 0, sizeof(L_26));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_26), ((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_23, (int32_t)1)), L_25, /*hidden argument*/NULL);
-		(&V_5)->set_two_2(L_26);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_27 = V_0;
-		int32_t L_28 = L_27.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_29 = V_0;
-		int32_t L_30 = L_29.get_y_1();
+		int32_t L_25 = L_24.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_26 = V_0;
+		int32_t L_27 = L_26.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_28 = V_0;
+		int32_t L_29 = L_28.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_30;
+		memset((&L_30), 0, sizeof(L_30));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_30), ((int32_t)il2cpp_codegen_add((int32_t)L_25, (int32_t)1)), L_27, L_29, /*hidden argument*/NULL);
+		(&V_5)->set_three_3(L_30);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_31 = V_0;
-		int32_t L_32 = L_31.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_33;
-		memset((&L_33), 0, sizeof(L_33));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_33), ((int32_t)il2cpp_codegen_add((int32_t)L_28, (int32_t)1)), L_30, L_32, /*hidden argument*/NULL);
-		(&V_5)->set_three_3(L_33);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_34 = V_0;
-		int32_t L_35 = L_34.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_36 = V_0;
-		int32_t L_37 = L_36.get_y_1();
+		int32_t L_32 = L_31.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_33 = V_0;
+		int32_t L_34 = L_33.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_35 = V_0;
+		int32_t L_36 = L_35.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_37;
+		memset((&L_37), 0, sizeof(L_37));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_37), L_32, L_34, ((int32_t)il2cpp_codegen_add((int32_t)L_36, (int32_t)1)), /*hidden argument*/NULL);
+		(&V_5)->set_four_4(L_37);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_38 = V_0;
-		int32_t L_39 = L_38.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_40;
-		memset((&L_40), 0, sizeof(L_40));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_40), L_35, L_37, ((int32_t)il2cpp_codegen_add((int32_t)L_39, (int32_t)1)), /*hidden argument*/NULL);
-		(&V_5)->set_four_4(L_40);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_41 = V_0;
-		int32_t L_42 = L_41.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_43 = V_0;
-		int32_t L_44 = L_43.get_y_1();
+		int32_t L_39 = L_38.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_40 = V_0;
+		int32_t L_41 = L_40.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_42 = V_0;
+		int32_t L_43 = L_42.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_44;
+		memset((&L_44), 0, sizeof(L_44));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_44), L_39, ((int32_t)il2cpp_codegen_add((int32_t)L_41, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_43, (int32_t)1)), /*hidden argument*/NULL);
+		(&V_5)->set_five_5(L_44);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_45 = V_0;
-		int32_t L_46 = L_45.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_47;
-		memset((&L_47), 0, sizeof(L_47));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_47), L_42, ((int32_t)il2cpp_codegen_add((int32_t)L_44, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_46, (int32_t)1)), /*hidden argument*/NULL);
-		(&V_5)->set_five_5(L_47);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_48 = V_0;
-		int32_t L_49 = L_48.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_50 = V_0;
-		int32_t L_51 = L_50.get_y_1();
+		int32_t L_46 = L_45.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_47 = V_0;
+		int32_t L_48 = L_47.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_49 = V_0;
+		int32_t L_50 = L_49.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_51;
+		memset((&L_51), 0, sizeof(L_51));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_51), ((int32_t)il2cpp_codegen_add((int32_t)L_46, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_48, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_50, (int32_t)1)), /*hidden argument*/NULL);
+		(&V_5)->set_six_6(L_51);
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_52 = V_0;
-		int32_t L_53 = L_52.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_54;
-		memset((&L_54), 0, sizeof(L_54));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_54), ((int32_t)il2cpp_codegen_add((int32_t)L_49, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_51, (int32_t)1)), ((int32_t)il2cpp_codegen_add((int32_t)L_53, (int32_t)1)), /*hidden argument*/NULL);
-		(&V_5)->set_six_6(L_54);
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_55 = V_0;
-		int32_t L_56 = L_55.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_57 = V_0;
-		int32_t L_58 = L_57.get_y_1();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_59 = V_0;
-		int32_t L_60 = L_59.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_61;
-		memset((&L_61), 0, sizeof(L_61));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_61), ((int32_t)il2cpp_codegen_add((int32_t)L_56, (int32_t)1)), L_58, ((int32_t)il2cpp_codegen_add((int32_t)L_60, (int32_t)1)), /*hidden argument*/NULL);
-		(&V_5)->set_seven_7(L_61);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_62 = V_5;
-		V_1 = L_62;
+		int32_t L_53 = L_52.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_54 = V_0;
+		int32_t L_55 = L_54.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_56 = V_0;
+		int32_t L_57 = L_56.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_58;
+		memset((&L_58), 0, sizeof(L_58));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_58), ((int32_t)il2cpp_codegen_add((int32_t)L_53, (int32_t)1)), L_55, ((int32_t)il2cpp_codegen_add((int32_t)L_57, (int32_t)1)), /*hidden argument*/NULL);
+		(&V_5)->set_seven_7(L_58);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_59 = V_5;
+		V_1 = L_59;
 		// _cube.isZero = GetPointActive(_cube.zero);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_63 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_64 = L_63.get_zero_0();
-		bool L_65 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_64, /*hidden argument*/NULL);
-		(&V_1)->set_isZero_8(L_65);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_60 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_61 = L_60.get_zero_0();
+		bool L_62 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_61, /*hidden argument*/NULL);
+		(&V_1)->set_isZero_8(L_62);
 		// _cube.isOne = GetPointActive(_cube.one);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_66 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_67 = L_66.get_one_1();
-		bool L_68 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_67, /*hidden argument*/NULL);
-		(&V_1)->set_isOne_9(L_68);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_63 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_64 = L_63.get_one_1();
+		bool L_65 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_64, /*hidden argument*/NULL);
+		(&V_1)->set_isOne_9(L_65);
 		// _cube.isTwo = GetPointActive(_cube.two);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_69 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_70 = L_69.get_two_2();
-		bool L_71 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_70, /*hidden argument*/NULL);
-		(&V_1)->set_isTwo_10(L_71);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_66 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_67 = L_66.get_two_2();
+		bool L_68 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_67, /*hidden argument*/NULL);
+		(&V_1)->set_isTwo_10(L_68);
 		// _cube.isThree = GetPointActive(_cube.three);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_72 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_73 = L_72.get_three_3();
-		bool L_74 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_73, /*hidden argument*/NULL);
-		(&V_1)->set_isThree_11(L_74);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_69 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_70 = L_69.get_three_3();
+		bool L_71 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_70, /*hidden argument*/NULL);
+		(&V_1)->set_isThree_11(L_71);
 		// _cube.isFour = GetPointActive(_cube.four);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_75 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_76 = L_75.get_four_4();
-		bool L_77 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_76, /*hidden argument*/NULL);
-		(&V_1)->set_isFour_12(L_77);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_72 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_73 = L_72.get_four_4();
+		bool L_74 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_73, /*hidden argument*/NULL);
+		(&V_1)->set_isFour_12(L_74);
 		// _cube.isFive = GetPointActive(_cube.five);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_78 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_79 = L_78.get_five_5();
-		bool L_80 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_79, /*hidden argument*/NULL);
-		(&V_1)->set_isFive_13(L_80);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_75 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_76 = L_75.get_five_5();
+		bool L_77 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_76, /*hidden argument*/NULL);
+		(&V_1)->set_isFive_13(L_77);
 		// _cube.isSix = GetPointActive(_cube.six);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_81 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_82 = L_81.get_six_6();
-		bool L_83 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_82, /*hidden argument*/NULL);
-		(&V_1)->set_isSix_14(L_83);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_78 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_79 = L_78.get_six_6();
+		bool L_80 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_79, /*hidden argument*/NULL);
+		(&V_1)->set_isSix_14(L_80);
 		// _cube.isSeven = GetPointActive(_cube.seven);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_84 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_85 = L_84.get_seven_7();
-		bool L_86 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_85, /*hidden argument*/NULL);
-		(&V_1)->set_isSeven_15(L_86);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_81 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_82 = L_81.get_seven_7();
+		bool L_83 = TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6AF2E9EFBE6312394D((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_82, /*hidden argument*/NULL);
+		(&V_1)->set_isSeven_15(L_83);
 		// _normal = new int3(0, 0, -1);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), 0, 0, (-1), /*hidden argument*/NULL);
 		// _face = new Face
@@ -8603,32 +8786,32 @@ IL_0022:
 		//     isThree = _cube.isThree
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_87 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_88 = L_87.get_zero_0();
-		(&V_6)->set_zero_0(L_88);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_89 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_90 = L_89.get_one_1();
-		(&V_6)->set_one_1(L_90);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_91 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_92 = L_91.get_two_2();
-		(&V_6)->set_two_2(L_92);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_93 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_94 = L_93.get_three_3();
-		(&V_6)->set_three_3(L_94);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_95 = V_1;
-		bool L_96 = L_95.get_isZero_8();
-		(&V_6)->set_isZero_4(L_96);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_97 = V_1;
-		bool L_98 = L_97.get_isOne_9();
-		(&V_6)->set_isOne_5(L_98);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_99 = V_1;
-		bool L_100 = L_99.get_isTwo_10();
-		(&V_6)->set_isTwo_6(L_100);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_101 = V_1;
-		bool L_102 = L_101.get_isThree_11();
-		(&V_6)->set_isThree_7(L_102);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_103 = V_6;
-		V_3 = L_103;
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_84 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_85 = L_84.get_zero_0();
+		(&V_6)->set_zero_0(L_85);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_86 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_87 = L_86.get_one_1();
+		(&V_6)->set_one_1(L_87);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_88 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_89 = L_88.get_two_2();
+		(&V_6)->set_two_2(L_89);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_90 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_91 = L_90.get_three_3();
+		(&V_6)->set_three_3(L_91);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_92 = V_1;
+		bool L_93 = L_92.get_isZero_8();
+		(&V_6)->set_isZero_4(L_93);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_94 = V_1;
+		bool L_95 = L_94.get_isOne_9();
+		(&V_6)->set_isOne_5(L_95);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_96 = V_1;
+		bool L_97 = L_96.get_isTwo_10();
+		(&V_6)->set_isTwo_6(L_97);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_98 = V_1;
+		bool L_99 = L_98.get_isThree_11();
+		(&V_6)->set_isThree_7(L_99);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_100 = V_6;
+		V_3 = L_100;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.four,
@@ -8641,57 +8824,54 @@ IL_0022:
 		//     isThree = _cube.isSeven
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_104 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_105 = L_104.get_four_4();
-		(&V_6)->set_zero_0(L_105);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_106 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_107 = L_106.get_five_5();
-		(&V_6)->set_one_1(L_107);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_108 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_109 = L_108.get_six_6();
-		(&V_6)->set_two_2(L_109);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_110 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_111 = L_110.get_seven_7();
-		(&V_6)->set_three_3(L_111);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_112 = V_1;
-		bool L_113 = L_112.get_isFour_12();
-		(&V_6)->set_isZero_4(L_113);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_114 = V_1;
-		bool L_115 = L_114.get_isFive_13();
-		(&V_6)->set_isOne_5(L_115);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_116 = V_1;
-		bool L_117 = L_116.get_isSix_14();
-		(&V_6)->set_isTwo_6(L_117);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_118 = V_1;
-		bool L_119 = L_118.get_isSeven_15();
-		(&V_6)->set_isThree_7(L_119);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_120 = V_6;
-		V_4 = L_120;
-		// ClearFace(startIndex);
-		int32_t L_121 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_121, /*hidden argument*/NULL);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_101 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_102 = L_101.get_four_4();
+		(&V_6)->set_zero_0(L_102);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_103 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_104 = L_103.get_five_5();
+		(&V_6)->set_one_1(L_104);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_105 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_106 = L_105.get_six_6();
+		(&V_6)->set_two_2(L_106);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_107 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_108 = L_107.get_seven_7();
+		(&V_6)->set_three_3(L_108);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_109 = V_1;
+		bool L_110 = L_109.get_isFour_12();
+		(&V_6)->set_isZero_4(L_110);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_111 = V_1;
+		bool L_112 = L_111.get_isFive_13();
+		(&V_6)->set_isOne_5(L_112);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_113 = V_1;
+		bool L_114 = L_113.get_isSix_14();
+		(&V_6)->set_isTwo_6(L_114);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_115 = V_1;
+		bool L_116 = L_115.get_isSeven_15();
+		(&V_6)->set_isThree_7(L_116);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_117 = V_6;
+		V_4 = L_117;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_122 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_123 = V_2;
-		bool L_124 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_122, L_123, /*hidden argument*/NULL);
-		if (!L_124)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_118 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_119 = V_2;
+		bool L_120 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_118, L_119, /*hidden argument*/NULL);
+		if (!L_120)
 		{
-			goto IL_02ec;
+			goto IL_02cc;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_125 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_126 = V_4;
-		int32_t L_127 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_125, L_126, L_127, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_121 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_122 = V_4;
+		int32_t L_123 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_121, L_122, L_123, /*hidden argument*/NULL);
 	}
 
-IL_02ec:
+IL_02cc:
 	{
 		// startIndex += 6;
-		int32_t L_128 = ___startIndex0;
-		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_128, (int32_t)6));
+		int32_t L_124 = ___startIndex0;
+		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_124, (int32_t)6));
 		// _normal = new int3(0, 0, 1);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), 0, 0, 1, /*hidden argument*/NULL);
 		// _face = new Face
@@ -8706,32 +8886,32 @@ IL_02ec:
 		//     isThree = _cube.isFour
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_125 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_126 = L_125.get_seven_7();
+		(&V_6)->set_zero_0(L_126);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_127 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_128 = L_127.get_six_6();
+		(&V_6)->set_one_1(L_128);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_129 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_130 = L_129.get_seven_7();
-		(&V_6)->set_zero_0(L_130);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_130 = L_129.get_five_5();
+		(&V_6)->set_two_2(L_130);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_131 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_132 = L_131.get_six_6();
-		(&V_6)->set_one_1(L_132);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_132 = L_131.get_four_4();
+		(&V_6)->set_three_3(L_132);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_133 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_134 = L_133.get_five_5();
-		(&V_6)->set_two_2(L_134);
+		bool L_134 = L_133.get_isSeven_15();
+		(&V_6)->set_isZero_4(L_134);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_135 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_136 = L_135.get_four_4();
-		(&V_6)->set_three_3(L_136);
+		bool L_136 = L_135.get_isSix_14();
+		(&V_6)->set_isOne_5(L_136);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_137 = V_1;
-		bool L_138 = L_137.get_isSeven_15();
-		(&V_6)->set_isZero_4(L_138);
+		bool L_138 = L_137.get_isFive_13();
+		(&V_6)->set_isTwo_6(L_138);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_139 = V_1;
-		bool L_140 = L_139.get_isSix_14();
-		(&V_6)->set_isOne_5(L_140);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_141 = V_1;
-		bool L_142 = L_141.get_isFive_13();
-		(&V_6)->set_isTwo_6(L_142);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_143 = V_1;
-		bool L_144 = L_143.get_isFour_12();
-		(&V_6)->set_isThree_7(L_144);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_145 = V_6;
-		V_3 = L_145;
+		bool L_140 = L_139.get_isFour_12();
+		(&V_6)->set_isThree_7(L_140);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_141 = V_6;
+		V_3 = L_141;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.three,
@@ -8744,57 +8924,54 @@ IL_02ec:
 		//     isThree = _cube.isZero
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_142 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_143 = L_142.get_three_3();
+		(&V_6)->set_zero_0(L_143);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_144 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_145 = L_144.get_two_2();
+		(&V_6)->set_one_1(L_145);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_146 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_147 = L_146.get_three_3();
-		(&V_6)->set_zero_0(L_147);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_147 = L_146.get_one_1();
+		(&V_6)->set_two_2(L_147);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_148 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_149 = L_148.get_two_2();
-		(&V_6)->set_one_1(L_149);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_149 = L_148.get_zero_0();
+		(&V_6)->set_three_3(L_149);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_150 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_151 = L_150.get_one_1();
-		(&V_6)->set_two_2(L_151);
+		bool L_151 = L_150.get_isThree_11();
+		(&V_6)->set_isZero_4(L_151);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_152 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_153 = L_152.get_zero_0();
-		(&V_6)->set_three_3(L_153);
+		bool L_153 = L_152.get_isTwo_10();
+		(&V_6)->set_isOne_5(L_153);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_154 = V_1;
-		bool L_155 = L_154.get_isThree_11();
-		(&V_6)->set_isZero_4(L_155);
+		bool L_155 = L_154.get_isOne_9();
+		(&V_6)->set_isTwo_6(L_155);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_156 = V_1;
-		bool L_157 = L_156.get_isTwo_10();
-		(&V_6)->set_isOne_5(L_157);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_158 = V_1;
-		bool L_159 = L_158.get_isOne_9();
-		(&V_6)->set_isTwo_6(L_159);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_160 = V_1;
-		bool L_161 = L_160.get_isZero_8();
-		(&V_6)->set_isThree_7(L_161);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_162 = V_6;
-		V_4 = L_162;
-		// ClearFace(startIndex);
-		int32_t L_163 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_163, /*hidden argument*/NULL);
+		bool L_157 = L_156.get_isZero_8();
+		(&V_6)->set_isThree_7(L_157);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_158 = V_6;
+		V_4 = L_158;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_164 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_165 = V_2;
-		bool L_166 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_164, L_165, /*hidden argument*/NULL);
-		if (!L_166)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_159 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_160 = V_2;
+		bool L_161 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_159, L_160, /*hidden argument*/NULL);
+		if (!L_161)
 		{
-			goto IL_03fd;
+			goto IL_03d6;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_167 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_168 = V_4;
-		int32_t L_169 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_167, L_168, L_169, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_162 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_163 = V_4;
+		int32_t L_164 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_162, L_163, L_164, /*hidden argument*/NULL);
 	}
 
-IL_03fd:
+IL_03d6:
 	{
 		// startIndex += 6;
-		int32_t L_170 = ___startIndex0;
-		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_170, (int32_t)6));
+		int32_t L_165 = ___startIndex0;
+		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_165, (int32_t)6));
 		// _normal = new int3(-1, 0, 0);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), (-1), 0, 0, /*hidden argument*/NULL);
 		// _face = new Face
@@ -8809,32 +8986,32 @@ IL_03fd:
 		//     isThree = _cube.isZero
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_171 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_172 = L_171.get_four_4();
-		(&V_6)->set_zero_0(L_172);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_173 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_174 = L_173.get_five_5();
-		(&V_6)->set_one_1(L_174);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_175 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_176 = L_175.get_one_1();
-		(&V_6)->set_two_2(L_176);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_177 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_178 = L_177.get_zero_0();
-		(&V_6)->set_three_3(L_178);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_179 = V_1;
-		bool L_180 = L_179.get_isFour_12();
-		(&V_6)->set_isZero_4(L_180);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_181 = V_1;
-		bool L_182 = L_181.get_isFive_13();
-		(&V_6)->set_isOne_5(L_182);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_183 = V_1;
-		bool L_184 = L_183.get_isOne_9();
-		(&V_6)->set_isTwo_6(L_184);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_185 = V_1;
-		bool L_186 = L_185.get_isZero_8();
-		(&V_6)->set_isThree_7(L_186);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_187 = V_6;
-		V_3 = L_187;
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_166 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_167 = L_166.get_four_4();
+		(&V_6)->set_zero_0(L_167);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_168 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_169 = L_168.get_five_5();
+		(&V_6)->set_one_1(L_169);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_170 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_171 = L_170.get_one_1();
+		(&V_6)->set_two_2(L_171);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_172 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_173 = L_172.get_zero_0();
+		(&V_6)->set_three_3(L_173);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_174 = V_1;
+		bool L_175 = L_174.get_isFour_12();
+		(&V_6)->set_isZero_4(L_175);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_176 = V_1;
+		bool L_177 = L_176.get_isFive_13();
+		(&V_6)->set_isOne_5(L_177);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_178 = V_1;
+		bool L_179 = L_178.get_isOne_9();
+		(&V_6)->set_isTwo_6(L_179);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_180 = V_1;
+		bool L_181 = L_180.get_isZero_8();
+		(&V_6)->set_isThree_7(L_181);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_182 = V_6;
+		V_3 = L_182;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.seven,
@@ -8847,57 +9024,54 @@ IL_03fd:
 		//     isThree = _cube.isThree
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_188 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_189 = L_188.get_seven_7();
-		(&V_6)->set_zero_0(L_189);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_190 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_191 = L_190.get_six_6();
-		(&V_6)->set_one_1(L_191);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_192 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_193 = L_192.get_two_2();
-		(&V_6)->set_two_2(L_193);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_194 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_195 = L_194.get_three_3();
-		(&V_6)->set_three_3(L_195);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_196 = V_1;
-		bool L_197 = L_196.get_isSeven_15();
-		(&V_6)->set_isZero_4(L_197);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_198 = V_1;
-		bool L_199 = L_198.get_isSix_14();
-		(&V_6)->set_isOne_5(L_199);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_200 = V_1;
-		bool L_201 = L_200.get_isTwo_10();
-		(&V_6)->set_isTwo_6(L_201);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_202 = V_1;
-		bool L_203 = L_202.get_isThree_11();
-		(&V_6)->set_isThree_7(L_203);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_204 = V_6;
-		V_4 = L_204;
-		// ClearFace(startIndex);
-		int32_t L_205 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_205, /*hidden argument*/NULL);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_183 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_184 = L_183.get_seven_7();
+		(&V_6)->set_zero_0(L_184);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_185 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_186 = L_185.get_six_6();
+		(&V_6)->set_one_1(L_186);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_187 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_188 = L_187.get_two_2();
+		(&V_6)->set_two_2(L_188);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_189 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_190 = L_189.get_three_3();
+		(&V_6)->set_three_3(L_190);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_191 = V_1;
+		bool L_192 = L_191.get_isSeven_15();
+		(&V_6)->set_isZero_4(L_192);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_193 = V_1;
+		bool L_194 = L_193.get_isSix_14();
+		(&V_6)->set_isOne_5(L_194);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_195 = V_1;
+		bool L_196 = L_195.get_isTwo_10();
+		(&V_6)->set_isTwo_6(L_196);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_197 = V_1;
+		bool L_198 = L_197.get_isThree_11();
+		(&V_6)->set_isThree_7(L_198);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_199 = V_6;
+		V_4 = L_199;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_206 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_207 = V_2;
-		bool L_208 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_206, L_207, /*hidden argument*/NULL);
-		if (!L_208)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_200 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_201 = V_2;
+		bool L_202 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_200, L_201, /*hidden argument*/NULL);
+		if (!L_202)
 		{
-			goto IL_050e;
+			goto IL_04e0;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_209 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_210 = V_4;
-		int32_t L_211 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_209, L_210, L_211, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_203 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_204 = V_4;
+		int32_t L_205 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_203, L_204, L_205, /*hidden argument*/NULL);
 	}
 
-IL_050e:
+IL_04e0:
 	{
 		// startIndex += 6;
-		int32_t L_212 = ___startIndex0;
-		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_212, (int32_t)6));
+		int32_t L_206 = ___startIndex0;
+		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_206, (int32_t)6));
 		// _normal = new int3(1, 0, 0);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), 1, 0, 0, /*hidden argument*/NULL);
 		// _face = new Face
@@ -8912,32 +9086,32 @@ IL_050e:
 		//     isThree = _cube.isSeven
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_207 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_208 = L_207.get_three_3();
+		(&V_6)->set_zero_0(L_208);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_209 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_210 = L_209.get_two_2();
+		(&V_6)->set_one_1(L_210);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_211 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_212 = L_211.get_six_6();
+		(&V_6)->set_two_2(L_212);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_213 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_214 = L_213.get_three_3();
-		(&V_6)->set_zero_0(L_214);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_214 = L_213.get_seven_7();
+		(&V_6)->set_three_3(L_214);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_215 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_216 = L_215.get_two_2();
-		(&V_6)->set_one_1(L_216);
+		bool L_216 = L_215.get_isThree_11();
+		(&V_6)->set_isZero_4(L_216);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_217 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_218 = L_217.get_six_6();
-		(&V_6)->set_two_2(L_218);
+		bool L_218 = L_217.get_isTwo_10();
+		(&V_6)->set_isOne_5(L_218);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_219 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_220 = L_219.get_seven_7();
-		(&V_6)->set_three_3(L_220);
+		bool L_220 = L_219.get_isSix_14();
+		(&V_6)->set_isTwo_6(L_220);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_221 = V_1;
-		bool L_222 = L_221.get_isThree_11();
-		(&V_6)->set_isZero_4(L_222);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_223 = V_1;
-		bool L_224 = L_223.get_isTwo_10();
-		(&V_6)->set_isOne_5(L_224);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_225 = V_1;
-		bool L_226 = L_225.get_isSix_14();
-		(&V_6)->set_isTwo_6(L_226);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_227 = V_1;
-		bool L_228 = L_227.get_isSeven_15();
-		(&V_6)->set_isThree_7(L_228);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_229 = V_6;
-		V_3 = L_229;
+		bool L_222 = L_221.get_isSeven_15();
+		(&V_6)->set_isThree_7(L_222);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_223 = V_6;
+		V_3 = L_223;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.zero,
@@ -8950,57 +9124,54 @@ IL_050e:
 		//     isThree = _cube.isFour
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_224 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_225 = L_224.get_zero_0();
+		(&V_6)->set_zero_0(L_225);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_226 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_227 = L_226.get_one_1();
+		(&V_6)->set_one_1(L_227);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_228 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_229 = L_228.get_five_5();
+		(&V_6)->set_two_2(L_229);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_230 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_231 = L_230.get_zero_0();
-		(&V_6)->set_zero_0(L_231);
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_231 = L_230.get_four_4();
+		(&V_6)->set_three_3(L_231);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_232 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_233 = L_232.get_one_1();
-		(&V_6)->set_one_1(L_233);
+		bool L_233 = L_232.get_isZero_8();
+		(&V_6)->set_isZero_4(L_233);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_234 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_235 = L_234.get_five_5();
-		(&V_6)->set_two_2(L_235);
+		bool L_235 = L_234.get_isOne_9();
+		(&V_6)->set_isOne_5(L_235);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_236 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_237 = L_236.get_four_4();
-		(&V_6)->set_three_3(L_237);
+		bool L_237 = L_236.get_isFive_13();
+		(&V_6)->set_isTwo_6(L_237);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_238 = V_1;
-		bool L_239 = L_238.get_isZero_8();
-		(&V_6)->set_isZero_4(L_239);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_240 = V_1;
-		bool L_241 = L_240.get_isOne_9();
-		(&V_6)->set_isOne_5(L_241);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_242 = V_1;
-		bool L_243 = L_242.get_isFive_13();
-		(&V_6)->set_isTwo_6(L_243);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_244 = V_1;
-		bool L_245 = L_244.get_isFour_12();
-		(&V_6)->set_isThree_7(L_245);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_246 = V_6;
-		V_4 = L_246;
-		// ClearFace(startIndex);
-		int32_t L_247 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_247, /*hidden argument*/NULL);
+		bool L_239 = L_238.get_isFour_12();
+		(&V_6)->set_isThree_7(L_239);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_240 = V_6;
+		V_4 = L_240;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_248 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_249 = V_2;
-		bool L_250 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_248, L_249, /*hidden argument*/NULL);
-		if (!L_250)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_241 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_242 = V_2;
+		bool L_243 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_241, L_242, /*hidden argument*/NULL);
+		if (!L_243)
 		{
-			goto IL_061f;
+			goto IL_05ea;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_251 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_252 = V_4;
-		int32_t L_253 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_251, L_252, L_253, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_244 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_245 = V_4;
+		int32_t L_246 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_244, L_245, L_246, /*hidden argument*/NULL);
 	}
 
-IL_061f:
+IL_05ea:
 	{
 		// startIndex += 6;
-		int32_t L_254 = ___startIndex0;
-		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_254, (int32_t)6));
+		int32_t L_247 = ___startIndex0;
+		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_247, (int32_t)6));
 		// _normal = new int3(0, -1, 0);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), 0, (-1), 0, /*hidden argument*/NULL);
 		// _face = new Face
@@ -9015,32 +9186,32 @@ IL_061f:
 		//     isThree = _cube.isSeven
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_255 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_256 = L_255.get_four_4();
-		(&V_6)->set_zero_0(L_256);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_257 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_258 = L_257.get_zero_0();
-		(&V_6)->set_one_1(L_258);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_259 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_260 = L_259.get_three_3();
-		(&V_6)->set_two_2(L_260);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_261 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_262 = L_261.get_seven_7();
-		(&V_6)->set_three_3(L_262);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_263 = V_1;
-		bool L_264 = L_263.get_isFour_12();
-		(&V_6)->set_isZero_4(L_264);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_265 = V_1;
-		bool L_266 = L_265.get_isZero_8();
-		(&V_6)->set_isOne_5(L_266);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_267 = V_1;
-		bool L_268 = L_267.get_isThree_11();
-		(&V_6)->set_isTwo_6(L_268);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_269 = V_1;
-		bool L_270 = L_269.get_isSeven_15();
-		(&V_6)->set_isThree_7(L_270);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_271 = V_6;
-		V_3 = L_271;
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_248 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_249 = L_248.get_four_4();
+		(&V_6)->set_zero_0(L_249);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_250 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_251 = L_250.get_zero_0();
+		(&V_6)->set_one_1(L_251);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_252 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_253 = L_252.get_three_3();
+		(&V_6)->set_two_2(L_253);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_254 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_255 = L_254.get_seven_7();
+		(&V_6)->set_three_3(L_255);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_256 = V_1;
+		bool L_257 = L_256.get_isFour_12();
+		(&V_6)->set_isZero_4(L_257);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_258 = V_1;
+		bool L_259 = L_258.get_isZero_8();
+		(&V_6)->set_isOne_5(L_259);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_260 = V_1;
+		bool L_261 = L_260.get_isThree_11();
+		(&V_6)->set_isTwo_6(L_261);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_262 = V_1;
+		bool L_263 = L_262.get_isSeven_15();
+		(&V_6)->set_isThree_7(L_263);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_264 = V_6;
+		V_3 = L_264;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.five,
@@ -9053,57 +9224,54 @@ IL_061f:
 		//     isThree = _cube.isSix
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_272 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_273 = L_272.get_five_5();
-		(&V_6)->set_zero_0(L_273);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_274 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_275 = L_274.get_one_1();
-		(&V_6)->set_one_1(L_275);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_276 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_277 = L_276.get_two_2();
-		(&V_6)->set_two_2(L_277);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_278 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_279 = L_278.get_six_6();
-		(&V_6)->set_three_3(L_279);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_280 = V_1;
-		bool L_281 = L_280.get_isFive_13();
-		(&V_6)->set_isZero_4(L_281);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_282 = V_1;
-		bool L_283 = L_282.get_isOne_9();
-		(&V_6)->set_isOne_5(L_283);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_284 = V_1;
-		bool L_285 = L_284.get_isTwo_10();
-		(&V_6)->set_isTwo_6(L_285);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_286 = V_1;
-		bool L_287 = L_286.get_isSix_14();
-		(&V_6)->set_isThree_7(L_287);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_288 = V_6;
-		V_4 = L_288;
-		// ClearFace(startIndex);
-		int32_t L_289 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_289, /*hidden argument*/NULL);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_265 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_266 = L_265.get_five_5();
+		(&V_6)->set_zero_0(L_266);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_267 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_268 = L_267.get_one_1();
+		(&V_6)->set_one_1(L_268);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_269 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_270 = L_269.get_two_2();
+		(&V_6)->set_two_2(L_270);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_271 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_272 = L_271.get_six_6();
+		(&V_6)->set_three_3(L_272);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_273 = V_1;
+		bool L_274 = L_273.get_isFive_13();
+		(&V_6)->set_isZero_4(L_274);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_275 = V_1;
+		bool L_276 = L_275.get_isOne_9();
+		(&V_6)->set_isOne_5(L_276);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_277 = V_1;
+		bool L_278 = L_277.get_isTwo_10();
+		(&V_6)->set_isTwo_6(L_278);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_279 = V_1;
+		bool L_280 = L_279.get_isSix_14();
+		(&V_6)->set_isThree_7(L_280);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_281 = V_6;
+		V_4 = L_281;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_290 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_291 = V_2;
-		bool L_292 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_290, L_291, /*hidden argument*/NULL);
-		if (!L_292)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_282 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_283 = V_2;
+		bool L_284 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_282, L_283, /*hidden argument*/NULL);
+		if (!L_284)
 		{
-			goto IL_0730;
+			goto IL_06f4;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_293 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_294 = V_4;
-		int32_t L_295 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_293, L_294, L_295, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_285 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_286 = V_4;
+		int32_t L_287 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_285, L_286, L_287, /*hidden argument*/NULL);
 	}
 
-IL_0730:
+IL_06f4:
 	{
 		// startIndex += 6;
-		int32_t L_296 = ___startIndex0;
-		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_296, (int32_t)6));
+		int32_t L_288 = ___startIndex0;
+		___startIndex0 = ((int32_t)il2cpp_codegen_add((int32_t)L_288, (int32_t)6));
 		// _normal = new int3(0, 1, 0);
 		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F *)(&V_2), 0, 1, 0, /*hidden argument*/NULL);
 		// _face = new Face
@@ -9118,32 +9286,32 @@ IL_0730:
 		//     isThree = _cube.isTwo
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_289 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_290 = L_289.get_one_1();
+		(&V_6)->set_zero_0(L_290);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_291 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_292 = L_291.get_five_5();
+		(&V_6)->set_one_1(L_292);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_293 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_294 = L_293.get_six_6();
+		(&V_6)->set_two_2(L_294);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_295 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_296 = L_295.get_two_2();
+		(&V_6)->set_three_3(L_296);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_297 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_298 = L_297.get_one_1();
-		(&V_6)->set_zero_0(L_298);
+		bool L_298 = L_297.get_isOne_9();
+		(&V_6)->set_isZero_4(L_298);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_299 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_300 = L_299.get_five_5();
-		(&V_6)->set_one_1(L_300);
+		bool L_300 = L_299.get_isFive_13();
+		(&V_6)->set_isOne_5(L_300);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_301 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_302 = L_301.get_six_6();
-		(&V_6)->set_two_2(L_302);
+		bool L_302 = L_301.get_isSix_14();
+		(&V_6)->set_isTwo_6(L_302);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_303 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_304 = L_303.get_two_2();
-		(&V_6)->set_three_3(L_304);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_305 = V_1;
-		bool L_306 = L_305.get_isOne_9();
-		(&V_6)->set_isZero_4(L_306);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_307 = V_1;
-		bool L_308 = L_307.get_isFive_13();
-		(&V_6)->set_isOne_5(L_308);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_309 = V_1;
-		bool L_310 = L_309.get_isSix_14();
-		(&V_6)->set_isTwo_6(L_310);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_311 = V_1;
-		bool L_312 = L_311.get_isTwo_10();
-		(&V_6)->set_isThree_7(L_312);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_313 = V_6;
-		V_3 = L_313;
+		bool L_304 = L_303.get_isTwo_10();
+		(&V_6)->set_isThree_7(L_304);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_305 = V_6;
+		V_3 = L_305;
 		// _faceM = new Face
 		// {
 		//     zero = _cube.zero,
@@ -9156,53 +9324,50 @@ IL_0730:
 		//     isThree = _cube.isThree
 		// };
 		il2cpp_codegen_initobj((&V_6), sizeof(Face_tDB51ED785B43D097A18B55813F281017DF743099 ));
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_306 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_307 = L_306.get_zero_0();
+		(&V_6)->set_zero_0(L_307);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_308 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_309 = L_308.get_four_4();
+		(&V_6)->set_one_1(L_309);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_310 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_311 = L_310.get_seven_7();
+		(&V_6)->set_two_2(L_311);
+		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_312 = V_1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_313 = L_312.get_three_3();
+		(&V_6)->set_three_3(L_313);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_314 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_315 = L_314.get_zero_0();
-		(&V_6)->set_zero_0(L_315);
+		bool L_315 = L_314.get_isZero_8();
+		(&V_6)->set_isZero_4(L_315);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_316 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_317 = L_316.get_four_4();
-		(&V_6)->set_one_1(L_317);
+		bool L_317 = L_316.get_isFour_12();
+		(&V_6)->set_isOne_5(L_317);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_318 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_319 = L_318.get_seven_7();
-		(&V_6)->set_two_2(L_319);
+		bool L_319 = L_318.get_isSeven_15();
+		(&V_6)->set_isTwo_6(L_319);
 		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_320 = V_1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_321 = L_320.get_three_3();
-		(&V_6)->set_three_3(L_321);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_322 = V_1;
-		bool L_323 = L_322.get_isZero_8();
-		(&V_6)->set_isZero_4(L_323);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_324 = V_1;
-		bool L_325 = L_324.get_isFour_12();
-		(&V_6)->set_isOne_5(L_325);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_326 = V_1;
-		bool L_327 = L_326.get_isSeven_15();
-		(&V_6)->set_isTwo_6(L_327);
-		Cube_tFBC8BF69602F0415B540C5BF59D188CCACB5BFA8  L_328 = V_1;
-		bool L_329 = L_328.get_isThree_11();
-		(&V_6)->set_isThree_7(L_329);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_330 = V_6;
-		V_4 = L_330;
-		// ClearFace(startIndex);
-		int32_t L_331 = ___startIndex0;
-		TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_331, /*hidden argument*/NULL);
+		bool L_321 = L_320.get_isThree_11();
+		(&V_6)->set_isThree_7(L_321);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_322 = V_6;
+		V_4 = L_322;
 		// if (IsFaceVisible(_face, _normal))
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_332 = V_3;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_333 = V_2;
-		bool L_334 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_332, L_333, /*hidden argument*/NULL);
-		if (!L_334)
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_323 = V_3;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_324 = V_2;
+		bool L_325 = TriangulateCubeJob_IsFaceVisible_m3BA5C41018B78F32B08F0857D8142F024380A32F((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_323, L_324, /*hidden argument*/NULL);
+		if (!L_325)
 		{
-			goto IL_0841;
+			goto IL_07fe;
 		}
 	}
 	{
 		// TriangulateFace(_face, _faceM, startIndex);
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_335 = V_3;
-		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_336 = V_4;
-		int32_t L_337 = ___startIndex0;
-		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_335, L_336, L_337, /*hidden argument*/NULL);
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_326 = V_3;
+		Face_tDB51ED785B43D097A18B55813F281017DF743099  L_327 = V_4;
+		int32_t L_328 = ___startIndex0;
+		TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900((TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *)__this, L_326, L_327, L_328, /*hidden argument*/NULL);
 	}
 
-IL_0841:
+IL_07fe:
 	{
 		// }
 		return;
@@ -9250,9 +9415,9 @@ IL2CPP_EXTERN_C  bool TriangulateCubeJob_GetPointActive_m514D7F545E1FFBC62D15DB6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TriangulateCubeJob_GetPointBufferIndex_m51D24C8DB941308E876F571672DAB32606945F36 (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___pointIds0, const RuntimeMethod* method)
 {
 	{
-		// pointIds -= _batchOffset;
+		// pointIds -= batchOffset;
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_0 = ___pointIds0;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_1 = __this->get__batchOffset_3();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_1 = __this->get_batchOffset_3();
 		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline(L_0, L_1, /*hidden argument*/NULL);
 		___pointIds0 = L_2;
 		// return (pointIds.x * (batchSize + 1) * (batchSize + 1)) + (pointIds.y * (batchSize + 1)) + pointIds.z;
@@ -9526,12 +9691,12 @@ IL2CPP_EXTERN_C  bool TriangulateCubeJob_IsVertexOpen_m9B09B6870C34D4A57ABC93E9D
 	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * _thisAdjusted = reinterpret_cast<TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *>(__this + _offset);
 	return TriangulateCubeJob_IsVertexOpen_m9B09B6870C34D4A57ABC93E9D3DDBDD03DA9EE10(_thisAdjusted, ___vertex0, ___normal1, method);
 }
-// System.Void DeformableMesh_TriangulateCubeJob::ClearFace(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int32_t ___startIndex0, const RuntimeMethod* method)
+// System.Void DeformableMesh_TriangulateCubeJob::ClearIndexes(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_ClearIndexes_m4C4D1D99519B3BE12B8064FA433CB90A574315AC (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, int32_t ___startIndex0, const RuntimeMethod* method)
 {
 	int32_t V_0 = 0;
 	{
-		// for (int i = startIndex; i < (startIndex + 6); i++)
+		// for (int i = startIndex; i < (startIndex + 36); i++)
 		int32_t L_0 = ___startIndex0;
 		V_0 = L_0;
 		goto IL_0015;
@@ -9543,17 +9708,17 @@ IL_0004:
 		NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF * L_1 = __this->get_address_of_indexes_5();
 		int32_t L_2 = V_0;
 		IL2CPP_NATIVEARRAY_SET_ITEM(int32_t, ((NativeArray_1_tC6374EC584BF0D6DD4AD6FA0FD00C2C82F82CCAF *)L_1)->___m_Buffer_0, L_2, (-1));
-		// for (int i = startIndex; i < (startIndex + 6); i++)
+		// for (int i = startIndex; i < (startIndex + 36); i++)
 		int32_t L_3 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_3, (int32_t)1));
 	}
 
 IL_0015:
 	{
-		// for (int i = startIndex; i < (startIndex + 6); i++)
+		// for (int i = startIndex; i < (startIndex + 36); i++)
 		int32_t L_4 = V_0;
 		int32_t L_5 = ___startIndex0;
-		if ((((int32_t)L_4) < ((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)6)))))
+		if ((((int32_t)L_4) < ((int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_5, (int32_t)((int32_t)36))))))
 		{
 			goto IL_0004;
 		}
@@ -9563,11 +9728,11 @@ IL_0015:
 		return;
 	}
 }
-IL2CPP_EXTERN_C  void TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA_AdjustorThunk (RuntimeObject * __this, int32_t ___startIndex0, const RuntimeMethod* method)
+IL2CPP_EXTERN_C  void TriangulateCubeJob_ClearIndexes_m4C4D1D99519B3BE12B8064FA433CB90A574315AC_AdjustorThunk (RuntimeObject * __this, int32_t ___startIndex0, const RuntimeMethod* method)
 {
 	int32_t _offset = 1;
 	TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * _thisAdjusted = reinterpret_cast<TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD *>(__this + _offset);
-	TriangulateCubeJob_ClearFace_m0AF2D598A385F15210D167B6036DEE4C441751FA(_thisAdjusted, ___startIndex0, method);
+	TriangulateCubeJob_ClearIndexes_m4C4D1D99519B3BE12B8064FA433CB90A574315AC(_thisAdjusted, ___startIndex0, method);
 }
 // System.Void DeformableMesh_TriangulateCubeJob::TriangulateFace(DeformableMesh_Face,DeformableMesh_Face,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriangulateCubeJob_TriangulateFace_m62877091461FED5CDFED777484DC42BA2EBEE900 (TriangulateCubeJob_t0CAC2921DFC9631E5FB97B5DB865CF5D008D9BAD * __this, Face_tDB51ED785B43D097A18B55813F281017DF743099  ___face0, Face_tDB51ED785B43D097A18B55813F281017DF743099  ___faceM1, int32_t ___startIndex2, const RuntimeMethod* method)
@@ -10672,6 +10837,47 @@ IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C
 		return L_9;
 	}
 }
+IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method)
+{
+	{
+		// public static int3 operator * (int3 lhs, int rhs) { return new int3 (lhs.x * rhs, lhs.y * rhs, lhs.z * rhs); }
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_0 = ___lhs0;
+		int32_t L_1 = L_0.get_x_0();
+		int32_t L_2 = ___rhs1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = ___lhs0;
+		int32_t L_4 = L_3.get_y_1();
+		int32_t L_5 = ___rhs1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = ___lhs0;
+		int32_t L_7 = L_6.get_z_2();
+		int32_t L_8 = ___rhs1;
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9;
+		memset((&L_9), 0, sizeof(L_9));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_9), ((int32_t)il2cpp_codegen_multiply((int32_t)L_1, (int32_t)L_2)), ((int32_t)il2cpp_codegen_multiply((int32_t)L_4, (int32_t)L_5)), ((int32_t)il2cpp_codegen_multiply((int32_t)L_7, (int32_t)L_8)), /*hidden argument*/NULL);
+		return L_9;
+	}
+}
+IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___rhs1, const RuntimeMethod* method)
+{
+	{
+		// public static int3 operator - (int3 lhs, int3 rhs) { return new int3 (lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z); }
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_0 = ___lhs0;
+		int32_t L_1 = L_0.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = ___rhs1;
+		int32_t L_3 = L_2.get_x_0();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = ___lhs0;
+		int32_t L_5 = L_4.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = ___rhs1;
+		int32_t L_7 = L_6.get_y_1();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_8 = ___lhs0;
+		int32_t L_9 = L_8.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_10 = ___rhs1;
+		int32_t L_11 = L_10.get_z_2();
+		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_12;
+		memset((&L_12), 0, sizeof(L_12));
+		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_12), ((int32_t)il2cpp_codegen_subtract((int32_t)L_1, (int32_t)L_3)), ((int32_t)il2cpp_codegen_subtract((int32_t)L_5, (int32_t)L_7)), ((int32_t)il2cpp_codegen_subtract((int32_t)L_9, (int32_t)L_11)), /*hidden argument*/NULL);
+		return L_12;
+	}
+}
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  float3_op_Division_mEA9DF1BD901A127A69DB2146EE9618646F6D1EE8_inline (float3_tB3DB6E304B40D8C4DA63622603E1671D83A2FDF7  ___lhs0, float ___rhs1, const RuntimeMethod* method)
 {
 	{
@@ -10700,28 +10906,6 @@ IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C
 		memset((&L_1), 0, sizeof(L_1));
 		int3__ctor_m2431D6DEB60987A6901C4144B34D53CCFFFF1B99_inline((&L_1), L_0, /*hidden argument*/NULL);
 		return L_1;
-	}
-}
-IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Subtraction_m7090B72690DA2B5EC9B87F023AA68F13A5D5C61D_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___rhs1, const RuntimeMethod* method)
-{
-	{
-		// public static int3 operator - (int3 lhs, int3 rhs) { return new int3 (lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z); }
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_0 = ___lhs0;
-		int32_t L_1 = L_0.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_2 = ___rhs1;
-		int32_t L_3 = L_2.get_x_0();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_4 = ___lhs0;
-		int32_t L_5 = L_4.get_y_1();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = ___rhs1;
-		int32_t L_7 = L_6.get_y_1();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_8 = ___lhs0;
-		int32_t L_9 = L_8.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_10 = ___rhs1;
-		int32_t L_11 = L_10.get_z_2();
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_12), ((int32_t)il2cpp_codegen_subtract((int32_t)L_1, (int32_t)L_3)), ((int32_t)il2cpp_codegen_subtract((int32_t)L_5, (int32_t)L_7)), ((int32_t)il2cpp_codegen_subtract((int32_t)L_9, (int32_t)L_11)), /*hidden argument*/NULL);
-		return L_12;
 	}
 }
 IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  math_clamp_mEE22F45E95FBE7751113DDE64D76ACA1A39B620F_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___x0, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___a1, int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___b2, const RuntimeMethod* method)
@@ -10778,25 +10962,6 @@ IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR String_t* int3_ToString_mFBF0FCDD841B
 		int32_t L_7 = L_6;
 		RuntimeObject * L_8 = Box(Int32_t585191389E07734F19F3156FF88FB3EF4800D102_il2cpp_TypeInfo_var, &L_7);
 		String_t* L_9 = String_Format_m26BBF75F9609FAD0B39C2242FEBAAD7D68F14D99(_stringLiteral33BF26062B563D984B9284F645BEF3577617DB5C, L_2, L_5, L_8, /*hidden argument*/NULL);
-		return L_9;
-	}
-}
-IL2CPP_EXTERN_C inline  IL2CPP_METHOD_ATTR int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  int3_op_Multiply_m1B0179446039D01760B8644C67B946ABBE978850_inline (int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  ___lhs0, int32_t ___rhs1, const RuntimeMethod* method)
-{
-	{
-		// public static int3 operator * (int3 lhs, int rhs) { return new int3 (lhs.x * rhs, lhs.y * rhs, lhs.z * rhs); }
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_0 = ___lhs0;
-		int32_t L_1 = L_0.get_x_0();
-		int32_t L_2 = ___rhs1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_3 = ___lhs0;
-		int32_t L_4 = L_3.get_y_1();
-		int32_t L_5 = ___rhs1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_6 = ___lhs0;
-		int32_t L_7 = L_6.get_z_2();
-		int32_t L_8 = ___rhs1;
-		int3_tD07EEECF4AB7A330ACFA57CF080BC8C43F66623F  L_9;
-		memset((&L_9), 0, sizeof(L_9));
-		int3__ctor_m2A75FF5C0A924A6F494B0C10F51F6D767A174016_inline((&L_9), ((int32_t)il2cpp_codegen_multiply((int32_t)L_1, (int32_t)L_2)), ((int32_t)il2cpp_codegen_multiply((int32_t)L_4, (int32_t)L_5)), ((int32_t)il2cpp_codegen_multiply((int32_t)L_7, (int32_t)L_8)), /*hidden argument*/NULL);
 		return L_9;
 	}
 }

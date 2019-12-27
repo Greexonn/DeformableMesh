@@ -57,14 +57,14 @@ static const Il2CppTokenRangePair s_rgctxIndices[2] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[9] = 
 {
-	{ (Il2CppRGCTXDataType)3, 16823 },
-	{ (Il2CppRGCTXDataType)3, 16824 },
+	{ (Il2CppRGCTXDataType)3, 16835 },
+	{ (Il2CppRGCTXDataType)3, 16836 },
 	{ (Il2CppRGCTXDataType)2, 21184 },
 	{ (Il2CppRGCTXDataType)2, 21185 },
 	{ (Il2CppRGCTXDataType)1, 19519 },
-	{ (Il2CppRGCTXDataType)3, 16825 },
+	{ (Il2CppRGCTXDataType)3, 16837 },
 	{ (Il2CppRGCTXDataType)2, 21186 },
-	{ (Il2CppRGCTXDataType)3, 16826 },
+	{ (Il2CppRGCTXDataType)3, 16838 },
 	{ (Il2CppRGCTXDataType)2, 19519 },
 };
 extern const Il2CppCodeGenModule g_Unity_JobsCodeGenModule;

@@ -9016,6 +9016,64 @@ public:
 };
 
 
+// Unity.Collections.NativeArray`1<Unity.Mathematics.int3>
+struct  NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 
+{
+public:
+	// System.Void* Unity.Collections.NativeArray`1::m_Buffer
+	void* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeArray`1::m_Length
+	int32_t ___m_Length_1;
+	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
+	int32_t ___m_AllocatorLabel_2;
+
+public:
+	inline static int32_t get_offset_of_m_Buffer_0() { return static_cast<int32_t>(offsetof(NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8, ___m_Buffer_0)); }
+	inline void* get_m_Buffer_0() const { return ___m_Buffer_0; }
+	inline void** get_address_of_m_Buffer_0() { return &___m_Buffer_0; }
+	inline void set_m_Buffer_0(void* value)
+	{
+		___m_Buffer_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Length_1() { return static_cast<int32_t>(offsetof(NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8, ___m_Length_1)); }
+	inline int32_t get_m_Length_1() const { return ___m_Length_1; }
+	inline int32_t* get_address_of_m_Length_1() { return &___m_Length_1; }
+	inline void set_m_Length_1(int32_t value)
+	{
+		___m_Length_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_AllocatorLabel_2() { return static_cast<int32_t>(offsetof(NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8, ___m_AllocatorLabel_2)); }
+	inline int32_t get_m_AllocatorLabel_2() const { return ___m_AllocatorLabel_2; }
+	inline int32_t* get_address_of_m_AllocatorLabel_2() { return &___m_AllocatorLabel_2; }
+	inline void set_m_AllocatorLabel_2(int32_t value)
+	{
+		___m_AllocatorLabel_2 = value;
+	}
+};
+
+// Native definition for P/Invoke marshalling of Unity.Collections.NativeArray`1
+#ifndef NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_pinvoke_define
+#define NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_pinvoke_define
+struct NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_pinvoke
+{
+	void* ___m_Buffer_0;
+	int32_t ___m_Length_1;
+	int32_t ___m_AllocatorLabel_2;
+};
+#endif
+// Native definition for COM marshalling of Unity.Collections.NativeArray`1
+#ifndef NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_com_define
+#define NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_com_define
+struct NativeArray_1_t350F3793D2FE9D9CD5A50725BE978ED846FE3098_marshaled_com
+{
+	void* ___m_Buffer_0;
+	int32_t ___m_Length_1;
+	int32_t ___m_AllocatorLabel_2;
+};
+#endif
+
 // Unity.Collections.NativeList`1<System.Int32>
 struct  NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79 
 {
@@ -10330,6 +10388,8 @@ public:
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	// Unity.Collections.NativeList`1<Unity.Mathematics.float3> DeformableMesh_MeshBatch::batchVertices
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	// Unity.Collections.NativeArray`1<Unity.Mathematics.int3> DeformableMesh_MeshBatch::batchCellsMap
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 
 public:
 	inline static int32_t get_offset_of_instance_0() { return static_cast<int32_t>(offsetof(MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A, ___instance_0)); }
@@ -10365,6 +10425,14 @@ public:
 	{
 		___batchVertices_3 = value;
 	}
+
+	inline static int32_t get_offset_of_batchCellsMap_4() { return static_cast<int32_t>(offsetof(MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A, ___batchCellsMap_4)); }
+	inline NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  get_batchCellsMap_4() const { return ___batchCellsMap_4; }
+	inline NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8 * get_address_of_batchCellsMap_4() { return &___batchCellsMap_4; }
+	inline void set_batchCellsMap_4(NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  value)
+	{
+		___batchCellsMap_4 = value;
+	}
 };
 
 // Native definition for P/Invoke marshalling of DeformableMesh/MeshBatch
@@ -10374,6 +10442,7 @@ struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_pinvoke
 	MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * ___meshFilter_1;
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 };
 // Native definition for COM marshalling of DeformableMesh/MeshBatch
 struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_com
@@ -10382,6 +10451,7 @@ struct MeshBatch_tB8CEADE31A4873716899AB044A0F7B026515EF8A_marshaled_com
 	MeshFilter_t8D4BA8E8723DE5CFF53B0DA5EE2F6B3A5B0E0FE0 * ___meshFilter_1;
 	NativeList_1_t47C3F5E521E2FFBD349D03D60DD96243CD829C79  ___batchIndexes_2;
 	NativeList_1_t9CF1B2AF46D748182345D2AA3DD411B25107BE25  ___batchVertices_3;
+	NativeArray_1_t2EA0739DD671A8CCA941CD87BF44CF5B895EB1A8  ___batchCellsMap_4;
 };
 
 // System.NotSupportedException

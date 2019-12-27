@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Collections;
@@ -158,7 +156,7 @@ public class DeformableMesh : MonoBehaviour
         int3 _from, _to;
         int3 _cellId = (int3)(sphereCenter / _cellSize);
         _from = math.clamp((_cellId - new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
-        _to = math.clamp((_cellId + new int3(_cellsCount, _cellsCount, _cellsCount)), int3.zero, _gridSize);
+        _to = math.clamp((_cellId + new int3(_cellsCount + 1, _cellsCount + 1, _cellsCount + 1)), int3.zero, _gridSize);//+1s fix the bug with holes in surface 
 
         //create job for calculations
         CutSphereJob _cutJob = new CutSphereJob
