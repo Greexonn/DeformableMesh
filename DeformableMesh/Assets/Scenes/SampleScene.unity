@@ -796,9 +796,9 @@ MonoBehaviour:
   _meshMaterial: {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
   _cellSize: 0.01
   _gridSize:
-    x: 80
-    y: 80
-    z: 80
+    x: 120
+    y: 120
+    z: 120
   _maxBatchCellSize: 10
 --- !u!1 &1687258581
 GameObject:

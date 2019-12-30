@@ -553,7 +553,7 @@ public class DeformableMesh : MonoBehaviour
                 float _value = math.clamp(_dist, 0, 1);
 
                 byte _pValue = (byte)math.lerp(0, 255, _value);
-                if (_pValue < 130)
+                if (_pValue < 20)
                     _pValue = 0;
                 if (_pValue < points[index])
                     points[index] = _pValue;
